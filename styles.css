@@ -2,18 +2,32 @@
     --row-start: 1;
 } */
 
-/* html {
-    overflow: hidden;
+html {
+    /* overflow: hidden; */
     height: 100%;
     min-width: 300px;
-} */
+}
 
-/* nav {
-    position: absolute;
-} */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#navbar, #footer {
+    min-height: 56px; /* smooth reload */
+}
+
+#navbar {
+    background-color: rgb(33, 37, 41);
+    /* position: sticky; */
+}
+
+#footer {
+    background-color:  rgb(248, 249, 250);
+}
+
 
 .map {
-    /* background-color: #333; */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -41,6 +55,11 @@
     padding: 6px;
 }
 
+a.map-area {
+    text-decoration: none;
+    color: #fff
+}
+
 .map-area:hover {
     /* border: 2px solid rgb(122, 103, 239); */
     background: rgb(122, 103, 239);
@@ -50,7 +69,7 @@
 .dirtmouth            { grid-column: 9 / span 10; grid-row: 1 / span 2; }
 .crystal-peak         { grid-column: 19 / span 10; grid-row: 1 / span 3; }
 .greenpath            { grid-column: 1 / span 6;  grid-row: 3 / span 4; }
-.forgotten-crossroads{ grid-column: 7 / span 12; grid-row: 3 / span 2; }
+.forgotten-crossroads { grid-column: 7 / span 12; grid-row: 3 / span 2; }
 .resting-grounds      { grid-column: 19 / span 10; grid-row: 4; }
 .fog-canyon           { grid-column: 7 / span 5;  grid-row: 5 / span 2; }
 .fungal-wastes        { grid-column: 12 / span 5; grid-row: 5 / span 4; }
@@ -59,6 +78,6 @@
 .city-of-tears-right  { grid-column: 23 / span 6; grid-row: 5 / span 3; }
 .kingdoms-edge        { grid-column: 29 / span 6; grid-row: 6 / span 5; }
 .deepnest             { grid-column: 1 / span 11; grid-row: 8 / span 2; }
-.royal-waterways      { grid-column: 17 / span 12; grid-row: 8 / span 2; } /* 7 3 */
-.ancient-basin        { grid-column: 9 / span 16; grid-row: 10 / span 2; } /* now 2 rows tall */
+.royal-waterways      { grid-column: 17 / span 12; grid-row: 8 / span 2; } 
+.ancient-basin        { grid-column: 9 / span 16; grid-row: 10 / span 2; }
 .the-hive             { grid-column: 29 / span 6; grid-row: 11; }

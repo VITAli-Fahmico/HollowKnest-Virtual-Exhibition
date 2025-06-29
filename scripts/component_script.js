@@ -10,6 +10,7 @@ async function loadHTML(fileName, placeholderId) { // for loading essential HTML
 		document.getElementById(placeholderId).innerHTML = htmlContent; // injects the HTML content here
 	} catch (error) {
 		console.error(`Error loading ${fileName}:`, error);
+		true
 	}
 }
 
