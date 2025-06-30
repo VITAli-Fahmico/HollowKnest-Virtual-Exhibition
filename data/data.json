@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "startWith": null, // placeholders
+    "startNarrative": null,
+    "startValue": null,
+    "narratives": [
+      "Historical",
+      "Hollow Knight"
+    ]
+  },
+  "objects" : [ // ?? An example: Marble column
+    {
+      "shortName" : "Marble column",
+      "itemText": null, // would be marbleColumn.html
+      "itemImages": [null, null, null], // a list of images to go between
+      "hollowKnightImages": [null, null, null], 
+      "metadata": {
+        "Full Name": "Marble column with base and capital",
+        "Year" : "138 CE",
+        "Historical movement/period": "Hadrianic",
+        "Associated Hollow Knight area": "Ancient Basin"
+      }
+    }
+  ]
+}
+// before objects are implemented, one needs to tested on its own for layout purposes
+// ! Note: Map areas in Hollow Knight to a dictionary

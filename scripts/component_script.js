@@ -1,8 +1,9 @@
-const directory = "components";
+const componentDirectory = "components";
+const stylesheetsDirectory = "stylesheets";
 
-async function loadHTML(fileName, placeholderId) { // for loading essential HTML content into each placeholder
+async function loadComponent(fileName, placeholderId) { // for loading essential HTML content into each placeholder
 	try {
-		const response = await fetch(`${directory}/${fileName}`);
+		const response = await fetch(`${componentDirectory}/${fileName}`);
 		if (!response.ok) {
 			throw new Error(`HTTP error! Status: ${response.status}`);
 		}
@@ -15,7 +16,7 @@ async function loadHTML(fileName, placeholderId) { // for loading essential HTML
 }
 
 async function loadNavbar() {
-	await loadHTML("navbar.html", "navbar");
+	await loadComponent("navbar.html", "navbar");
 
 	const currentPage = window.location.pathname.split("/").pop();  // gets only the ending (e.g. map.html without the start of the filename path)
 	const navLinks = document.querySelectorAll("#navbar a.nav-link");
@@ -29,7 +30,7 @@ async function loadNavbar() {
 }
 
 async function loadFooter() {
-	await loadHTML("footer.html", "footer");
+	await loadComponent("footer.html", "footer");
 }
 
 document.addEventListener("DOMContentLoaded", async () => { // loads the header and the footer on DOMContentLoaded

@@ -26,7 +26,6 @@ html, body {
     background-color:  rgb(248, 249, 250);
 }
 
-
 .map {
     color: #fff;
     display: flex;
@@ -62,21 +61,27 @@ a.map-area {
 
 .map-area:hover {
     /* border: 2px solid rgb(122, 103, 239); */
-    background: rgb(122, 103, 239);
+    background: #7a67ef;
 }
 
+/* ∞ roughly sorted into levels based on height (from left to right) */
+/* 1st level */
 .howling-cliffs       { grid-column: 1 / span 8;  grid-row: 1 / span 2; }
 .dirtmouth            { grid-column: 9 / span 10; grid-row: 1 / span 2; }
 .crystal-peak         { grid-column: 19 / span 10; grid-row: 1 / span 3; }
 .greenpath            { grid-column: 1 / span 6;  grid-row: 3 / span 4; }
 .forgotten-crossroads { grid-column: 7 / span 12; grid-row: 3 / span 2; }
 .resting-grounds      { grid-column: 19 / span 10; grid-row: 4; }
+
+/* 2nd level */
 .fog-canyon           { grid-column: 7 / span 5;  grid-row: 5 / span 2; }
 .fungal-wastes        { grid-column: 12 / span 5; grid-row: 5 / span 4; }
 .queens-gardens       { grid-column: 1 / span 11; grid-row: 7; }
 .city-of-tears-left   { grid-column: 17 / span 6; grid-row: 5 / span 3; }
 .city-of-tears-right  { grid-column: 23 / span 6; grid-row: 5 / span 3; }
 .kingdoms-edge        { grid-column: 29 / span 6; grid-row: 6 / span 5; }
+
+/* 3rd level */
 .deepnest             { grid-column: 1 / span 11; grid-row: 8 / span 2; }
 .royal-waterways      { grid-column: 17 / span 12; grid-row: 8 / span 2; } 
 .ancient-basin        { grid-column: 9 / span 16; grid-row: 10 / span 2; }
