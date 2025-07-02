@@ -3,7 +3,7 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Title page</title>
+      <title>Exhibition</title>
       <link rel="stylesheet" href="styles.css">
       <link id="theme-link" rel="stylesheet" href="stylesheets/futuristic.css" type="text/css"> 
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css"> -->
@@ -14,18 +14,96 @@
   </head>
   <body>
     <header id="navbar"></header>
-      <main class="my-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="my-2">Title</h1>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia suscipit laboriosam commodi culpa omnis nobis quidem aperiam illum quae exercitationem! 
-                    </p>
-                </div>
+    <main class="my-5">
+      <div class="container">
+        <div class="row my-2">
+          <h1>Marble column</h1> <!-- maybe this belongs in a row-->
+        </div>
+        <div class="row my-2">
+          <div class="col d-flex">
+            <img 
+            src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/250646/1794086/main-image" 
+            class="img-fluid limited-image-height m-auto" 
+            alt="">
+            <!-- ! alt tags should be based on the full name! -->
+            <!-- card-img-top is for making images fit within the frame 
+            card-img-top 
+            -->
+          </div>
+          <!--
+          ! Make everything adjust with width
+          ! Maybe it is better NOT to use Bootstrap for this page
+          -->
+          <div class="col align-self-center">
+              <table class="table table-striped border d-md-block collapse" id="table">
+                <tbody id="metadataTable">
+                  <tr>
+                    <th>Full name</th>
+                    <td>Marble column with base and capital</td>
+                  </tr>
+                  <tr>
+                    <th>Year</th>
+                    <td>138 CE</td>
+                  </tr>
+                  <tr>
+                    <th>Historical movement/period</th>
+                    <td>Hadrianic</td>
+                  </tr>
+                  <tr>
+                    <th>Associated Hollow Knight area</th>
+                    <td>Ancient Basin</td>
+                  </tr>
+                </tbody>
+            </table>
             </div>
         </div>
-      </main>
-      <footer id="footer"></footer>
+        <div class="row my-2">
+          <div class="col">
+            <div class="narrative my-2" class="style:font-style:italic"> <!-- ! imaginary narrative class -->
+              <p style="font-style: italic;">
+              As the Knight ventures deeper into Hallownest, they begin to uncover details that few travellers 
+              in Hallownest have encountered, with details that are “so scant”. Once the home of the Pale King, 
+              his palace has disappeared as a consequence of the Infection, 
+              and all that remains are the elegant, yet decadent structures of an ancient city.
+              </p>
+            </div>
+            <div class="my-2">
+                <p class="short-text">
+                This is an ancient Roman marble column with a base and capital (from 117 - 138 CE) that is 
+                representative of architecture of the Hadrianic period. As an ancient area, 
+                Ancient Basin has many old structures and roads that were formed, most notably, 
+                marble columns that draw from ancient Roman and Greek aesthetics. 
+                These columns are tall, grooved, and weathered yet still remain their elegance, 
+                creating a sense of age, stillness, and magnificence.
+                </p>
+                
+                <p class="medium-text">
+                The Roman column’s capital belongs to the Roman composite order, 
+                featuring the Ionic order’s volutes at the top and the rows of acanthus fronds are below. 
+                By blending these two aesthetics in conjunction with the narrow vertical grooves running down, 
+                the column is made taller and more elegant. The shaft of the column is partially restored, 
+                but still has marks remaining, similar to the marks of the long-preserved columns of Ancient Basin, 
+                showing signs that the Ancient Basin is an ancient underground city 
+                inspired by ancient Greek and Roman architecture.  
+                </p>
+                
+                <p class="long-text">
+                The Ancient Basin is one of the oldest and deepest parts of Hallownest, 
+                a location where the architecture visibly shifts from organic to more stripped back, monumental, and timeworn. 
+                It gives the impression that it is a place for the living and a ruin dedicated to the memory and forgotten power 
+                of the Pale King, the former monarch of Hallownest. The presence of the stone pillars as 
+                illustrated in the pictures depict a civilisation long past its prime, evoking not only age, 
+                but also the permanence and magnificence of the ancient monumental architecture. 
+                This atmosphere closely parallels the aesthetic and structural principles of Roman architecture during the 
+                Hadrianic period, as seen in the marble column shows an effort to balance strength with elegance. 
+                These same principles are echoed in Ancient Basin’s architecture, albeit interpreted through the game’s darker, 
+                more simple style. The tall, thin columns in the area bear resemblance to their Roman counterparts with 
+                their worn and cracked design and remain elegant even in spite of their ruined state.
+                </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer"></footer>
   </body>
 </html>
