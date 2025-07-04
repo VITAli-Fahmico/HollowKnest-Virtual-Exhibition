@@ -1,22 +1,3 @@
-const hollowKnightAreasToNumber = {
-	"Dirtmouth": 1,
-	"Forgotten Crossroads": 2,
-	"Greenpath": 3,
-	"Fungal Wastes": 4,
-	"City of Tears (L)": 5,
-	"City of Tears (R)": 6,
-	"Crystal Peak": 7,
-	"Resting Grounds": 8,
-	"Howling Cliffs": 9,
-	"Fog Canyon": 10,
-	"Deepnest": 11,
-	"Royal Waterways": 12,
-	"Ancient Basin": 13,
-	"Kingdom's Edge": 14,
-	"The Hive": 15,
-	"Queen's Gardens": 16,
-}
-
 // ! Note for myself (Nico)
 // why use 
 // this waits until the HTML document has been fully loaded and parsed
