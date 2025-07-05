@@ -1,5 +1,7 @@
 // to complete
 
+// load image for each...
+
 // gets the image for each area... uses :
 // img src="" alt=""
 // itemImages[0]
@@ -27,9 +29,13 @@ const allItems = allData.items
 
 // let currentItem = ""
 
-for (let objectNumber = 1; objectNumber <= allItems.length; objectNumber++) {
-    let itemImage = allItems[objectNumber - 1].itemImages[0]
-    let hollowKnightImage = allItems[objectNumber - 1].hollowKnightImages[0]
+for (let itemNumber = 1; itemNumber <= allItems.length; itemNumber++) {
+    let item = allItems[itemNumber - 1]
+    let itemImage = item.itemImages[0]
+    let hollowKnightImage = item.hollowKnightImages[0]
+    // let area = document.getElementById("myShape")
+
+    console.log(item.areaId)
     console.log(itemImage)
     console.log(hollowKnightImage)
 }

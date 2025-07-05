@@ -1,22 +1,38 @@
-// to complete
+const imageDirectory = "assets";
 
-// load image for each...
+function styleImages(className, hollowKnightImage, itemImage) {
+    const style = document.createElement("style");
+    style.innerHTML = `
+    .${className} {
+        background-image: ${hollowKnightImage};
+        background-color: rgb(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        background-size: cover;       
+        background-position: center;
+    }
+    
+    .${className}:hover {
+        background-image: ${itemImage};
+        background-color: rgb(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        background-size: cover;       
+        background-position: center;
+    }
 
-// gets the image for each area... uses :
-// img src="" alt=""
-// itemImages[0]
-// hollowKnightImages[0]
-// add alt as well...
-
-document.addEventListener("DOMContentLoaded", async function(event) {
-    const response = await fetch("data.json");
-    const data = await response.json();
-    const allItems = data.items
-
-for (let objectNumber = 1; objectNumber <= allItems.length; objectNumber++) {
-    let itemImage = allItems[0].itemImages[0]
-    let hollowKnightImage = allItems[0].hollowKnightImages[0]
+    }`;
+    document.head.appendChild(style);
 }
 
-});
+document.addEventListener("DOMContentLoaded", async function(event) {
+    const response = await fetch("data/data.json");
+    const data = await response.json();
+    const allItems = data.items;
 
+    for (let itemNumber = 1; itemNumber <= allItems.length; itemNumber++) {
+        let item = allItems[itemNumber - 1];
+        let itemImage = `url('${imageDirectory + "/" + item.itemImages[0]}')`;
+        let hollowKnightImage = `url('${imageDirectory + "/" + item.hollowKnightImages[0]}')`;
+
+        styleImages(item.areaId, hollowKnightImage, itemImage);
+    }
+});
