@@ -7,6 +7,13 @@
 // JS often tries to manipulate HTML elements (like setting innerHTML, or adding event listeners)
 // if the script runs before the page has been successfully loaded, then there may be issues...
 
+let items = []
+let narratives = []
+let currentSelection = []
+let currentNarrative = ""
+let currentValue = ""
+let currentSort = ""
+
 // runs the function when ready (i.e. everything inside the brackets)
 
 // the event listener in this case is attached to the ENTIRE document
@@ -14,21 +21,27 @@
 document.addEventListener("DOMContentLoaded", async function(event) { 
 	fetch('data/data.json')
 	.then(response => response.json())
-	// ! then return data from the JSON file
-	// .then(data => {	
-		// items = data.items
-		// let startWith = data.meta.startWith
-		// let item = item[startWith]
+	.then(data => {	
+		items = data.items
+		let startWith = data.meta.startWith
+		let item = items[startWith]
 
-		// narratives = data.meta.narratives
-		// currentNarrative = data.meta.startNarrative
-		// currentValue = data.meta.startValue
-		// prepareNarratives()
-	// })
+		narratives = data.meta.narratives
+		currentNarrative = data.meta.startNarrative
+		currentValue = data.meta.startValue
+		areas = data.areas
+		prepareNarratives()
+	})
 });
+
+// & IF and else for starting items
+// if the narrative is historical: start with year 1
+// If the narrative is HK, start with area 1
 
 // ! function : prepare narratives
 // show information
+// function prepareNarratives() {
+// }
 
 // ! function : show information 
 // utility functions for showing content should be run in here
@@ -37,6 +50,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 // ∞ use fetch (or make a function that is responsible for retrieving text)
 // shows only the small text
 // hides the medium and large texts
+// ! make sure to put d-none on elements with a given class
 
 // ! function : medium text
 // ∞ use fetch

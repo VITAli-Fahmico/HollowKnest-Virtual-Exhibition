@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function setTheme(themeName) {
     const themeLink = document.getElementById("theme-link");
-    console.log(themeName)
-    console.log(themes[themeName])
 
     if (themes[themeName]) {
         themePath = stylesheetsDirectory + "/" + themes[themeName];

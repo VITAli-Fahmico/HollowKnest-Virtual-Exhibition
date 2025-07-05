@@ -24,8 +24,8 @@ async function loadNavbar() {
 	navLinks.forEach(link => {
 		const linkHref = link.getAttribute("href");
 		if (linkHref === currentPage) {
-			link.classList.add("active"); // adds the active class to the highlight that you are currently on
-		}
+			link.classList.add("active"); // adds the active class to the highlight that you are currently on the page
+		} // 
 	});
 }
 
@@ -33,7 +33,10 @@ async function loadFooter() {
 	await loadComponent("footer.html", "footer");
 }
 
+// ! if on the exhibition page
+
 document.addEventListener("DOMContentLoaded", async () => { // loads the header and the footer on DOMContentLoaded
 	await loadNavbar();
 	await loadFooter();
+	// await loadExhibitionPreview()
 }); 

@@ -1,42 +1,42 @@
+
 {
   "meta": {
-    "startWith": null, // placeholders
+    "startWith": "Chronological", 
     "startNarrative": null,
     "startValue": null,
     "narratives": [
-      "Historical",
+      "Chronological",
       "Hollow Knight"
     ]
   },
-  "objects" : [ // ?? An example: Marble column
+  "items" : [ 
     {
       "shortName" : "Marble column",
-      "itemText": null, // would be marbleColumn.html
-      "itemImages": [null, null, null], // a list of images to go between
-      "hollowKnightImages": [null, null, null], 
+      "itemText": null, 
+      "itemImages": ["ancient-basin-I1", "ancient-basin-I2", "ancient-basin-I3"], 
+      "hollowKnightImages": ["ancient-basin-A1", "ancient-basin-A2"],
       "metadata": {
         "Full Name": "Marble column with base and capital",
         "Year" : "138 CE",
         "Historical movement/period": "Hadrianic",
         "Associated Hollow Knight area": "Ancient Basin"
       }
-      // additional attributes (for these)...
     }
-  ], // a LIST of objects
+  ], 
   "areas" : {
 	"Dirtmouth": {
 		"areaNumber": 1,
-		"previousDirection": "", // <!-- ← → ↔ ↑ ↓ , ↕ , ↖ ↗ ↘ ↙ -->
-		"nextDirection": "↓" // ?? down
+		"previousDirection": "", 
+		"nextDirection": "↓" 
 	},
 	"Forgotten Crossroads": {
 		"areaNumber": 2,
-		"previousDirection": "↑", // ?? up
-		"nextDirection": "←" // ?? left
+		"previousDirection": "↑", 
+		"nextDirection": "←"
 	},
 	"Greenpath": {
 		"areaNumber": 3,
-		"previousDirection": "→", // ?? right
+		"previousDirection": "→", 
 		"nextDirection": "↘"
 	},
 	"Fungal Wastes": {
@@ -87,7 +87,7 @@
 	"Ancient Basin": {
 		"areaNumber": 13,
 		"previousDirection": "↑",
-		"nextDirection": "↗" //
+		"nextDirection": "↗" 
 	},
 	"Kingdom's Edge": {
 		"areaNumber": 14,
@@ -106,5 +106,3 @@
 	}
 	}
 }
-// before objects are implemented, one needs to tested on its own for layout purposes
-// ! Note: Map areas in Hollow Knight to a dictionary
