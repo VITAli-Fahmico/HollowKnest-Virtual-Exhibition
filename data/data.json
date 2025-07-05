@@ -20,9 +20,91 @@
         "Historical movement/period": "Hadrianic",
         "Associated Hollow Knight area": "Ancient Basin"
       }
-      // additional attributes (for these objects)...
+      // additional attributes (for these)...
     }
-  ]
+  ], // a LIST of objects
+  "areas" : {
+	"Dirtmouth": {
+		"areaNumber": 1,
+		"previousDirection": "", // <!-- ← → ↔ ↑ ↓ , ↕ , ↖ ↗ ↘ ↙ -->
+		"nextDirection": "↓" // ?? down
+	},
+	"Forgotten Crossroads": {
+		"areaNumber": 2,
+		"previousDirection": "↑", // ?? up
+		"nextDirection": "←" // ?? left
+	},
+	"Greenpath": {
+		"areaNumber": 3,
+		"previousDirection": "→", // ?? right
+		"nextDirection": "↘"
+	},
+	"Fungal Wastes": {
+		"areaNumber": 4,
+		"previousDirection": "↖",
+		"nextDirection": "→"
+	},
+	"City of Tears (L)": {
+		"areaNumber": 5,
+		"previousDirection": "←",
+		"nextDirection": "↗"
+	},
+	"Crystal Peak": {
+		"areaNumber": 6,
+		"previousDirection": "↙",
+		"nextDirection": "↓"
+	},
+	"Resting Grounds": {
+		"areaNumber": 7,
+		"previousDirection": "↑",
+		"nextDirection": "↖"
+	},
+	"Howling Cliffs": {
+		"areaNumber": 8,
+		"previousDirection": "↘",
+		"nextDirection": "↓"
+	},
+	"Fog Canyon": {
+		"areaNumber": 9,
+		"previousDirection": "↑",
+		"nextDirection": "→"
+	},
+	"City of Tears (R)": {
+		"areaNumber": 10,
+		"previousDirection": "←",
+		"nextDirection": "↙"
+	},
+	"Deepnest": {
+		"areaNumber": 11,
+		"previousDirection": "↗",
+		"nextDirection": "→"
+	},
+	"Royal Waterways": {
+		"areaNumber": 12,
+		"previousDirection": "←",
+		"nextDirection": "↓"
+	},
+	"Ancient Basin": {
+		"areaNumber": 13,
+		"previousDirection": "↑",
+		"nextDirection": "↗" //
+	},
+	"Kingdom's Edge": {
+		"areaNumber": 14,
+		"previousDirection": "↙",
+		"nextDirection": "↓"
+	},
+	"The Hive": {
+		"areaNumber": 15,
+		"previousDirection": "↑",
+		"nextDirection": "↖"
+	},
+	"Queen's Gardens": {
+		"areaNumber": 16,
+		"previousDirection": "↘",
+		"nextDirection": ""
+	}
+	}
 }
 // before objects are implemented, one needs to tested on its own for layout purposes
 // ! Note: Map areas in Hollow Knight to a dictionary
