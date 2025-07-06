@@ -1,9 +1,9 @@
 
 {
   "meta": {
-    "startWith": "Chronological", 
-    "startNarrative": null,
-    "startValue": null,
+    "startWith": 0, 
+    "startNarrative": "Hollow Knight",
+    "startValue": "Ancient Basin",
     "narratives": [
       "Chronological",
       "Hollow Knight"
@@ -16,9 +16,10 @@
 		"itemImages": ["royal_waterways_I1.jpg", "royal_waterways_I2.jpg", "royal_waterways_I3.jpg"],
     	"hollowKnightImages": ["royal_waterways_A1.jpg", "royal_waterways_A2.jpg"],
 		"areaId": "royal-waterways",
+		"yearId" : 1859,
     	"metadata": {
 			"Full Name": "Marble column with base and capital",
-			"Year" : "1859",
+			"Year" : "1845 - 1859",
 			"Historical movement/period": "English Gothic Revival",
 			"Associated Hollow Knight area": "Royal Waterways"
       }
@@ -29,11 +30,26 @@
 		"itemImages": ["ancient_basin_I1.jpg", "ancient_basin_I2.jpg", "ancient_basin_I3.jpg"], 
 		"hollowKnightImages": ["ancient_basin_A1.jpg", "ancient_basin_A2.jpg"],
 		"areaId": "ancient-basin",
+		"yearId" : 138,
 		"metadata": {
 			"Full Name": "Marble column with base and capital",
 			"Year" : "138 CE",
 			"Historical movement/period": "Hadrianic",
 			"Associated Hollow Knight area": "Ancient Basin"
+      }
+        },
+	    {
+		"shortName" : "Mememto mori",
+		"itemText": null, 
+		"itemImages": ["kingdoms_edge_I1.jpg", "kingdoms_edge_I2.jpg", "kingdoms_edge_I3.jpg"], 
+		"hollowKnightImages": ["kingdoms_edge_A1.jpg", "kingdoms_edge_A2.jpg"],
+		"areaId": "kingdoms-edge",
+		"yearId" : 1900,
+		"metadata": {
+			"Full Name": "Memento mori showing woman with half a head and half a skull",
+			"Year" : "1801 – 1900",
+			"Historical movement/period": "Industrial Revolution",
+			"Associated Hollow Knight area": "Kingdom's Edge"
       }
     }
   ], 

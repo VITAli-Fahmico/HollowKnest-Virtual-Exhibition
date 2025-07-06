@@ -41,12 +41,11 @@ html, body {
     min-height: 56px; /* smooth reload */
 }
 
-#navbar {
+.navbar-background {
     background-color: rgb(33, 37, 41);
-    /* position: sticky; */
 }
 
-#footer {
+.footer-background {
     background-color:  rgb(248, 249, 250);
 }
 

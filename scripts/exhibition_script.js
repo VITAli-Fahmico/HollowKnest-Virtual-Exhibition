@@ -13,24 +13,25 @@ let currentSelection = []
 let currentNarrative = ""
 let currentValue = ""
 let currentSort = ""
+let areas = []
 
 // runs the function when ready (i.e. everything inside the brackets)
 
 // the event listener in this case is attached to the ENTIRE document
 // ∞ parameters (event, function to run)
-document.addEventListener("DOMContentLoaded", async function(event) { 
+document.addEventListener("DOMContentLoaded", async function() { 
 	fetch('data/data.json')
 	.then(response => response.json())
 	.then(data => {	
 		items = data.items
 		let startWith = data.meta.startWith
-		let item = items[startWith]
+		// let item = items[startWith]
 
 		narratives = data.meta.narratives
 		currentNarrative = data.meta.startNarrative
 		currentValue = data.meta.startValue
 		areas = data.areas
-		prepareNarratives()
+		prepareNarratives(currentNarrative)
 	})
 });
 
@@ -40,7 +41,31 @@ document.addEventListener("DOMContentLoaded", async function(event) {
 
 // ! function : prepare narratives
 // show information
-// function prepareNarratives() {
+
+function prepareNarratives(narrativeType) {
+	if (narrativeType === "Chronological") {
+		items.sort((itemA, itemB) => itemA.yearId - itemB.yearId);
+
+	} else if (narrativeType === "Hollow Knight") {
+		items.sort((itemA, itemB) => {
+			const areaA = itemA.metadata["Associated Hollow Knight area"];
+			const areaB = itemB.metadata["Associated Hollow Knight area"];
+			const areaOrderA = areas[areaA].areaNumber;
+			const areaOrderB = areas[areaB].areaNumber;
+			return areaOrderA - areaOrderB;
+		});
+	}; 
+
+	// ! not done here yet...
+	let index = currentSelection.findIndex(item => {item[narrativeType] == currentSort})
+	if (index == -1) {
+		index = 0
+	}; // test if it works....
+	// showInfo(index)
+}
+
+// function showInfo(index) {
+
 // }
 
 // ! function : show information 

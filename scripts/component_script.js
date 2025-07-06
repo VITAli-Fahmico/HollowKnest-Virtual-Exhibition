@@ -1,7 +1,7 @@
 const componentDirectory = "components";
 const stylesheetsDirectory = "stylesheets";
 
-async function loadComponent(fileName, placeholderId) { // for loading essential HTML content into each placeholder
+async function loadComponent(fileName, placeholderId, backgroundClass) { // for loading essential HTML content into each placeholder
 	try {
 		const response = await fetch(`${componentDirectory}/${fileName}`);
 		if (!response.ok) {
@@ -9,6 +9,11 @@ async function loadComponent(fileName, placeholderId) { // for loading essential
 		}
 		const htmlContent = await response.text();
 		document.getElementById(placeholderId).innerHTML = htmlContent; // injects the HTML content here
+
+		const component = document.querySelector("#" + placeholderId); // for getting rid of the temporary background
+      	if (component) {
+        	component.classList.remove(backgroundClass);
+      	}
 	} catch (error) {
 		console.error(`Error loading ${fileName}:`, error);
 		true
@@ -16,7 +21,7 @@ async function loadComponent(fileName, placeholderId) { // for loading essential
 }
 
 async function loadNavbar() {
-	await loadComponent("navbar.html", "navbar");
+	await loadComponent("navbar.html", "navbar", "navbar-background");
 
 	const currentPage = window.location.pathname.split("/").pop();  // gets only the ending (e.g. map.html without the start of the filename path)
 	const navLinks = document.querySelectorAll("#navbar a.nav-link");
@@ -30,7 +35,7 @@ async function loadNavbar() {
 }
 
 async function loadFooter() {
-	await loadComponent("footer.html", "footer");
+	await loadComponent("footer.html", "footer", "footer-background");
 }
 
 // ! if on the exhibition page
