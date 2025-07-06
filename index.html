@@ -3,7 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Title page</title>
+        <title>HollowKnest</title>
+
+        <!--for SemWeb-->
+        <!--Dublin Core section-->
+        <!--  Dublin Core schemas -->
+        <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+        <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+        <!--Dublin Core Metadata-->
+        <meta name="DC.title" content="HollowKnest" />
+        <meta name="DC.creator" content="Fahmida Islam, Nico Napoli" />
+        <meta name="DC.subject" content="Digital Humanities Project, Cultural Heritage, Video Game, Hollow Knight, Digital Exhibition" />
+        <meta name="DC.description" content="A virtual exhibition connecting areas of the video game Hollow Knight to real-world cultural heritage objects." />
+        <meta name="DC.publisher" content="University of Bologna, DHDK MA Program" />
+        <meta name="DC.rights" content="© 2025 Fahmida Islam, Nico Napoli. Educational use only." />
+
+        <!--put url of website!!!-->
+        <meta name="DC.identifier" content="https://yourprojectdomain.unibo.it" />
+        <meta name="DC.type" scheme="DCTERMS.DCMIType" content="InteractiveResource" />
+
+
+        <!--RFC 3066 scheme for language codes-->
+        <meta name="DC.language" scheme="DCTERMS.RFC3066" content="en" />
+        <meta name="DC.language" scheme="DCTERMS.RFC3066" content="it" />
+        <!-- More precise with DCTERMS -->
+        <meta name="DCTERMS.created" content="2025-02-18" />
+        <meta name="DCTERMS.issued" content="2025-07-07" />
+
+
         <link rel="stylesheet" href="styles.css">
         <link id="theme-link" rel="stylesheet" href="stylesheets/futuristic.css" type="text/css"> 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css"> -->
@@ -11,60 +38,86 @@
         <script src="scripts/component_script.js"></script>
         <script src="scripts/exhibition_script.js"></script>
         <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+        <!--for icons-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
-    <body>
-        <header id="navbar" class="navbar-background"></header>
+     <body>
+        <header id="navbar"></header>
         <main class="my-5">
             <div class="container">
                 <div class="row">
-                    <img src="assets/img/hollowknight-wallpaper.jpg">
+                    <!--Fahmida-->
+                    <div class="col">
+                        <img src="assets/img/hollowknight-wallpaper.jpg">
                         <h1 class="my-2">
                             <!--i want to visualize in the home page the transition from HollowKnight - Hollownest - HollowKnest in css-->
                             <p><span class="typed" data-typed-items="HollowKnight, Hollownest, HollowKnest">HollowKnest</span></p>
                         </h1>
-                    <!--Fahmida-->
-                    <div class="col">
-                        <p>Are you ready to discover all the cultural connections between the Hollownest Kingdom in <em>Hollow Knight</em> and our world?</p>
-                        <p>Explore the items in the exhibition following either the Historical Narrative or the Game Narrative. 
-                            You can also switch in between if you are curious about one or the other! 
-                            Both are very insightful and will make you want to search for more connections yourself!</p>
-                        <p>You don't have much time? Don't worry! 
-                            You are in the right place if you are here for a quick visit or want to discover every insect and 
-                            hero hiding in the corners of this exhibition! You can also learn more about the related items 
-                            through their QR codes. </p>
+
+                        <p>Are you ready to discover all the cultural connections between the Hollownest Kingdom in <i>Hollow Knight</i> and our world?</p>
+                        <p>Explore the items in the exhibition following either the Historical Narrative or the Game Narrative. You can also switch in between if you are curious about one or the other! Both are very insightful and will make you want to search for more connections yourself!</p>
+                        <p>You don't have much time? Don't worry! You are in the right place if you are here for a quick visit or want to discover every insect and hero hiding in the corners of this exhibition! You can also learn more about the related items through their QR codes. </p>
                     </div>
                 </div>
+
                 <div class="row my-5">
                     <div class="col">
                         <h1 class="my-2">About Hollow Knight</h1>
                         <!--write short game description-->
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia suscipit laboriosam commodi culpa omnis nobis quidem aperiam illum quae exercitationem! 
-                            Nemo error ipsa iure suscipit sit sed nihil tempore tempora voluptas ea iste ipsam fugiat, inventore ratione quibusdam, quo exercitationem esse distinctio neque. 
-                            Nulla architecto laudantium magni aperiam veritatis repellat labore nobis, tempore consectetur in laboriosam illum perspiciatis obcaecati ea, 
-                            illo voluptas accusamus explicabo vitae modi deserunt soluta saepe veniam est aut. Dicta, a necessitatibus? Quos nesciunt architecto molestias error, 
-                            excepturi saepe fugiat quod vero reiciendis nihil perspiciatis enim cum eveniet! Eos reiciendis dolorem vitae ex accusamus incidunt quibusdam magni sunt, 
-                            molestiae odit sapiente ut amet, libero suscipit distinctio beatae ducimus, nemo quia sed ipsam! Officiis deserunt mollitia sint, 
-                            impedit totam eaque suscipit omnis id minus porro quasi est aliquid quam odit, beatae laborum fugit voluptas quidem, explicabo quos facere fugiat. 
-                            Repudiandae reiciendis eum culpa velit incidunt, qui consequatur temporibus, exercitationem vitae, dolorum non provident quasi error. 
-                            Consectetur repellendus, officia nesciunt quibusdam ex qui distinctio aliquid debitis incidunt perspiciatis voluptate pariatur fuga cum! 
-                            Praesentium voluptatem doloribus ducimus corrupti necessitatibus sint, voluptate non molestiae deleniti alias eos iusto esse, 
-                            quidem sit vero quod expedita et obcaecati iure repellendus. Asperiores, iure? Praesentium est iusto quidem modi. Distinctio molestias doloribus dolores, 
-                            cupiditate assumenda deleniti. Itaque porro veritatis quae nesciunt quidem quasi non, in mollitia adipisci,
-                            culpa blanditiis veniam expedita magni enim quia accusamus delectus voluptate molestiae? Exercitationem ratione, 
-                            incidunt facilis soluta nobis dolor beatae voluptates rerum est ab libero in corporis asperiores repellat.
-                        </p>
+                        <p><a href="https://www.hollowknight.com/"><i>Hollow Knight</i></a> is a 2D epic adventure game made by <a href="https://www.teamcherry.com.au/">studio Team Cherry</a>. Set in the mysterious, underground world of Hallownest. The main character is a small but brave bug - going by the same name as the game itself - exploring ancient ruins, battling strange creatures and uncovering hidden secrets.
+                        <br/>The game offers a rich and unforgettable journey through its beautiful hand-drawn art and atmospheric storytelling.</p>
+                        <p>Discover more about the lore of the game in the <a href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki">fanmade wiki page!</a></p>
                     </div>
                 </div>
+                
+                <!--card carousel-->
                 <div class="row my-5">
-                    <div class="col"> <!-- ?? card body -->
+                    <div class="col">
+                        <h1 class="my-2">Items</h1>
+                        <p></p>
+                </div>
+
+                <!--team section-->
+                <div class="row my-5">
+                    <div class="col">
+                        <section class="team-section">
+                            <div class="team-member">
+                                <img src="assets/img/fahmida.jpg" alt="">
+                                <h3>Fahmida Islam</h3>
+                                <a href="https://github.com/Fahmyrose/" target="_blank" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="assets/img/nico.jpg" alt="">
+                                <h3>Nico Napoli</h3>
+                                <a href="https://github.com/nichothenacho64" target="_blank" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                    </a>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
         </main>
-        <footer id="footer" class="footer-background"></footer>
+
+        <footer id="footer">
+
+        </footer>
     </body>
 </html>
+
+<!--
+emnet
+p.mt-4 = <p class="mt-4></p>
+mt = margin top
+
+PUBLISH: 
+Navigate to the folder of your choice –> go to folder
+write mdb publish
+mdb go -> publish a website
+-->
 
 <!--
 emnet
