@@ -11,6 +11,90 @@
   },
   "items" : [ 
 	{
+    	"shortName" : "Urethral syringe",
+    	"itemText": null, 
+		"itemImages": ["greenpath_I1.jpg"],
+    	"hollowKnightImages": ["greenpath_A1.jpg", "greenpath_A2.jpg"],
+		"areaId": "greenpath",
+		"yearId" : 1545,
+    	"metadata": {
+			"Full Name": "Cast iron balcony front designed by Hector Guimard",
+			"Year": "1545, discovered in 1982",
+			"Historical movement/period": "Renaissance (Tudor England)",
+			"Associated Hollow Knight area": "Greenpath"
+    	}
+    },
+  	{
+    	"shortName" : "Balcony front",
+    	"itemText": null, 
+		"itemImages": ["city_of_tears_left_I1.jpg", "city_of_tears_left_I2.jpg", "city_of_tears_left_I3.jpg"],
+    	"hollowKnightImages": ["city_of_tears_left_A1.jpg", "city_of_tears_left_A2.jpg"],
+		"areaId": "city-of-tears-left",
+		"yearId" : 1900,
+    	"metadata": {
+			"Full Name": "Cast iron balcony front designed by Hector Guimard",
+			"Year": "1900",
+			"Historical movement/period": "Art Noveau",
+			"Associated Hollow Knight area": "City of Tears (L)"
+    	}
+    },
+	{
+    	"shortName" : "Frieze",
+    	"itemText": null, 
+		"itemImages": ["crystal_peak_I1.jpg", "crystal_peak_I2.jpg", "crystal_peak_I3.jpg"],
+    	"hollowKnightImages": ["crystal_peak_A1.jpg", "crystal_peak_A2.jpg"],
+		"areaId": "crystal-peak",
+		"yearId" : 500,
+    	"metadata": {
+			"Full Name": "Decorative Frieze with Wolves Chasing Gazelles",
+			"Year": "300 - 500 CE",
+			"Historical movement/period": "Byzantine / Coptic",
+			"Associated Hollow Knight area": "Crystal Peak"
+    	}
+    },
+	{
+    	"shortName" : "Ships surrealist painting",
+    	"itemText": null, 
+		"itemImages": ["resting_grounds_I1.jpg"],
+    	"hollowKnightImages": ["resting_grounds_A1.jpg"],
+		"areaId": "resting-grounds",
+		"yearId" : 1927,
+    	"metadata": {
+			"Full Name": "Ships in the Dark",
+			"Year": "1927",
+			"Historical movement/period": "Surrealism / Abstract Modernism",
+			"Associated Hollow Knight area": "Resting Grounds"
+    	}
+    },
+		{
+    	"shortName" : "Celluloid exterior accordion",
+    	"itemText": null, 
+		"itemImages": ["howling_cliffs_I1.jpg", "howling_cliffs_I2.jpg", "howling_cliffs_I3.jpg"],
+    	"hollowKnightImages": ["howling_cliffs_A1.jpg"],
+		"areaId": "howling-cliffs",
+		"yearId" : 1916,
+    	"metadata": {
+			"Full Name": "Celluloid exterior accordion",
+			"Year": "1916 – 1919",
+			"Historical movement/period": "Arts & Crafts",
+			"Associated Hollow Knight area": "Howling Cliffs"
+    	}
+    },
+	{
+    	"shortName" : "Steampunk elevator",
+    	"itemText": null, 
+		"itemImages": ["city_of_tears_right_I1.jpg", "city_of_tears_right_I2.jpg", "city_of_tears_right_I3.jpg"],
+    	"hollowKnightImages": ["city_of_tears_right_A1.jpg", "city_of_tears_right_A2.jpg"],
+		"areaId": "city-of-tears-right",
+		"yearId" : 1903,
+    	"metadata": {
+			"Full Name": "Elevator in the house of S. Muyaki",
+			"Year": "1903",
+			"Historical movement/period": "Steampunk",
+			"Associated Hollow Knight area": "City of Tears (R)"
+    	}
+    },
+	{
     	"shortName" : "Decorative oak panel",
     	"itemText": null, 
 		"itemImages": ["royal_waterways_I1.jpg", "royal_waterways_I2.jpg", "royal_waterways_I3.jpg"],
@@ -19,12 +103,12 @@
 		"yearId" : 1859,
     	"metadata": {
 			"Full Name": "Marble column with base and capital",
-			"Year" : "1845 - 1859",
+			"Year": "1845 - 1859",
 			"Historical movement/period": "English Gothic Revival",
 			"Associated Hollow Knight area": "Royal Waterways"
-      }
+    	}
     },
-	    {
+	{
 		"shortName" : "Marble column",
 		"itemText": null, 
 		"itemImages": ["ancient_basin_I1.jpg", "ancient_basin_I2.jpg", "ancient_basin_I3.jpg"], 
@@ -33,12 +117,12 @@
 		"yearId" : 138,
 		"metadata": {
 			"Full Name": "Marble column with base and capital",
-			"Year" : "138 CE",
+			"Year": "138 CE",
 			"Historical movement/period": "Hadrianic",
 			"Associated Hollow Knight area": "Ancient Basin"
-      }
-        },
-	    {
+    	}
+    },
+	{
 		"shortName" : "Mememto mori",
 		"itemText": null, 
 		"itemImages": ["kingdoms_edge_I1.jpg", "kingdoms_edge_I2.jpg", "kingdoms_edge_I3.jpg"], 
@@ -47,10 +131,24 @@
 		"yearId" : 1900,
 		"metadata": {
 			"Full Name": "Memento mori showing woman with half a head and half a skull",
-			"Year" : "1801 – 1900",
+			"Year": "1801 – 1900",
 			"Historical movement/period": "Industrial Revolution",
 			"Associated Hollow Knight area": "Kingdom's Edge"
-      }
+    	}
+    },
+		{
+    	"shortName" : "Faith and Hope",
+    	"itemText": null, 
+		"itemImages": ["queens_gardens_I1.jpg"],
+    	"hollowKnightImages": ["queens_gardens_A1.jpg", "queens_gardens_A2.jpg"],
+		"areaId": "queens-gardens",
+		"yearId" : 1869,
+    	"metadata": {
+			"Full Name": "The Faith and Hope Stained-Glass Window",
+			"Year": "1867 – 1869",
+			"Historical movement/period": "American Gothic",
+			"Associated Hollow Knight area": "Queen's Gardens"
+    	}
     }
   ], 
   "areas" : {
