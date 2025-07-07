@@ -25,20 +25,18 @@
 
         <section class="card-body">
           <div class="row">
-            <div class="d-flex col"> <!-- col-sm-12 col-md-6 -->
+            <div class="d-flex col card-section"> 
               <figure class="image-frame ratio">
-                <!-- <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/250646/1794086/main-image" alt="" class="img-object-fit"> -->
                 <img id="itemImageArea" src="" alt="" class="img-object-fit">
               </figure>
             </div>
             
-            <div class="col">		
+            <div class="col card-section">		
               <figure class="image-frame">
-                <!-- <img src="https://64.media.tumblr.com/0a2926f45709cf86aa92c10a069cca48/e0d954ca98c131c3-a0/s2048x3072/c23d0859f16fa5fe8f13b7de134632670aab0225.pnj" alt="" class="img-object-fit"> -->
                  <img id="hollowKnightImageArea" src="" alt="" class="img-object-fit">
               </figure>
               <section>
-                <table class="table table-striped border mb-0" id="table"> <!-- /* d-md-block */ -->
+                <table class="table table-striped border mb-0" id="table"> 
                     <tbody id="metadataTable">
                       <tr>
                         <th>Full name</th>
@@ -62,16 +60,16 @@
             </div>
 
             <div class="col-sm-12 my-4">
-              <button href="#" type="button" class="btn btn-primary" id="buttonNext">Increase topic difficulty</button>
-              <button href="#" type="button" class="btn btn-primary" id="buttonNext">Increase language difficulty</button>
+              <button href="#" type="button" class="btn btn-primary content-button" id="topicDifficulty">Increase topic difficulty</button>
+              <button href="#" type="button" class="btn btn-primary content-button" id="languageDifficulty">Increase language difficulty</button>
             </div>
           </div>
           <section id="card-text">
             <article class="fst-italic">
               <p id="historicalNarrativeArea"></p>
               <p id="hollowKnightNarrativeArea"></p>
-              </article>
-              <article class="my-2">
+            </article>
+            <article class="my-2">
               <p id="shortTextArea" class=""></p>
               <p id="mediumTextArea" class=""></p>
               <p id="longTextArea" class=""></p>
@@ -81,10 +79,10 @@
         </section>
 
         <footer class="card-footer">
-          <nav class="d-flex justify-content-between"> <!-- align items center -->
-            <a href="#" class="btn btn-primary" id="previousButton"></a> <!-- Royal Waterways ↑ -->
+          <nav class="d-flex justify-content-between"> 
+            <a href="#" class="btn btn-primary" id="previousButton"></a> 
             <h3 id="narrativeItem"></h3>
-            <a href="#" class="btn btn-primary" id="nextButton"></a> <!--  -->
+            <a href="#" class="btn btn-primary" id="nextButton"></a> 
           </nav>
         </footer>
         </section>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="60" viewBox="0 0 280 60" role="img" aria-label="HollowKnest Logo">
+  <style>
+    .text { font-family: 'Georgia', serif; font-size: 32px; fill: #ffffff; dominant-baseline: middle; }
+    .highlight { fill: #8fd3ff; }
+    .bg { fill: #1a1a1a; }
+  </style>
+  <!-- Background rectangle with minimal padding -->
+  <rect class="bg" width="280" height="60" rx="10"></rect>
+  
+  <!-- Bug-horn style emblem -->
+  <path d="M40,20 Q30,0 20,20 Q30,10 40,20 Z" fill="#8fd3ff"></path>
+  <circle cx="30" cy="35" r="10" fill="#ffffff"></circle>
+  <path d="M26,32 Q30,26 34,32 Q30,38 26,32 Z" fill="#1a1a1a"></path>
+
+  <!-- Text: hollowknest -->
+  <text x="60" y="34" class="text">hollow<tspan class="highlight">knest</tspan></text>
+</svg>

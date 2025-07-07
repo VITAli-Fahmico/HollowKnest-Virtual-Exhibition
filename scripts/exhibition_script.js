@@ -167,28 +167,27 @@ function getNavigationElements(itemIndex) {
 	if (itemIndex > 0) {
 		previousButtonDisabled = false;
 		previousButtonMetadata = currentSelection[itemIndex - 1].metadata[metadataAttribute];
+		document.getElementById("previousButton").innerHTML = previousButtonMetadata;
 	} else {
 		previousButtonDisabled = true;
-		previousButtonMetadata = "--";
+		previousButtonMetadata = null;
+		document.getElementById("previousButton").style.visibility = "hidden";
 	}
 
 	if (itemIndex < currentSelection.length - 1) {
 		nextButtonDisabled = false;
 		nextButtonMetadata = currentSelection[itemIndex + 1].metadata[metadataAttribute];
+		document.getElementById("nextButton").innerHTML = nextButtonMetadata;
 	} else {
 		nextButtonDisabled = true
-		nextButtonMetadata = "--"
+		nextButtonMetadata = null;
+		document.getElementById("nextButton").style.visibility = "hidden";
 	}
-
 	document.getElementById("previousButton").disabled = previousButtonDisabled;
 	document.getElementById("nextButton").disabled = nextButtonDisabled;
 
-	document.getElementById("previousButton").innerHTML = previousButtonMetadata;
-	document.getElementById("nextButton").innerHTML = nextButtonMetadata;
-
 	document.getElementById("cardTitle").innerHTML = currentSelection[itemIndex].shortName
 }
-
 
 
 // ! function : show information 
