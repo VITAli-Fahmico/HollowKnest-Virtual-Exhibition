@@ -2,24 +2,24 @@ const imageDirectory = "assets";
 
 function styleImages(className, hollowKnightImage, itemImage) {
     const style = document.createElement("style");
+
     style.innerHTML = `
     .${className} {
-        background-image: ${hollowKnightImage};
+        background-image: ${hollowKnightImage}; 
         background-color: rgb(0, 0, 0, 0.5);
         background-blend-mode: multiply;
         background-size: cover;       
         background-position: center;
     }
     
-    .${className}:hover {
-        background-image: ${itemImage};
+    .${className}-text:hover {
+        background-image: ${itemImage}; 
         background-color: rgb(0, 0, 0, 0.5);
         background-blend-mode: multiply;
         background-size: cover;       
         background-position: center;
-    }
-
     }`;
+    console.log(style)
     document.head.appendChild(style);
 }
 

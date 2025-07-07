@@ -1,5 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+/* --purple-gradient: linear-gradient(135deg, rgb(196, 113, 237, 0.5), rgb(106, 130, 251, 0.5)); */
+
+:root {
+    --color-bg: #121212;
+    --color-nav: rgb(36, 36, 36);
+
+    --color-surface: #1E1E1E;
+    --color-primary: #BB86FC;
+    --color-primary-variant: #3700B3;
+    --color-secondary: #03DAC6;
+    --color-secondary-variant: #018786;
+    --color-error: #CF6679;
+
+    --text-high: rgba(255, 255, 255, 0.87);
+    --text-medium: rgba(255, 255, 255, 0.60);
+    --text-disabled: rgba(255, 255, 255, 0.38);
+    --border-outline: rgba(255, 255, 255, 0.12);
+}
+
+
+body {
+    font-family: 'Nunito Sans', sans-serif !important;
+    color: var(--text-high) !important;
+}
+
 html { /* placeholder text */
     width: 100%;
 }
 
+nav.navbar, footer, .navbar-background, .footer-background {
+    background-color: var(--color-nav) !important;
+    /* color: var(--text-high) !important; */
+}
+/* rgba(255, 255, 255, 0.12) */
+
+body {
+    background-color: var(--color-bg) !important;
+    color: var(--text-high);
+}
+
+footer div {
+    color: var(--text-high) !important;
+}
+
 /* what? Do gradients... */
+/* every 1st should be one colour, the 2nd another, and the 3rd another, change accordingly  */
+
+.background-shading:nth-child(3n+1) {
+    filter: contrast(75%) sepia(100%) hue-rotate(190deg) saturate(300%) blur(3px); /* purple, blue 200 */
+}
+
+.background-shading:nth-child(3n+2) {
+    filter: contrast(75%) sepia(100%) hue-rotate(250deg) saturate(300%) blur(3px); /* pink 250 */
+}
+
+.background-shading:nth-child(3n+3) {
+    filter: contrast(75%) sepia(100%) hue-rotate(320deg) saturate(300%) blur(3px); /* pink 250 */
+}
+
+.bg-dark {
+    --bs-bg-opacity: 0;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0;
+}
+
+.dropdown-menu {
+    --bs-dropdown-bg: var(--color-nav);
+}
+
+.dropdown-item {
+    color: var(--text-medium);
+}
+
+.footer-text {
+    color: var(--text-high) !important;
+}
+
+.navbar-nav {
+    background-color: var(--color-nav) !important;
+}
