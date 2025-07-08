@@ -82,19 +82,17 @@ function getItemInformation(itemIndex) {
 
 function getItemText(itemIndex) { 
 	let item = currentSelection[itemIndex];
+	const itemNarrativeBridge = `${textsDirectory}/narrative_bridges.html`;
 	const itemTextFile = `${textsDirectory}/${currentTone}_${currentCompetency}/${item.itemText}`;
 
-	fetch(itemTextFile)
-	.then(res => res.text())
+	fetch(itemNarrativeBridge)
+	.then(response => response.text())
 	.then(htmlText => {
 		const tempDiv = document.createElement("div");
 		tempDiv.innerHTML = htmlText;
 
-		const historicalNarrative = tempDiv.querySelector("#historicalNarrative");
-		const hollowKnightNarrative = tempDiv.querySelector("#hollowKnightNarrative");
-		const shortText = tempDiv.querySelector("#shortText");
-		const mediumText = tempDiv.querySelector("#mediumText");
-		const longText = tempDiv.querySelector("#longText");
+		const historicalNarrative = tempDiv.querySelector(`.${item.areaId}-historical-text`);
+		const hollowKnightNarrative = tempDiv.querySelector(`${item.areaId}-hollow-knight-text`);
 
 		if (currentNarrative === "Chronological") {
 			document.getElementById("historicalNarrativeArea").appendChild(historicalNarrative);
@@ -103,6 +101,18 @@ function getItemText(itemIndex) {
 		} else {
 			console.warn("There is no narrative text specified for this item");
 		}
+
+	});
+
+	fetch(itemTextFile)
+	.then(response => response.text())
+	.then(htmlText => {
+		const tempDiv = document.createElement("div");
+		tempDiv.innerHTML = htmlText;
+
+		const shortText = tempDiv.querySelector("#shortText");
+		const mediumText = tempDiv.querySelector("#mediumText");
+		const longText = tempDiv.querySelector("#longText");
 
 		const textMap = {
 			"short": shortText,
@@ -172,7 +182,7 @@ function getNavigationElements(itemIndex) {
 		document.getElementById("previousButton").innerHTML = previousButtonMetadata;
 	} else {
 		previousButtonDisabled = true;
-		previousButtonMetadata = null;
+		previousButtonMetadata = "----";
 		document.getElementById("previousButton").style.visibility = "hidden";
 	}
 
@@ -182,9 +192,10 @@ function getNavigationElements(itemIndex) {
 		document.getElementById("nextButton").innerHTML = nextButtonMetadata;
 	} else {
 		nextButtonDisabled = true
-		nextButtonMetadata = null;
+		nextButtonMetadata = "----";
 		document.getElementById("nextButton").style.visibility = "hidden";
 	}
+	
 	document.getElementById("previousButton").disabled = previousButtonDisabled;
 	document.getElementById("nextButton").disabled = nextButtonDisabled;
 
