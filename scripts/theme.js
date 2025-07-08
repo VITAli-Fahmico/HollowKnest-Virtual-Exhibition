@@ -17,6 +17,7 @@ function setTheme(themeName) {
     if (themes[themeName]) {
         themePath = stylesheetsDirectory + "/" + themes[themeName];
         themeLink.href = themePath;
+        themeLink.classList.add("active");
         localStorage.setItem("theme", themeName); // change the theme, store the name not the path!!!
     } else {
         console.warn(`Theme "${themeName}" does not exist.`);

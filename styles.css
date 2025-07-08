@@ -71,6 +71,7 @@ html, body {
     gap: 2rem;
     padding: 2rem;
     background-color: #f9f9f9;
+    border-radius: 15px;
 }
 
 .team-member {

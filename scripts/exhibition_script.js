@@ -143,6 +143,8 @@ function getItemImages(itemIndex) { // temporarily just one
 	let hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
 	itemImageArea.src = imageDirectory + "/" + item.itemImages[0];
 	hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[0];
+	itemImageArea.alt = item.metadata.fullName;
+	hollowKnightImageArea.alt = item.metadata.hollowKnightArea;
 }
 
 function getNavigationElements(itemIndex) {
