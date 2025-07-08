@@ -152,7 +152,92 @@
 			"historicalPeriod": "American Gothic",
 			"hollowKnightArea": "Queen's Gardens"
     	}
-    }
+    },
+		{
+    	"shortName" : "St. Patrick’s Well",
+    	"itemText": null, 
+		"itemImages": ["dirtmouth_I1.jpg"],
+    	"hollowKnightImages": ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"],
+		"areaId": "dirtmouth",
+		"yearId" : 1791,
+    	"metadata": {
+			"fullName": "Plan and elevation of St. Patrick’s Well in Orvieto",
+			"year": "1791",
+			"historicalPeriod": "Enlightment",
+			"hollowKnightArea": "Dirtmouth"
+    	}
+    },
+		{
+    	"shortName" : "Pilgrim's Badge",
+    	"itemText": null, 
+		"itemImages": ["forgotten_crossroads_I1.jpg"],
+    	"hollowKnightImages": ["forgotten_crossroads_A1.jpg", "forgotten_crossroads_A2.jpg"],
+		"areaId": "forgotten-crossroads",
+		"yearId" : "400 - 1500",
+    	"metadata": {
+			"fullName": "French Pilgrim Badge",
+			"year": "400 - 1500",
+			"historicalPeriod": "Medieval Period",
+			"hollowKnightArea": "Forgotten Crossroads"
+		}
+    },
+		{
+    	"shortName" : "Noh Mask",
+    	"itemText": null, 
+		"itemImages": ["fungal_wastes_I1.jpg"],
+    	"hollowKnightImages": ["fungal_wastes_A1.jpg", "fungal_wastes_A2.jpg"],
+		"areaId": "fungal-wastes",
+		"yearId" : "1600",
+    	"metadata": {
+			"fullName": "Japanese Noh Mask",
+			"year": "1600",
+			"historicalPeriod": "Edo Period",
+			"hollowKnightArea": "Fungal Wastes"
+		}
+    },
+		{
+    	"shortName" : "A Wakeful Sleep",
+    	"itemText": null, 
+		"itemImages": ["fog_canyon_I1.jpg"],
+    	"hollowKnightImages": ["fog_canyon_A1.jpg", "fog_canyon_A2.jpg"],
+		"areaId": "fog-canyon",
+		"yearId" : "1400 - 1500",
+    	"metadata": {
+			"fullName": "'A Wakeful Sleep' handscroll by Tosa Mitsunobu",
+			"year": "1400 - 1500",
+			"historicalPeriod": "Zen Buddhism's influence on Japanese culture",
+			"hollowKnightArea": "Fog Canyon"
+		}
+    },
+		{
+    	"shortName" : "Golden Spider Silk",
+    	"itemText": null, 
+		"itemImages": ["deepnest_I1.jpg"],
+    	"hollowKnightImages": ["deepnest_A1.jpg", "deepnest_A2.jpg"],
+		"areaId": "deepnest",
+		"yearId" : "2009",
+    	"metadata": {
+			"fullName": "Golden Spider silk preservation method to make a handwoven Shawl",
+			"year": "2009",
+			"historicalPeriod": "Expansion of EAC in East Africa",
+			"hollowKnightArea": "Deepnest"
+		}
+    },
+		{
+    	"shortName" : "People’s Hive",
+    	"itemText": null, 
+		"itemImages": ["the_hive_I1.jpg"],
+    	"hollowKnightImages": ["the_hive_A1.jpg", "the_hive_A2.jpg"],
+		"areaId": "the-hive",
+		"yearId" : "1948",
+    	"metadata": {
+			"fullName": "Abbè Warre's 'People's Hive'",
+			"year": "1948",
+			"historicalPeriod": "French Miners' Strike",
+			"hollowKnightArea": "The Hive"
+	
+
+
   ], 
   "areas" : {
 	"Dirtmouth": {
@@ -234,6 +319,4 @@
 		"areaNumber": 16,
 		"previousDirection": "↘",
 		"nextDirection": ""
-	}
-	}
-}
+	},
