@@ -17,7 +17,7 @@
     <!-- ! how will this look in the future? -->
     <!-- first, the info page is loaded -->
     <!-- pressing a button onto a narrative then loads the actual page itself -->
-    <main class="my-5 exhibition">
+    <main class="my-2 exhibition">
       <article class="card" id="mainCard">
         <header class="card-header">
           <h2 class="text-center" id="cardTitle"></h2>
@@ -59,15 +59,14 @@
               </section>
             </div>
 
-            <div class="col-sm-12 my-4">
-              <button href="#" type="button" class="btn btn-primary content-button" id="topicDifficulty">Increase topic difficulty</button>
-              <button href="#" type="button" class="btn btn-primary content-button" id="languageDifficulty">Increase language difficulty</button>
+            <div class="col-sm-12 mt-4 mb-4">
+              <a href="#" type="button" id="contentDifficulty" onclick="changeTextContent()" class="btn btn-primary content-button"></a>
+              <a href="#" type="button" id="languageDifficulty" onclick="changeTextLanguage()" class="btn btn-primary content-button"></a>
             </div>
           </div>
           <section id="card-text">
             <article class="fst-italic">
-              <p id="historicalNarrativeArea"></p>
-              <p id="hollowKnightNarrativeArea"></p>
+              <p id="narrativeArea"></p>
             </article>
             <article class="my-2">
               <p id="shortTextArea" class=""></p>
@@ -75,10 +74,11 @@
               <p id="longTextArea" class=""></p>
               </article>
           </section>
-          <button class="btn btn-outline-primary btn-sm mb-4">Show less</button>
+          <button id="showLess" class="btn btn-outline-primary btn-sm mb-4" onclick="showLess()">Show less</button>
+          <button id="showMore" class="btn btn-outline-primary btn-sm mb-4" onclick="showMore()">Show more</button>
         </section>
 
-        <footer class="card-footer">
+        <footer class="card-footer align-items-center">
           <nav class="d-flex justify-content-between"> 
             <a href="#" class="btn btn-primary" id="previousButton"></a> 
             <h3 class="text-center" id="narrativeItem"></h3>

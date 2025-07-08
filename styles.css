@@ -218,6 +218,11 @@ figure.image-frame {
     object-position: center;
 }
 
+.limit-height {
+    max-height: 50vh !important; 
+    width: auto; 
+}
+
 /* ∞ Add animation and transition styles here /
 
 /* 
@@ -232,20 +237,38 @@ figure.image-frame {
     margin-bottom: 0 !important;
 }
 
+#narrativeItem {
+    font-size: 150% !important;
+    line-height: 1.6;
+}
+
 @media (max-width:992px) {
 	main.exhibition {
         font-size: 75% !important;
 	}
 
-    #cardTitle, #narrativeItem {
+    #cardTitle {
         line-height: 1 !important;
+        font-size: 200% !important;
+    }
+
+    #narrativeItem {
+        line-height: 1.4 !important;
     }
 
     .btn {
         font-size: 0.75rem !important;
     }
 
-    #nextButton {
-        line-height: 1 !important;
+    .card-footer {
+        height: var(--exhibition-card-footer-height) + 1em !important;
     }
+
+    #previousButton, #nextButton {
+        font-size: 0.55rem !important;
+    }
+
+/*     #nextButton {
+        line-height: 1 !important;
+    } */
 }

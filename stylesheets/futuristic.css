@@ -24,7 +24,7 @@
     --content-button-gradient: linear-gradient(135deg, var(--content-button-color-1), var(--content-button-color-2));
     --link-color: #ffa865; 
     --link-highlight-color: #f97b46;
-    --content-button-gradient: linear-gradient(135deg, #d69b6e, #db6938);
+    --content-button-gradient: linear-gradient(135deg, #dea070, #db602b);
 }
 
 /* ∞ navbar */
@@ -33,8 +33,8 @@
   color: #000000;
 } */
 
-@media only screen and (min-width: 992px) {
-  .navbar .navbar-nav .nav-item::after {
+@media only screen and (min-width: 992px) { 
+    .navbar .navbar-nav .nav-item::after {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -45,6 +45,7 @@
         width: 0%;
         content: "";
         height: 4px;
+        transition: width 0.25s ease-in-out;
     } /* ! add a transition here!!! */
 
     .navbar .navbar-nav .nav-item:hover::after {
@@ -63,8 +64,6 @@
 
 
 /* ∞ body */
-
-
 
 body {
     font-family: "Avenir", 'Nunito Sans', sans-serif !important;
@@ -131,8 +130,8 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
-#historicalNarrativeArea, #hollowKnightNarrativeArea {
-    color: var(--supplementary-body-text);
+#narrativeArea {
+    color: var(--supplementary-body-text) !important;
 }
 
 /* what? Do gradients... */
@@ -191,18 +190,18 @@ section > table {
 
 
 .background-shading:nth-child(3n+1) {
-    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(314deg) saturate(350%) blur(3.5px); /* purple, blue 200 */
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(322deg) saturate(350%) blur(3.5px); /* purple, blue 200 */
 }
 
 .background-shading:nth-child(3n+2) {
-    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(322deg) saturate(350%) blur(3.5px); /* crystal peak */
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(330deg) saturate(350%) blur(3.5px); /* crystal peak */
 }
 
 .background-shading:nth-child(3n+3) {
-    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(330deg) saturate(350%) blur(3.5px); /* waterways */
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(338deg) saturate(350%) blur(3.5px); /* waterways */
 }
 
-/* ∞ boostrap */
+/* ∞ overriding boostrap styles */
 
 .btn-primary {
     --bs-btn-color: var(--body-text);
@@ -214,7 +213,7 @@ section > table {
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: var(--content-button-color-1);
-    --bs-btn-active-border-color: var(--content-button-color-2);
+    /* --bs-btn-active-border-color: var(--content-button-color-2); */
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: var(--content-button-gradient);
@@ -223,14 +222,20 @@ section > table {
     background-image: var(--content-button-gradient);
 }
 
-.btn-outline-primary {
-    border-color: var(--content-button-color-2);
-    color: var(--content-button-color-2)
+.btn-primary {
+    transition: filter 0.25s ease-in-out;
 }
 
 .btn-primary:hover {
-    opacity: 0.75;
-    color: white;
+    filter: brightness(115%);
+}
+
+.btn-outline-primary {
+    color: var(--link-color);
+    border-color: var(--link-color);
+    transition: filter 0.25s ease-in-out;
+    --bs-btn-active-bg: var(--content-button-color-1);
+    --bs-btn-active-border-color: var(--content-button-color-1);
 }
 
 .btn-outline-primary:hover {
@@ -239,9 +244,12 @@ section > table {
     border-color: var(--content-button-color-1);
 }
 
-/* .content-button {
-    background-image: var(--content-button-gradient);
-} */
+.btn-outline-primary:disabled {
+    color: var(--link-color);
+    border-color: var(--link-color);
+    filter: opacity(50%);
+}
+
 .border {
     border: none !important;
 }
@@ -261,5 +269,3 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: var(--color-elevation-3) !important;
 }
-
-

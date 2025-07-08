@@ -2,15 +2,11 @@
 {
   "meta": {
     "startWith": 0, 
-    "startNarrative": "Hollow Knight",
+    "startNarrative": "Chronological",
     "startValue": "Ancient Basin",
-	"startTextDurations": ["short", "medium", "long"],
+	"allTextDurations": ["short", "medium", "long"],
 	"defaultTone": "adults",
-	"defaultCompetency": "advanced",
-    "narratives": [
-      "Chronological",
-      "Hollow Knight"
-    ]
+	"defaultCompetency": "advanced"
   },
   "items" : [ 
 	{
@@ -20,6 +16,7 @@
     	"hollowKnightImages": ["greenpath_A1.jpg", "greenpath_A2.jpg"],
 		"areaId": "greenpath",
 		"yearId" : 1545,
+		"qrCodeImage": "greenpath_qr_code",
     	"metadata": {
 			"fullName": "Cast iron balcony front designed by Hector Guimard",
 			"year": "1545, discovered in 1982",
@@ -29,11 +26,12 @@
     },
   	{
     	"shortName" : "Balcony front",
-    	"itemText": null, 
+    	"itemText": "city_of_tears.html", 
 		"itemImages": ["city_of_tears_left_I1.jpg", "city_of_tears_left_I2.jpg", "city_of_tears_left_I3.jpg"],
     	"hollowKnightImages": ["city_of_tears_left_A1.jpg", "city_of_tears_left_A2.jpg"],
 		"areaId": "city-of-tears-left",
 		"yearId" : 1900,
+		"qrCodeImage": "city_of_tears_left_qr_code",
     	"metadata": {
 			"fullName": "Cast iron balcony front designed by Hector Guimard",
 			"year": "1900",
@@ -48,6 +46,7 @@
     	"hollowKnightImages": ["crystal_peak_A1.jpg", "crystal_peak_A2.jpg"],
 		"areaId": "crystal-peak",
 		"yearId" : 500,
+		"qrCodeImage": "crystal_peak_left_qr_code",
     	"metadata": {
 			"fullName": "Decorative Frieze with Wolves Chasing Gazelles",
 			"year": "300 - 500 CE",
@@ -78,7 +77,7 @@
 		"yearId" : 1916,
     	"metadata": {
 			"fullName": "Celluloid exterior accordion",
-			"year": "1916 – 1919",
+			"year": "1916 - 1919",
 			"historicalPeriod": "Arts & Crafts",
 			"hollowKnightArea": "Howling Cliffs"
     	}
@@ -134,12 +133,12 @@
 		"yearId" : 1900,
 		"metadata": {
 			"fullName": "Memento mori showing woman with half a head and half a skull",
-			"year": "1801 – 1900",
+			"year": "1801 - 1900",
 			"historicalPeriod": "Industrial Revolution",
 			"hollowKnightArea": "Kingdom's Edge"
     	}
     },
-		{
+	{
     	"shortName" : "Faith and Hope",
     	"itemText": null, 
 		"itemImages": ["queens_gardens_I1.jpg"],
@@ -148,14 +147,14 @@
 		"yearId" : 1869,
     	"metadata": {
 			"fullName": "The Faith and Hope Stained-Glass Window",
-			"year": "1867 – 1869",
+			"year": "1867 - 1869",
 			"historicalPeriod": "American Gothic",
 			"hollowKnightArea": "Queen's Gardens"
     	}
     },
-		{
+	{
     	"shortName" : "St. Patrick’s Well",
-    	"itemText": null, 
+    	"itemText": "dirtmouth.html", 
 		"itemImages": ["dirtmouth_I1.jpg"],
     	"hollowKnightImages": ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"],
 		"areaId": "dirtmouth",
@@ -163,7 +162,7 @@
     	"metadata": {
 			"fullName": "Plan and elevation of St. Patrick’s Well in Orvieto",
 			"year": "1791",
-			"historicalPeriod": "Enlightment",
+			"historicalPeriod": "Enlightenment",
 			"hollowKnightArea": "Dirtmouth"
     	}
     },
@@ -173,7 +172,7 @@
 		"itemImages": ["forgotten_crossroads_I1.jpg"],
     	"hollowKnightImages": ["forgotten_crossroads_A1.jpg", "forgotten_crossroads_A2.jpg"],
 		"areaId": "forgotten-crossroads",
-		"yearId" : "400 - 1500",
+		"yearId" : 1500,
     	"metadata": {
 			"fullName": "French Pilgrim Badge",
 			"year": "400 - 1500",
@@ -187,7 +186,7 @@
 		"itemImages": ["fungal_wastes_I1.jpg"],
     	"hollowKnightImages": ["fungal_wastes_A1.jpg", "fungal_wastes_A2.jpg"],
 		"areaId": "fungal-wastes",
-		"yearId" : "1600",
+		"yearId" : 1600,
     	"metadata": {
 			"fullName": "Japanese Noh Mask",
 			"year": "1600",
@@ -201,7 +200,7 @@
 		"itemImages": ["fog_canyon_I1.jpg"],
     	"hollowKnightImages": ["fog_canyon_A1.jpg", "fog_canyon_A2.jpg"],
 		"areaId": "fog-canyon",
-		"yearId" : "1400 - 1500",
+		"yearId" : 1500,
     	"metadata": {
 			"fullName": "'A Wakeful Sleep' handscroll by Tosa Mitsunobu",
 			"year": "1400 - 1500",
@@ -215,7 +214,7 @@
 		"itemImages": ["deepnest_I1.jpg"],
     	"hollowKnightImages": ["deepnest_A1.jpg", "deepnest_A2.jpg"],
 		"areaId": "deepnest",
-		"yearId" : "2009",
+		"yearId" : 2009,
     	"metadata": {
 			"fullName": "Golden Spider silk preservation method to make a handwoven Shawl",
 			"year": "2009",
@@ -229,7 +228,7 @@
 		"itemImages": ["the_hive_I1.jpg"],
     	"hollowKnightImages": ["the_hive_A1.jpg", "the_hive_A2.jpg"],
 		"areaId": "the-hive",
-		"yearId" : "1948",
+		"yearId" : 1948,
     	"metadata": {
 			"fullName": "Abbè Warre's 'People's Hive'",
 			"year": "1948",

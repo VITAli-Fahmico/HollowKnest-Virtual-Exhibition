@@ -1,4 +1,4 @@
-const imageDirectory = "assets";
+const imageDirectory = "assets/items_and_areas";
 
 function styleImages(className, hollowKnightImage, itemImage) {
     const style = document.createElement("style");
