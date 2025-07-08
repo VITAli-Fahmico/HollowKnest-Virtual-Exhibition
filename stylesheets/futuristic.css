@@ -24,6 +24,7 @@
     --content-button-gradient: linear-gradient(135deg, var(--content-button-color-1), var(--content-button-color-2));
     --link-color: #ffa865; 
     --link-highlight-color: #f97b46;
+    --content-button-gradient: linear-gradient(135deg, #d69b6e, #db6938);
 }
 
 /* ∞ navbar */

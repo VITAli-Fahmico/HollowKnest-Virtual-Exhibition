@@ -2,7 +2,7 @@
 {
   "meta": {
     "startWith": 0, 
-    "startNarrative": "Chronological",
+    "startNarrative": "Hollow Knight",
     "startValue": "Ancient Basin",
 	"startTextDurations": ["short", "medium", "long"],
 	"defaultTone": "adults",
@@ -235,9 +235,8 @@
 			"year": "1948",
 			"historicalPeriod": "French Miners' Strike",
 			"hollowKnightArea": "The Hive"
-	
-
-
+		}
+	}
   ], 
   "areas" : {
 	"Dirtmouth": {
@@ -319,4 +318,6 @@
 		"areaNumber": 16,
 		"previousDirection": "↘",
 		"nextDirection": ""
-	},
+	}
+	}
+}
