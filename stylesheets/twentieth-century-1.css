@@ -1,13 +1,3 @@
-html { /* placeholder text */
+html {
     width: 100%;
 }
-
-html { /* this is for seeing if the theme switch works*/
-    /* background-color: white; */
-    filter: invert(1) !important; /* hue-rotate(180deg) */
-}
-
-img, video {
-  filter: invert(1);
-}
-

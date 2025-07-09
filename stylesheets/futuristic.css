@@ -19,11 +19,9 @@
 
     --card-text: rgba(255, 255, 255, 0.88);
 
-    --content-button-color-1: rgb(208, 148, 109);
-    --content-button-color-2: rgb(193, 77, 84);
-    --content-button-gradient: linear-gradient(135deg, var(--content-button-color-1), var(--content-button-color-2));
-    --link-color: #ffa865; 
-    --link-highlight-color: #f97b46;
+    --content-button-color-1: #dea070; /*  d0946d */
+    --link-color: #ffa865; /* ffa865 */
+    --link-highlight-color: #f97b46; /* f97b46 */
     --content-button-gradient: linear-gradient(135deg, #dea070, #db602b);
 }
 
@@ -60,8 +58,6 @@
         position: relative;
     }
 }
-
-
 
 /* ∞ body */
 
@@ -190,7 +186,7 @@ section > table {
 
 
 .background-shading:nth-child(3n+1) {
-    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(322deg) saturate(350%) blur(3.5px); /* purple, blue 200 */
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(320deg) saturate(350%) blur(3.5px); /* purple, blue 200 */
 }
 
 .background-shading:nth-child(3n+2) {
@@ -198,36 +194,19 @@ section > table {
 }
 
 .background-shading:nth-child(3n+3) {
-    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(338deg) saturate(350%) blur(3.5px); /* waterways */
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(340deg) saturate(350%) blur(3.5px); /* waterways */
 }
 
 /* ∞ overriding boostrap styles */
 
 .btn-primary {
-    --bs-btn-color: var(--body-text);
-    --bs-btn-bg: var(--content-button-color-1);
-    --bs-btn-border-color: none;
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--content-button-color-1);
-    --bs-btn-hover-border-color: var(--content-button-color-1);
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: var(--content-button-color-1);
-    /* --bs-btn-active-border-color: var(--content-button-color-2); */
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: var(--content-button-gradient);
-    --bs-btn-disabled-border-color: var(--content-button-gradient);
-    
     background-image: var(--content-button-gradient);
-}
-
-.btn-primary {
     transition: filter 0.25s ease-in-out;
+    --bs-btn-border-color: #none !important;
 }
 
 .btn-primary:hover {
-    filter: brightness(115%);
+    filter: brightness(120%);
 }
 
 .btn-outline-primary {
@@ -240,7 +219,6 @@ section > table {
 
 .btn-outline-primary:hover {
     background-image: var(--content-button-gradient);
-    background-color: var(--content-button-color-2);
     border-color: var(--content-button-color-1);
 }
 
