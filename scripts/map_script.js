@@ -1,6 +1,20 @@
 const imageDirectory = "assets/items_and_areas";
 
-function styleImages(className, hollowKnightImage, itemImage) {
+document.addEventListener("DOMContentLoaded", async function(event) {
+    const response = await fetch("data/data.json");
+    const data = await response.json();
+    const allItems = data.items;
+
+    for (let itemNumber = 1; itemNumber <= allItems.length; itemNumber++) {
+        let item = allItems[itemNumber - 1];
+        let itemImage = `url('${imageDirectory + "/" + item.itemImages[0]}')`;
+        let hollowKnightImage = `url('${imageDirectory + "/" + item.hollowKnightImages[0]}')`;
+
+        styleImage(item.areaId, hollowKnightImage, itemImage);
+    }
+});
+
+function styleImage(className, hollowKnightImage, itemImage) {
     const style = document.createElement("style");
 
     style.innerHTML = `
@@ -19,20 +33,10 @@ function styleImages(className, hollowKnightImage, itemImage) {
         background-size: cover;       
         background-position: center;
     }`;
-    console.log(style)
     document.head.appendChild(style);
 }
 
-document.addEventListener("DOMContentLoaded", async function(event) {
-    const response = await fetch("data/data.json");
-    const data = await response.json();
-    const allItems = data.items;
-
-    for (let itemNumber = 1; itemNumber <= allItems.length; itemNumber++) {
-        let item = allItems[itemNumber - 1];
-        let itemImage = `url('${imageDirectory + "/" + item.itemImages[0]}')`;
-        let hollowKnightImage = `url('${imageDirectory + "/" + item.hollowKnightImages[0]}')`;
-
-        styleImages(item.areaId, hollowKnightImage, itemImage);
-    }
-});
+function selectArea(selectedArea) {
+    localStorage.setItem("selectedArea", JSON.stringify(selectedArea));
+    window.location.href = "exhibition.html";
+}

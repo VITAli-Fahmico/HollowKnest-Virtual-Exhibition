@@ -7,7 +7,7 @@
 	"allTextDurations": ["short", "medium", "long"],
 	"defaultTone": "adults",
 	"defaultCompetency": "advanced"
-  },
+  },	
   "items" : [ 
 	{
     	"shortName" : "Urethral syringe",
@@ -16,7 +16,7 @@
     	"hollowKnightImages": ["greenpath_A1.jpg", "greenpath_A2.jpg"],
 		"areaId": "greenpath",
 		"yearId" : 1545,
-		"qrCodeImage": "greenpath_qr_code",
+		"qrCodeImage": "greenpath_qr_code.jpg",
     	"metadata": {
 			"fullName": "Cast iron balcony front designed by Hector Guimard",
 			"year": "1545, discovered in 1982",
@@ -26,12 +26,12 @@
     },
   	{
     	"shortName" : "Balcony front",
-    	"itemText": "city_of_tears.html", 
+    	"itemText": "city_of_tears_left.html", 
 		"itemImages": ["city_of_tears_left_I1.jpg", "city_of_tears_left_I2.jpg", "city_of_tears_left_I3.jpg"],
     	"hollowKnightImages": ["city_of_tears_left_A1.jpg", "city_of_tears_left_A2.jpg"],
 		"areaId": "city-of-tears-left",
 		"yearId" : 1900,
-		"qrCodeImage": "city_of_tears_left_qr_code",
+		"qrCodeImage": "city_of_tears_left_qr_code.jpg",
     	"metadata": {
 			"fullName": "Cast iron balcony front designed by Hector Guimard",
 			"year": "1900",
@@ -41,12 +41,12 @@
     },
 	{
     	"shortName" : "Frieze",
-    	"itemText": null, 
+    	"itemText": "crystal_peak.html", 
 		"itemImages": ["crystal_peak_I1.jpg", "crystal_peak_I2.jpg", "crystal_peak_I3.jpg"],
     	"hollowKnightImages": ["crystal_peak_A1.jpg", "crystal_peak_A2.jpg"],
 		"areaId": "crystal-peak",
 		"yearId" : 500,
-		"qrCodeImage": "crystal_peak_left_qr_code",
+		"qrCodeImage": "crystal_peak_left_qr_code.jpg",
     	"metadata": {
 			"fullName": "Decorative Frieze with Wolves Chasing Gazelles",
 			"year": "300 - 500 CE",
@@ -56,7 +56,7 @@
     },
 	{
     	"shortName" : "Ships surrealist painting",
-    	"itemText": null, 
+    	"itemText": "resting_grounds.html", 
 		"itemImages": ["resting_grounds_I1.jpg"],
     	"hollowKnightImages": ["resting_grounds_A1.jpg"],
 		"areaId": "resting-grounds",
@@ -70,7 +70,7 @@
     },
 		{
     	"shortName" : "Celluloid exterior accordion",
-    	"itemText": null, 
+    	"itemText": "howling_cliffs.html", 
 		"itemImages": ["howling_cliffs_I1.jpg", "howling_cliffs_I2.jpg", "howling_cliffs_I3.jpg"],
     	"hollowKnightImages": ["howling_cliffs_A1.jpg"],
 		"areaId": "howling-cliffs",
@@ -84,7 +84,7 @@
     },
 	{
     	"shortName" : "Steampunk elevator",
-    	"itemText": null, 
+    	"itemText": "city_of_tears_right.html", 
 		"itemImages": ["city_of_tears_right_I1.jpg", "city_of_tears_right_I2.jpg", "city_of_tears_right_I3.jpg"],
     	"hollowKnightImages": ["city_of_tears_right_A1.jpg", "city_of_tears_right_A2.jpg"],
 		"areaId": "city-of-tears-right",
@@ -98,7 +98,7 @@
     },
 	{
     	"shortName" : "Decorative oak panel",
-    	"itemText": null, 
+    	"itemText": "royal_waterways.html", 
 		"itemImages": ["royal_waterways_I1.jpg", "royal_waterways_I2.jpg", "royal_waterways_I3.jpg"],
     	"hollowKnightImages": ["royal_waterways_A1.jpg", "royal_waterways_A2.jpg"],
 		"areaId": "royal-waterways",
@@ -126,11 +126,11 @@
     },
 	{
 		"shortName" : "Mememto mori",
-		"itemText": null, 
+		"itemText": "kingdoms_edge.html", 
 		"itemImages": ["kingdoms_edge_I1.jpg", "kingdoms_edge_I2.jpg", "kingdoms_edge_I3.jpg"], 
 		"hollowKnightImages": ["kingdoms_edge_A1.jpg", "kingdoms_edge_A2.jpg"],
 		"areaId": "kingdoms-edge",
-		"yearId" : 1900,
+		"yearId" : 1899,
 		"metadata": {
 			"fullName": "Memento mori showing woman with half a head and half a skull",
 			"year": "1801 - 1900",
@@ -140,7 +140,7 @@
     },
 	{
     	"shortName" : "Faith and Hope",
-    	"itemText": null, 
+    	"itemText": "queens_gardens.html", 
 		"itemImages": ["queens_gardens_I1.jpg"],
     	"hollowKnightImages": ["queens_gardens_A1.jpg", "queens_gardens_A2.jpg"],
 		"areaId": "queens-gardens",
@@ -168,7 +168,7 @@
     },
 		{
     	"shortName" : "Pilgrim's Badge",
-    	"itemText": null, 
+    	"itemText": "forgotten_crossroads.html", 
 		"itemImages": ["forgotten_crossroads_I1.jpg"],
     	"hollowKnightImages": ["forgotten_crossroads_A1.jpg", "forgotten_crossroads_A2.jpg"],
 		"areaId": "forgotten-crossroads",
@@ -182,7 +182,7 @@
     },
 		{
     	"shortName" : "Noh Mask",
-    	"itemText": null, 
+    	"itemText": "fungal_wastes.html", 
 		"itemImages": ["fungal_wastes_I1.jpg"],
     	"hollowKnightImages": ["fungal_wastes_A1.jpg", "fungal_wastes_A2.jpg"],
 		"areaId": "fungal-wastes",
@@ -196,7 +196,7 @@
     },
 		{
     	"shortName" : "A Wakeful Sleep",
-    	"itemText": null, 
+    	"itemText": "fog_canyon.html", 
 		"itemImages": ["fog_canyon_I1.jpg"],
     	"hollowKnightImages": ["fog_canyon_A1.jpg", "fog_canyon_A2.jpg"],
 		"areaId": "fog-canyon",
@@ -210,7 +210,7 @@
     },
 		{
     	"shortName" : "Golden Spider Silk",
-    	"itemText": null, 
+    	"itemText": "deepnest.html", 
 		"itemImages": ["deepnest_I1.jpg"],
     	"hollowKnightImages": ["deepnest_A1.jpg", "deepnest_A2.jpg"],
 		"areaId": "deepnest",
@@ -224,7 +224,7 @@
     },
 		{
     	"shortName" : "People’s Hive",
-    	"itemText": null, 
+    	"itemText": "the_hive.html", 
 		"itemImages": ["the_hive_I1.jpg"],
     	"hollowKnightImages": ["the_hive_A1.jpg", "the_hive_A2.jpg"],
 		"areaId": "the-hive",

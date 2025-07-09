@@ -25,6 +25,9 @@ let currentCompetency = "";
 
 let languageButtonCreated = false;
 let contentButtonCreated = false;
+let selectedAreaFound = false;
+
+let selectedArea = localStorage.getItem("selectedArea");
 
 function arraysEqual(arr1, arr2) {
 	if (arr1.length !== arr2.length) return false;
@@ -51,9 +54,17 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 		prepareNarratives(currentNarrative)
 	})
+	
 });
 
 function prepareNarratives(narrativeType) {
+	if (selectedArea && !selectedAreaFound) {
+		selectedArea = localStorage.getItem("selectedArea");
+		currentValue = JSON.parse(selectedArea);
+		selectedAreaFound = true;
+		console.log(currentValue)
+	}
+
 	if (narrativeType === "Chronological") {
 		currentSelection = items.sort((itemA, itemB) => itemA.yearId - itemB.yearId);
 
@@ -79,7 +90,15 @@ function prepareNarratives(narrativeType) {
 	if (currentItemIndex === -1) {
 		currentItemIndex = 0;
 	}; 
-	console.log(currentItemIndex);
+
+	const style = document.createElement("style");
+
+    style.innerHTML = `
+    figure#itemImageArea:hover {
+        background-image: ${items[currentItemIndex].qrCodeImage}; 
+    }`;
+    document.head.appendChild(style);
+
 	getItemInformation();
 }
 
