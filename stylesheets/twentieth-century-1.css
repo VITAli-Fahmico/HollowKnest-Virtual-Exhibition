@@ -1,3 +1,214 @@
-html {
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+/* --purple-gradient: linear-gradient(135deg, rgb(196, 113, 237, 0.5), rgb(106, 130, 251, 0.5)); */
+
+:root {
+    --color-bg: #ecceaa;
+    --color-elevation-1: #ecceaa;
+    --color-row: #ecceaa;
+    --color-elevation-2: #e3c6a2;
+    --color-dropdown: #ecceaa;
+    --color-elevation-3: #ecceaa;
+    
+    --body-text: rgb(0, 0, 0);
+    --metadata-text: rgba(0, 0, 0, 0.77);
+    --supplementary-body-text: rgba(0, 0, 0, 0.66);
+    --additional-text: rgba(0, 0, 0, 0.6);
+    --disabled-text: rgba(0, 0, 0, 0.38);
+    --border-outline: rgba(0, 0, 0, 0.12);
+
+    --card-text: rgba(0, 0, 0, 0.88);
+    --heading-color: #da2321;
+    --content-button-color-1: #dea070; /*  d0946d */
+    --link-color: #3f7daf; /* ffa865 */
+    --link-highlight-color: #f97b46; /* f97b46 */
+    --content-button-gradient: linear-gradient(0deg, #000000, #131313);
+    /* db4e28 */
+}
+
+/* ∞ navbar */
+/* ∞ body */
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    background-color: #f5eace;
+    background-image: url("https://transparenttextures.com/patterns/beige-paper.png");
+    color: var(--body-text) !important;
+}
+
+
+
+a {
+    color: var(--link-color); /* make this into another colour, maybe a bit more saturated. hover should make it different */
+}
+
+a:hover {
+    color: var(--link-highlight-color); /* make this into another colour, maybe a bit more saturated. hover should make it different */
+}
+
+nav.navbar, footer, .navbar-background, .footer-background {
+    background-color: #000 !important;
+    /* color: var(--text-high) !important; */
+}
+
+.dropdown-item:hover {
+    background-color: var(--link-highlight-color);
+}
+
+.dropdown-item:focus {
+    background-color: var(--link-color);
+}
+
+.dropdown-item.active {
+    color: var(--link-highlight-color) !important;
+}
+/* rgba(255, 255, 255, 0.12) */
+
+article.card {
+    color: var(--card-text);
+    background-color: var(--color-elevation-2);
+}
+
+section.team-section {
+    background-color: var(--color-elevation-2);
+}
+
+.team-member {
+    background-color: var(--color-elevation-3)
+}
+
+.team-member a {
+    color: var(--metadata-text);
+}
+
+.team-member a:hover {
+    color: var(--link-highlight-color);
+}
+
+footer div {
+    color: var(--supplementary-body-text) !important;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 650;
+    text-transform: uppercase;
+    color: var(--heading-color);
+}
+
+#narrativeArea {
+    color: var(--supplementary-body-text) !important;
+}
+
+/* what? Do gradients... */
+/* every 1st should be one colour, the 2nd another, and the 3rd another, change accordingly  */
+
+.bg-dark {
+    --bs-bg-opacity: 0;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0;
+}
+
+.dropdown-menu {
+    background-color: var(--color-dropdown);
+}
+
+.dropdown-item {
+    color: var(--additional-text);
+}
+
+.footer-text {
+    color: var(--supplementary-body-text) !important;
+}
+
+.image-frame {
+    border: none;
+    background-color: var(--color-elevation-3);
+}
+
+figure.image-frame {
+    border-radius: 15px 15px 0 0;
+}
+
+.image-frame.ratio {
+    border-radius: 15px;
+}
+
+.card-header, .card-footer {
+    background-color: var(--color-row) !important;
+}
+
+a.map-area:hover {
+    color: var(--link-highlight-color);
+}
+
+section > table {
+    border-radius: 0 0 20px 20px;
+    /* border-collapse: separate; */
+    overflow: hidden;
+}
+
+/* 
+.background-shading:nth-child(3n+1) {
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(320deg) saturate(350%) blur(3.5px); 
+}
+
+.background-shading:nth-child(3n+2) {
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(330deg) saturate(350%) blur(3.5px); 
+}
+
+.background-shading:nth-child(3n+3) {
+    filter: brightness(50%) contrast(75%) sepia(100%) hue-rotate(340deg) saturate(350%) blur(3.5px); 
+} */
+
+/* ∞ overriding boostrap styles */
+
+.btn-primary {
+    background-image: var(--content-button-gradient);
+    transition: filter 0.25s ease-in-out;
+    --bs-btn-border-color: #none !important;
+}
+
+.btn-primary:hover {
+    filter: brightness(120%);
+}
+
+.btn-outline-primary {
+    color: var(--link-color);
+    border-color: var(--link-color);
+    transition: filter 0.25s ease-in-out;
+    --bs-btn-active-bg: var(--content-button-color-1);
+    --bs-btn-active-border-color: var(--content-button-color-1);
+}
+
+.btn-outline-primary:hover {
+    background-image: var(--content-button-gradient);
+    border-color: var(--content-button-color-1);
+}
+
+.btn-outline-primary:disabled {
+    color: var(--link-color);
+    border-color: var(--link-color);
+    filter: opacity(50%);
+}
+
+.border {
+    border: none !important;
+}
+
+.table>:not(caption)>*>* {
+    background: none;
+    border: none;
+    border-spacing: 0;   
+    color: var(--metadata-text);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--color-elevation-2) !important;
+
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-elevation-3) !important;
 }

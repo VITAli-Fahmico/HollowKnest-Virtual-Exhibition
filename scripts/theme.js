@@ -12,13 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function setTheme(themeName) {
-    const themeLink = document.getElementById("theme-link");
+    const existingLink = document.getElementById("theme-link");
+
+    // Remove old theme if it exists
+    if (existingLink) {
+        existingLink.remove();
+    }
 
     if (themes[themeName]) {
-        themePath = stylesheetsDirectory + "/" + themes[themeName];
-        themeLink.href = themePath;
-        themeLink.classList.add("active");
-        localStorage.setItem("theme", themeName); // change the theme, store the name not the path!!!
+        const themePath = stylesheetsDirectory + "/" + themes[themeName];
+        const newLink = document.createElement("link");
+        newLink.id = "theme-link";
+        newLink.rel = "stylesheet";
+        newLink.href = themePath;
+
+        document.head.appendChild(newLink);
+
+        localStorage.setItem("theme", themeName); // store the name, not path
+        console.log(`Theme applied: ${themeName}`);
     } else {
         console.warn(`Theme "${themeName}" does not exist.`);
     }

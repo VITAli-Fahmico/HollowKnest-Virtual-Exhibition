@@ -153,10 +153,6 @@ h1, h2, h3, h4, h5 {
     color: var(--supplementary-body-text) !important;
 }
 
-.navbar-nav {
-    background-color: var(--color-elevation-2) !important;
-}
-
 .image-frame {
     border: none;
     background-color: var(--color-elevation-3);

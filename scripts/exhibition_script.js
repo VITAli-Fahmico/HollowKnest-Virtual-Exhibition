@@ -245,7 +245,7 @@ function getNavigationElements() {
 		metadataAttribute = "hollowKnightArea";
 		additionalPreviousCharacters = areas[currentItemMetadata.hollowKnightArea].previousDirection;
 		additionalNextCharacters = areas[currentItemMetadata.hollowKnightArea].nextDirection;
-		document.getElementById("narrativeItem").innerHTML = `Hollow Knight area: ${currentItemMetadata[metadataAttribute]}`
+		document.getElementById("narrativeItem").innerHTML = `Area: ${currentItemMetadata[metadataAttribute]}`
 	} else {
 		console.warn("There are no buttons specified");
 	}
