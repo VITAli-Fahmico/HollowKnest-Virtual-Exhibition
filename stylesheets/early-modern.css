@@ -66,7 +66,7 @@ body {
     line-height: 1.6 !important;                                    /* Increased line height for readability */
     font-size: 1.1rem !important;                                   /* Slightly larger base font size */
     /* Aged paper texture applied as a background image. Adjust path if necessary. */
-    background-image: url('../images/aged_paper_light.jpg') !important;
+    background-image: url('/assets/additional_images/vintage-grunge.jpg') !important;
     background-repeat: repeat;                                      /* Repeat the texture across the background */
     background-size: auto;                                          /* Maintain original texture size */
     background-blend-mode: multiply;                                /* Blends the texture with the background color */
