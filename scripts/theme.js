@@ -6,7 +6,7 @@ const themes = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "futuristic.css";
+    const savedTheme = localStorage.getItem("theme") || "futuristic";
     console.log(`Theme reloaded: ${savedTheme}`)
     setTheme(savedTheme);
 });
