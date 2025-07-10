@@ -221,10 +221,13 @@ h3 { font-size: 2.5rem !important; }
 
 /* Narrative text in exhibition view (e.g., for body text that needs a retro touch) */
 #narrativeItem {
-    font-family: var(--twentieth-century-font-body) !important; /* Clean body font */
+    font-family: var(--twentieth-century-font-body) !important; /* This is good (Electrolize) */
     font-size: 1.1em !important;
     line-height: 1.6 !important;
-    color: var(--twentieth-century-text-light) !important;
+    /* ADD OR MODIFY THE FOLLOWING LINE: */
+    color: var(--twentieth-century-text-light) !important; /* Ensure very light text for readability */
+    /* Remove any text-shadows if they are present and causing blurriness */
+    text-shadow: none !important; /* Crucial for body text readability */
 }
 
 /* Special text that needs a pixelated arcade look */
@@ -400,21 +403,49 @@ a.map-area {
 /* 11. Image Styling and Decorative Frames                                   */
 /* Applies filters and bold, bright frames to images.                     */
 /* ========================================================================= */
+/* 11. Image Styling and Decorative Frames */
 img {
-    border: 3px solid var(--twentieth-century-neon-blue) !important; /* Bold neon blue border */
+    border: 3px solid var(--twentieth-century-neon-blue) !important;
     box-shadow: 0 0 10px var(--twentieth-century-neon-blue),
-                5px 5px 15px rgba(0, 0, 0, 0.4);                     /* Glow and drop shadow */
-    filter: saturate(1.2) contrast(1.1);                              /* Boost colors and contrast */
+                5px 5px 15px rgba(0, 0, 0, 0.4);
+    filter: saturate(1.2) contrast(1.1); /* This filter might be the issue */
     transition: all 0.3s ease;
-    border-radius: 8px; /* Slightly rounded for consistency */
+    border-radius: 8px;
 }
 
-img:hover {
-    filter: saturate(1.5) contrast(1.3) brightness(1.1); /* Even more vibrant on hover */
-    transform: scale(1.02);
-    box-shadow: 0 0 15px var(--twentieth-century-neon-pink),
-                8px 8px 20px rgba(0, 0, 0, 0.6);
+/* 10. Map Section Styles (or right after the general img rule) */
+
+.map-area img, /* Target images directly within a map-area */
+.map img /* Target images directly within the main map container, if any */
+{
+    /* Override general image filters to ensure clarity */
+    filter: brightness(1.1) contrast(1.05) saturate(1.0); /* Subtle adjustments, no heavy saturation */
+    /* You can also remove the filter completely if you want the original image colors */
+    /* filter: none !important; */
+
+    /* Ensure a strong, visible border */
+    border: 4px solid var(--twentieth-century-neon-green) !important; /* A distinct neon color */
+    border-radius: 10px !important; /* Keep it consistent with map areas */
+
+    /* Apply a clear, vibrant glow */
+    box-shadow: 0 0 15px var(--twentieth-century-neon-green), /* Core glow */
+                0 0 25px var(--twentieth-century-neon-blue) inset !important; /* Inset glow from another neon color */
+    
+    /* Ensure sizing is appropriate for map content, if needed */
+    width: 100% !important; /* Make sure it fills its container */
+    height: auto !important; /* Maintain aspect ratio */
+    object-fit: contain !important; /* Ensure the entire image is visible within its bounds */
 }
+
+/* Add a hover effect for map images if desired, separate from general img hover */
+.map-area img:hover,
+.map img:hover {
+    box-shadow: 0 0 20px var(--twentieth-century-neon-pink), /* Change glow color on hover */
+                0 0 30px var(--twentieth-century-neon-yellow) inset !important;
+    transform: scale(1.02); /* Slight scale for interaction */
+    filter: brightness(1.2) contrast(1.1) saturate(1.1); /* Slightly brighter/more vibrant on hover */
+}
+
 
 figure.image-frame, .image-frame {
     padding: 15px !important;                                     /* Thicker padding for frame */
@@ -616,9 +647,12 @@ main.exhibition {
     height: var(--exhibition-card-header-height) !important;
 }
 
+/* Find this section or similar around the card styling */
 .card-body {
     height: var(--fv-card-body-height) !important;
-    overflow-y: scroll !important;
+    overflow-y: scroll !important; /* Ensures scrolling for content */
+    /* ADD OR MODIFY THE FOLLOWING LINE: */
+    color: var(--twentieth-century-text-light) !important; /* Ensure light text on dark/mid background */
 }
 
 .card-footer {
