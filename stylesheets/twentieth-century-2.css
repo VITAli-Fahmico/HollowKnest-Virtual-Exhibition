@@ -600,7 +600,7 @@ html {
 }
 
 html, body {
-    overflow-y: auto !important;
+    /* overflow-y: auto !important; */
     overscroll-behavior: none !important;
 }
 
