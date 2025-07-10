@@ -1,3 +1,693 @@
-html { /* placeholder text */
-    width: 100%;
+/*
+ * twentieth-century-2.css
+ *
+ * This stylesheet defines the visual theme for the "20th Century Second Half" aesthetic (1950s-1990s).
+ * It focuses on vibrant, flashy colors, neon effects, retro typography, and bold geometric shapes,
+ * inspired by diners, arcades, pop art, and disco.
+ *
+ * This file is designed to be dynamically loaded by theme.js by swapping the 'href' of a <link> tag.
+ *
+ * All styles in this file are intended to override default/base styles (from styles.css)
+ * and Bootstrap styles to achieve the desired look.
+ *
+ * Image assets mentioned (e.g., 'retro_pattern.png', 'neon_sign_texture.jpg') are assumed to be
+ * in an 'images/' folder, which is a sibling to the 'stylesheets/' folder. Adjust paths if your
+ * structure differs.
+ */
+
+/* ========================================================================= */
+/* 1. CSS Variables for Color Palette and Fonts (Defined at :root)          */
+/* These variables are chosen from the moodboard's "color palette" section, */
+/* focusing on vibrant, high-contrast, and often neon-inspired tones.       */
+/* ========================================================================= */
+:root {
+    /* Main Backgrounds & Base Colors */
+    --twentieth-century-dark: #222222;        /* Near-black for backgrounds, strong contrast */
+    --twentieth-century-light: #F0F0F0;       /* Off-white for clean contrast */
+    --twentieth-century-mid-gray: #444444;    /* Neutral grey for subtle elements */
+
+    /* Neon & Flashy Colors (Inspired by diner signs, arcade lights) */
+    --twentieth-century-neon-pink: #FF00FF;    /* Bright magenta/fuchsia */
+    --twentieth-century-neon-blue: #00FFFF;    /* Cyan/aqua blue */
+    --twentieth-century-neon-green: #00FF00;   /* Bright lime green */
+    --twentieth-century-neon-yellow: #FFFF00;  /* Pure bright yellow */
+    --twentieth-century-neon-purple: #8A2BE2;  /* Vibrant purple */
+    --twentieth-century-neon-orange: #FFA500;  /* Bright orange */
+
+    /* Accent & Secondary Colors (From the broader moodboard palette) */
+    --twentieth-century-accent-red: #E74C3C;   /* Strong, classic red */
+    --twentieth-century-accent-teal: #1ABC9C;  /* Bright teal */
+    --twentieth-century-accent-gold: #FFD700;  /* Gold for metallic effects */
+
+    /* Text Colors */
+    --twentieth-century-text-dark: var(--twentieth-century-dark);    /* Default dark text */
+    --twentieth-century-text-light: var(--twentieth-century-light);  /* Default light text */
+
+    /* Backgrounds */
+    --twentieth-century-background-main: var(--twentieth-century-dark);     /* Primary page background */
+    --twentieth-century-background-secondary: var(--twentieth-century-mid-gray); /* For cards, sections */
+
+    /* Fonts (Chosen from Google Fonts to match moodboard aesthetics) */
+    --twentieth-century-font-heading: 'Bangers', cursive;      /* Comic/bold display font for titles */
+    --twentieth-century-font-subheading: 'Concert One', sans-serif; /* Bold, rounded sans-serif */
+    --twentieth-century-font-body: 'Electrolize', sans-serif;  /* Modern, clean sans-serif for body */
+    --twentieth-century-font-display: 'Press Start 2P', cursive; /* Pixelated arcade font for special text */
+    --twentieth-century-font-script: 'Permanent Marker', cursive; /* Marker pen/graffiti style */
+}
+
+/* ========================================================================= */
+/* 2. Base Body and General Text Styling                                     */
+/* Applies the overall background, text color, and primary font.            */
+/* Includes a subtle retro pattern for an immersive feel.                   */
+/* ========================================================================= */
+body {
+    background-color: var(--twentieth-century-background-main) !important; /* Dark background */
+    color: var(--twentieth-century-text-light) !important;                /* Light text for contrast */
+    font-family: var(--twentieth-century-font-body) !important;           /* Clean body font */
+    line-height: 1.5 !important;                                        /* Standard line height */
+    font-size: 1rem !important;                                         /* Standard base font size */
+    /* Subtle retro geometric pattern background */
+    background-image: url('../images/retro_pattern.png') !important; /* Adjust path */
+    background-repeat: repeat;                                          /* Repeat pattern */
+    background-size: 150px;                                             /* Size of the pattern unit */
+    background-blend-mode: overlay;                                     /* Blends pattern with background color */
+    filter: saturate(1.1); /* Slightly boost overall saturation */
+}
+
+/* ========================================================================= */
+/* 3. Navigation Bar and Footer Overrides                                    */
+/* Styles the top navigation and bottom footer to match the theme.        */
+/* Emphasis on bold colors and potential neon outlines.                    */
+/* ========================================================================= */
+.navbar-background {
+    background-color: var(--twentieth-century-dark) !important;      /* Dark background for navbar */
+    color: var(--twentieth-century-text-light) !important;           /* Light text for contrast */
+    border-bottom: 2px solid var(--twentieth-century-neon-blue) !important; /* Neon accent line */
+    box-shadow: 0 0 15px var(--twentieth-century-neon-blue);         /* Subtle neon glow */
+}
+
+/* For Navbar Text, Brand, and Nav Links to ensure they use neon colors */
+.navbar-background .navbar-nav .nav-link,
+.navbar-background .navbar-brand,
+.navbar-background .navbar-text {
+    color: var(--twentieth-century-neon-pink) !important; /* Neon pink for links */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-pink), 0 0 10px var(--twentieth-century-neon-pink); /* Neon glow effect */
+    transition: all 0.3s ease;
+}
+
+.navbar-background .navbar-nav .nav-link:hover,
+.navbar-background .navbar-brand:hover {
+    color: var(--twentieth-century-neon-yellow) !important; /* Yellow on hover */
+    text-shadow: 0 0 8px var(--twentieth-century-neon-yellow), 0 0 15px var(--twentieth-century-neon-yellow); /* Stronger glow */
+}
+
+/* Toggler icon (hamburger menu) */
+.navbar-toggler-icon {
+    /* Use a custom SVG or filter for neon effect if needed */
+    filter: drop-shadow(0 0 5px var(--twentieth-century-neon-blue)) drop-shadow(0 0 10px var(--twentieth-century-neon-blue));
+}
+
+
+.footer-background {
+    background-color: var(--twentieth-century-dark) !important;      /* Dark background for footer */
+    color: var(--twentieth-century-text-light) !important;           /* Light text for contrast */
+    border-top: 2px solid var(--twentieth-century-neon-green) !important; /* Neon accent line */
+    box-shadow: 0 0 15px var(--twentieth-century-neon-green);        /* Subtle neon glow */
+}
+
+/* Ensure footer text/links are visible with light color */
+.footer-background * {
+    color: var(--twentieth-century-text-light) !important;
+}
+
+/* ========================================================================= */
+/* 4. Card Styling (General Bootstrap Card Overrides)                        */
+/* Applies themed colors, borders, and shadows to Bootstrap cards.          */
+/* Designed to look like illuminated arcade machines or retro signs.        */
+/* ========================================================================= */
+.card {
+    background-color: var(--twentieth-century-background-secondary) !important; /* Mid-grey background */
+    border: 3px solid var(--twentieth-century-neon-purple) !important;        /* Strong neon border */
+    border-radius: 12px !important;                                         /* More rounded for retro look */
+    /* Box shadow to simulate a neon glow around the card */
+    box-shadow: 0 0 15px var(--twentieth-century-neon-purple),              /* Core glow */
+                0 0 25px var(--twentieth-century-neon-purple) inset,       /* Inset glow */
+                8px 8px 15px rgba(0, 0, 0, 0.5) !important;                 /* Standard drop shadow */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+}
+
+.card:hover {
+    box-shadow: 0 0 25px var(--twentieth-century-neon-pink),              /* Change glow color on hover */
+                0 0 35px var(--twentieth-century-neon-pink) inset,
+                10px 10px 20px rgba(0, 0, 0, 0.6) !important;
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+.card-header {
+    background-color: var(--twentieth-century-dark) !important;        /* Dark header background */
+    color: var(--twentieth-century-neon-yellow) !important;            /* Neon yellow text */
+    border-bottom: 2px dashed var(--twentieth-century-neon-orange) !important; /* Dashed neon line */
+    /* Optional: subtle texture for card headers */
+    background-image: url('../images/neon_grid.png') !important; /* Adjust path if you have a grid texture */
+    background-size: contain;
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    box-shadow: inset 0 -5px 10px rgba(0,0,0,0.4); /* Deeper inset shadow */
+    padding: 1.2em;
+    font-family: var(--twentieth-century-font-subheading) !important; /* Use subheading font */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow); /* Neon text glow */
+}
+
+.card-footer {
+    background-color: var(--twentieth-century-dark) !important;        /* Dark footer background */
+    color: var(--twentieth-century-neon-blue) !important;              /* Neon blue text */
+    border-top: 2px dashed var(--twentieth-century-neon-green) !important; /* Dashed neon line */
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.4); /* Inset shadow */
+}
+
+/* ========================================================================= */
+/* 5. Link Styling                                                           */
+/* Defines the appearance of hyperlinks, emphasizing neon colors.         */
+/* ========================================================================= */
+a {
+    color: var(--twentieth-century-neon-blue) !important; /* Bright neon blue for links */
+    text-decoration: none;                               /* No underline by default */
+    text-shadow: 0 0 3px var(--twentieth-century-neon-blue), 0 0 8px var(--twentieth-century-neon-blue); /* Neon glow */
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--twentieth-century-neon-pink) !important; /* Change color on hover */
+    text-decoration: underline;                         /* Underline on hover */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-pink), 0 0 12px var(--twentieth-century-neon-pink); /* Stronger glow */
+}
+
+/* ========================================================================= */
+/* 6. Typography (Headings and Specific Text Elements)                       */
+/* Applies bold, expressive fonts to headings and specific text.          */
+/* ========================================================================= */
+h1, h2, h3, .banner-title {
+    font-family: var(--twentieth-century-font-heading) !important; /* Bold, comic-style font */
+    font-weight: normal !important;                              /* Often don't need extra bold */
+    text-transform: uppercase;                                   /* Uppercase for impact */
+    letter-spacing: 0.1em;                                       /* Increased letter spacing */
+    color: var(--twentieth-century-neon-yellow) !important;      /* Default neon yellow color */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow),   /* Core neon glow */
+                 0 0 10px var(--twentieth-century-neon-orange),  /* Secondary glow color */
+                 0 0 15px var(--twentieth-century-neon-red);     /* Tertiary glow color */
+}
+
+h1 { font-size: 4.5rem !important; }
+h2 { font-size: 3.5rem !important; }
+h3 { font-size: 2.5rem !important; }
+
+/* Carousel article headings */
+.carousel article h2 {
+    font-family: var(--twentieth-century-font-subheading) !important; /* Subheading font */
+    font-size: 1.8rem !important;
+    text-shadow: none !important; /* Remove heavy glow for smaller headings */
+    color: var(--twentieth-century-neon-pink) !important;
+}
+
+/* Card titles in exhibition view */
+#cardTitle {
+    font-family: var(--twentieth-century-font-subheading) !important; /* Subheading font */
+    font-weight: normal !important;
+    color: var(--twentieth-century-neon-pink) !important;
+    text-shadow: 0 0 3px var(--twentieth-century-neon-pink);
+}
+
+/* Narrative text in exhibition view (e.g., for body text that needs a retro touch) */
+#narrativeItem {
+    font-family: var(--twentieth-century-font-body) !important; /* Clean body font */
+    font-size: 1.1em !important;
+    line-height: 1.6 !important;
+    color: var(--twentieth-century-text-light) !important;
+}
+
+/* Special text that needs a pixelated arcade look */
+.pixel-text {
+    font-family: var(--twentieth-century-font-display) !important; /* Pixelated font */
+    font-size: 1.5em !important;
+    color: var(--twentieth-century-neon-green) !important;
+    text-shadow: 0 0 5px var(--twentieth-century-neon-green);
+}
+
+/* ========================================================================= */
+/* 7. Button Styling (Bootstrap Button Overrides)                            */
+/* Customizes the appearance of all Bootstrap buttons with a retro feel.  */
+/* ========================================================================= */
+.btn {
+    font-family: var(--twentieth-century-font-subheading) !important; /* Bold, rounded font for buttons */
+    font-weight: bold !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 8px !important;                                 /* Rounded button corners */
+    padding: 0.8em 2em !important;                                 /* Generous padding */
+    border: 2px solid var(--twentieth-century-neon-blue) !important; /* Neon blue border */
+    background-image: linear-gradient(45deg, var(--twentieth-century-neon-pink), var(--twentieth-century-neon-purple)) !important; /* Vibrant gradient */
+    color: var(--twentieth-century-text-light) !important;        /* Light text on button */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5), 0 0 10px var(--twentieth-century-neon-pink); /* Stronger text shadow with glow */
+    box-shadow: 0 0 15px var(--twentieth-century-neon-pink), 0 5px 15px rgba(0,0,0,0.5); /* Button glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05) translateY(-2px);                          /* Slight lift and scale on hover */
+    background-image: linear-gradient(45deg, var(--twentieth-century-neon-yellow), var(--twentieth-century-neon-orange)) !important; /* Change gradient on hover */
+    border-color: var(--twentieth-century-neon-yellow) !important;
+    box-shadow: 0 0 20px var(--twentieth-century-neon-yellow), 0 8px 20px rgba(0,0,0,0.7); /* Stronger glow */
+    color: var(--twentieth-century-dark) !important; /* Dark text on hover */
+}
+
+/* ========================================================================= */
+/* 8. Carousel Specific Adjustments                                          */
+/* Ensures the carousel cards fit the theme's energetic aesthetic.          */
+/* ========================================================================= */
+.carousel article {
+    background-color: var(--twentieth-century-background-secondary) !important; /* Mid-grey background */
+    border: 2px solid var(--twentieth-century-neon-green) !important;         /* Neon green border */
+    box-shadow: 0 0 10px var(--twentieth-century-neon-green),                 /* Neon glow */
+                0 4px 15px rgba(0, 0, 0, 0.4) !important;                     /* Standard shadow */
+    border-radius: 10px !important;
+    padding: 1.5rem !important;
+}
+
+.carousel article img:first-of-type {
+    border-radius: 8px !important; /* Slightly rounded corners for carousel images */
+    border: 2px solid var(--twentieth-century-neon-blue) !important;
+    box-shadow: 0 0 8px var(--twentieth-century-neon-blue);
+}
+
+.qr-code {
+    border: 3px dashed var(--twentieth-century-neon-pink) !important; /* Dashed neon border for QR codes */
+    border-radius: 8px !important;                                    /* More rounded corners */
+    box-shadow: 0 0 10px var(--twentieth-century-neon-pink);          /* Neon glow */
+}
+
+.qr-code:hover {
+    transform: scale(1.15) rotate(5deg) !important; /* More playful effect on hover */
+    transition: transform 0.3s ease-in-out !important;
+}
+
+/* ========================================================================= */
+/* 9. About Team Section Styles                                              */
+/* Theming for the "About Team" section and individual team member cards.   */
+/* Reflects a retro album cover or character select screen feel.            */
+/* ========================================================================= */
+.team-section {
+    background-color: var(--twentieth-century-background-main) !important; /* Dark background for section */
+    border-radius: 20px !important;                                         /* More rounded edges */
+    padding: 2em;
+    border: 3px solid var(--twentieth-century-neon-yellow) !important;
+    box-shadow: 0 0 20px var(--twentieth-century-neon-yellow);
+}
+
+.team-member {
+    padding: 1.5rem !important;                                       /* Generous padding */
+    background-color: var(--twentieth-century-background-secondary) !important; /* Mid-grey background */
+    border-radius: 15px !important;                                     /* Rounded corners */
+    border: 2px solid var(--twentieth-century-neon-orange) !important; /* Neon orange border */
+    box-shadow: 0 0 10px var(--twentieth-century-neon-orange),
+                5px 5px 15px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.team-member:hover {
+    transform: scale(1.03) translateY(-5px) !important;                 /* Lift and slight scale on hover */
+    background-color: var(--twentieth-century-mid-gray) !important;
+    box-shadow: 0 0 15px var(--twentieth-century-neon-pink),
+                8px 8px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+.team-member img {
+    border-radius: 50% !important; /* Circular images for a classic profile look */
+    border: 3px solid var(--twentieth-century-neon-blue) !important; /* Neon blue border */
+    box-shadow: 0 0 15px var(--twentieth-century-neon-blue);         /* Neon glow around image */
+    filter: grayscale(0.2) contrast(1.1);                            /* Subtle retro photo effect */
+    transition: all 0.3s ease;
+}
+
+.team-member img:hover {
+    filter: grayscale(0) contrast(1.2) saturate(1.2); /* More vibrant on hover */
+    transform: scale(1.02);
+}
+
+.team-member h3 {
+    color: var(--twentieth-century-neon-yellow) !important; /* Neon yellow for names */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow);
+}
+
+.team-member a {
+    color: var(--twentieth-century-neon-pink) !important; /* Neon pink for links */
+}
+
+.team-member a:hover {
+    color: var(--twentieth-century-neon-yellow) !important; /* Yellow on hover */
+}
+
+/* ========================================================================= */
+/* 10. Map Section Styles                                                    */
+/* Theming for the interactive map areas with a digital/circuit board feel. */
+/* ========================================================================= */
+.map {
+    color: var(--twentieth-century-text-light) !important;           /* Light text for map content */
+    background-color: var(--twentieth-century-dark) !important;      /* Dark background for map container */
+    padding: 50px !important;
+    /* Background with circuit board or digital lines pattern */
+    background-image: url('../images/circuit_pattern.png') !important; /* Adjust path */
+    background-repeat: repeat;
+    background-size: 200px;
+    background-blend-mode: overlay;
+    border: 4px solid var(--twentieth-century-neon-green) !important; /* Strong neon border */
+    box-shadow: 0 0 25px var(--twentieth-century-neon-green);         /* Green neon glow */
+}
+
+.map-grid {
+    gap: 8px !important; /* Slightly larger gaps for map grid */
+}
+
+.map-area {
+    background-color: var(--twentieth-century-mid-gray) !important;    /* Mid-grey for individual map regions */
+    border: 2px solid var(--twentieth-century-neon-purple) !important; /* Neon purple border */
+    color: var(--twentieth-century-neon-pink) !important;              /* Neon pink text inside map areas */
+    border-radius: 12px !important;                                    /* More rounded corners */
+    font-size: 1.8vw !important;                                       /* Responsive font size */
+    padding: 8px !important;
+    box-shadow: inset 0 0 8px var(--twentieth-century-neon-blue),       /* Inset blue glow */
+                3px 3px 10px rgba(0,0,0,0.4) !important;                 /* Standard drop shadow */
+    transition: all 0.2s ease-in-out;
+}
+
+.map-area:hover {
+    background-color: var(--twentieth-century-dark) !important;
+    border-color: var(--twentieth-century-neon-yellow) !important;
+    color: var(--twentieth-century-neon-yellow) !important;
+    box-shadow: inset 0 0 15px var(--twentieth-century-neon-yellow),
+                5px 5px 15px rgba(0,0,0,0.6) !important;
+}
+
+a.map-area {
+    color: var(--twentieth-century-neon-pink) !important; /* Ensures link text color within map areas */
+}
+
+/* ========================================================================= */
+/* 11. Image Styling and Decorative Frames                                   */
+/* Applies filters and bold, bright frames to images.                     */
+/* ========================================================================= */
+img {
+    border: 3px solid var(--twentieth-century-neon-blue) !important; /* Bold neon blue border */
+    box-shadow: 0 0 10px var(--twentieth-century-neon-blue),
+                5px 5px 15px rgba(0, 0, 0, 0.4);                     /* Glow and drop shadow */
+    filter: saturate(1.2) contrast(1.1);                              /* Boost colors and contrast */
+    transition: all 0.3s ease;
+    border-radius: 8px; /* Slightly rounded for consistency */
+}
+
+img:hover {
+    filter: saturate(1.5) contrast(1.3) brightness(1.1); /* Even more vibrant on hover */
+    transform: scale(1.02);
+    box-shadow: 0 0 15px var(--twentieth-century-neon-pink),
+                8px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+figure.image-frame, .image-frame {
+    padding: 15px !important;                                     /* Thicker padding for frame */
+    background-color: var(--twentieth-century-mid-gray) !important; /* Mid-grey "matting" */
+    border: 5px solid var(--twentieth-century-neon-purple) !important; /* Main frame border */
+    /* Multi-layered border effect for complex retro frame */
+    box-shadow: 0 0 0 3px var(--twentieth-century-neon-pink),
+                0 0 0 8px var(--twentieth-century-neon-green),
+                10px 10px 25px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 15px !important;                               /* Rounded corners for frames */
+    overflow: hidden;
+    position: relative;
+}
+
+/* ========================================================================= */
+/* 12. Decorative Separators and List Embellishments                         */
+/* Adds bold, energetic separators and custom list item markers.            */
+/* ========================================================================= */
+hr {
+    border: none !important;
+    border-top: 3px dotted var(--twentieth-century-neon-pink) !important; /* Thick dotted neon line */
+    width: 90% !important;
+    margin: 3em auto !important;
+    box-shadow: 0 0 10px var(--twentieth-century-neon-pink); /* Neon glow for HR */
+}
+
+.section-divider {
+    height: 3px !important;                                    /* Thicker divider line */
+    background-color: var(--twentieth-century-neon-blue) !important; /* Neon blue line */
+    margin: 4em 0 !important;
+    position: relative;
+    box-shadow: 0 0 15px var(--twentieth-century-neon-blue); /* Neon glow for divider */
+}
+
+/* (No specific icons requested, so keeping this blank. If you want a retro icon, add it here.) */
+/* .section-divider::before,
+.section-divider::after {
+    content: '';
+    position: absolute;
+    width: 30px; // Larger for visibility
+    height: 30px;
+    background-image: url('../images/retro_star.svg'); // Example: A retro star or pixelated icon
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px var(--twentieth-century-neon-yellow);
+}
+.section-divider::before { left: 5%; }
+.section-divider::after { right: 5%; transform: translateY(-50%) rotateY(180deg); }
+*/
+
+/* Custom list item markers - using a bold symbol like an asterisk or small square */
+ul li::before {
+    content: '★ ';                                           /* Star symbol for bullets */
+    color: var(--twentieth-century-neon-yellow) !important; /* Neon yellow color */
+    margin-right: 0.7em;                                     /* More spacing */
+    font-size: 1.2em;                                        /* Larger symbol */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow); /* Glow */
+}
+ul {
+    list-style: none !important;                             /* Removes default bullets */
+    padding-left: 1.5em !important;                          /* Add back some padding if needed */
+}
+
+
+/* ========================================================================= */
+/* 13. Form Elements and Dropdown Menus                                      */
+/* Theming for input fields and navigation dropdowns with a sleek, techy feel. */
+/* ========================================================================= */
+.form-control {
+    border: 2px solid var(--twentieth-century-neon-green) !important; /* Neon green border */
+    background-color: var(--twentieth-century-dark) !important;      /* Dark background */
+    color: var(--twentieth-century-text-light) !important;           /* Light text */
+    border-radius: 8px !important;                                   /* More rounded */
+    box-shadow: inset 0 0 10px var(--twentieth-century-neon-blue);   /* Inset glow */
+    padding: 0.8em 1em;
+}
+
+.form-control:focus {
+    border-color: var(--twentieth-century-neon-pink) !important;
+    box-shadow: inset 0 0 15px var(--twentieth-century-neon-pink), 0 0 8px var(--twentieth-century-neon-pink);
+    background-color: var(--twentieth-century-mid-gray) !important;
+    color: var(--twentieth-century-neon-yellow) !important;
+}
+
+.dropdown-menu {
+    background-color: var(--twentieth-century-mid-gray) !important;   /* Mid-grey background */
+    border: 2px solid var(--twentieth-century-neon-blue) !important;  /* Neon blue border */
+    box-shadow: 0 0 20px var(--twentieth-century-neon-blue);          /* Strong glow */
+    border-radius: 8px !important;
+}
+
+.dropdown-item {
+    color: var(--twentieth-century-text-light) !important;            /* Light text for items */
+    font-family: var(--twentieth-century-font-body) !important;
+    padding: 0.7em 1.2em;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--twentieth-century-neon-purple) !important; /* Neon purple on hover */
+    color: var(--twentieth-century-neon-yellow) !important;            /* Neon yellow text on hover */
+    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow);
+}
+
+/* ========================================================================= */
+/* 14. Modal Styling                                                         */
+/* Theming for Bootstrap modal pop-ups with a bold, digital look.         */
+/* ========================================================================= */
+.modal-content {
+    background-color: var(--twentieth-century-background-secondary) !important; /* Secondary background */
+    border: 4px solid var(--twentieth-century-neon-green) !important;          /* Strong neon green border */
+    box-shadow: 0 0 30px var(--twentieth-century-neon-green),
+                10px 10px 25px rgba(0, 0, 0, 0.6);                               /* Strong glow and shadow */
+    border-radius: 15px !important;
+}
+
+.modal-header, .modal-footer {
+    background-color: var(--twentieth-century-dark) !important;        /* Dark header/footer */
+    color: var(--twentieth-century-neon-pink) !important;              /* Neon pink text */
+    border-bottom: 2px solid var(--twentieth-century-neon-yellow);     /* Neon yellow separator */
+    font-family: var(--twentieth-century-font-subheading) !important;
+    text-shadow: 0 0 5px var(--twentieth-century-neon-pink);
+}
+
+/* ========================================================================= */
+/* 15. Adjustments for Existing main.css (or styles.css) Rules             */
+/* Ensures consistency and proper overriding of pre-existing rules.        */
+/* ========================================================================= */
+/* Global HTML/Body overflow handling from your main.css */
+html {
+    overflow-x: hidden !important;
+}
+
+html, body {
+    overflow-y: auto !important;
+    overscroll-behavior: none !important;
+}
+
+/* Minimum height for navbar and footer */
+#navbar, #footer {
+    min-height: 60px !important; /* Slightly taller for bolder design */
+}
+
+/* Homepage banner styling adjustments */
+.banner-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    display: inline-block !important;
+    /* Use a dark, abstract pattern or texture for the banner */
+    background-image: url('../images/abstract_dark_pattern.png') !important; /* Adjust path, consider a geometric or vaporwave pattern */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--twentieth-century-dark) !important; /* Fallback color */
+    background-blend-mode: overlay;
+    border-bottom: 5px solid var(--twentieth-century-neon-purple) !important;
+    box-shadow: 0 0 30px var(--twentieth-century-neon-purple);
+}
+
+.banner-title {
+    color: var(--twentieth-century-neon-yellow) !important; /* Neon yellow for banner title */
+    text-shadow: 0 0 10px var(--twentieth-century-neon-yellow),
+                 0 0 20px var(--twentieth-century-neon-orange),
+                 0 0 30px var(--twentieth-century-accent-red) !important; /* Multi-color neon glow */
+    letter-spacing: 0.15em !important;
+    font-family: var(--twentieth-century-font-heading) !important;
+}
+
+/* Carousel general layout adjustments */
+.carousel {
+    gap: 2rem !important; /* More space between carousel items */
+    padding: 2rem !important;
+    background-color: var(--twentieth-century-background-main) !important; /* Ensure carousel background matches theme */
+}
+
+/* Exhibition-specific sizing variables (assuming they are still relevant) */
+/*
+:root {
+    --exhibition-main-height: calc(100vh - 4em);
+    --exhibition-card-header-height: 3.5em;
+    --exhibition-card-footer-height: 3.5em;
+    --fv-card-body-height: calc(
+        var(--exhibition-main-height) -
+        var(--exhibition-card-header-height) -
+        var(--exhibition-card-footer-height) -
+        1em
+    );
+}
+*/
+
+/* Exhibition main area styling */
+main.exhibition {
+    height: var(--exhibition-main-height) !important;
+    background-color: var(--twentieth-century-background-main) !important;
+}
+
+/* Exhibition card component height adjustments */
+.card-header {
+    height: var(--exhibition-card-header-height) !important;
+}
+
+.card-body {
+    height: var(--fv-card-body-height) !important;
+    overflow-y: scroll !important;
+}
+
+.card-footer {
+    height: var(--exhibition-card-footer-height) !important;
+}
+
+/* Image object-fit styling from main.css */
+.img-object-fit {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* Height limiting for images in specific contexts */
+.limit-height {
+    max-height: 60vh !important; /* Slightly more prominent images */
+    width: auto !important;
+}
+
+/* Specific line-height and margin for exhibition titles/narratives */
+#cardTitle, #narrativeItem {
+    line-height: 1.3 !important; /* Tighter line height for modern feel */
+    margin-bottom: 0.5em !important; /* Add some margin for better spacing */
+}
+
+/* ========================================================================= */
+/* 16. Media Queries (Responsive Adjustments)                                */
+/* Ensures the theme adapts well to different screen sizes.                */
+/* These are copied from your original main.css for consistency.           */
+/* ========================================================================= */
+@media (max-width:600px) {
+    .card {
+        width: 95vw !important;
+        left: 2.5vw !important;
+    }
+    h1 { font-size: 3rem !important; }
+    h2 { font-size: 2.2rem !important; }
+    h3 { font-size: 1.6rem !important; }
+}
+@media (min-width:600px) {
+    .card {
+        width: 90vw !important;
+        left: 5vw !important;
+    }
+}
+
+@media (max-width:992px) {
+    main.exhibition {
+        font-size: 85% !important; /* Slightly larger text for mobile readability */
+    }
+
+    #cardTitle {
+        line-height: 1.1 !important;
+        font-size: 180% !important;
+    }
+
+    #narrativeItem {
+        line-height: 1.5 !important;
+    }
+
+    .btn {
+        font-size: 0.85rem !important;
+        padding: 0.6em 1.2em !important;
+    }
+
+    .card-footer {
+        height: calc(var(--exhibition-card-footer-height) + 1em) !important;
+    }
+
+    #previousButton, #nextButton {
+        font-size: 0.65rem !important;
+        padding: 0.4em 0.8em !important;
+    }
 }
