@@ -76,14 +76,35 @@ body {
 /* 3. Navigation Bar and Footer Overrides                                    */
 /* Styles the top navigation and bottom footer to match the theme.        */
 /* ========================================================================= */
-.navbar-background {
-    background-color: var(--early-modern-darkest-brown) !important; /* Darkest brown for navbar background */
-    color: var(--early-modern-cream) !important;                    /* Light text color for contrast */
+/* In stylesheets/early-modern.css */
+
+/* For Navbar */
+.navbar.navbar-expand-lg.bg-light.navbar-background, /* Target original Bootstrap classes AND your class */
+.navbar.navbar-expand-lg.navbar-background /* Or just your class if you can remove bg-light */
+{
+    background-color: var(--early-modern-darkest-brown) !important;
 }
 
-.footer-background {
-    background-color: var(--early-modern-darkest-brown) !important; /* Darkest brown for footer background */
-    color: var(--early-modern-cream) !important;                    /* Light text color for contrast */
+/* For Navbar Text (this is crucial for Bootstrap navbars) */
+.navbar-background .navbar-nav .nav-link,
+.navbar-background .navbar-brand,
+.navbar-background .navbar-text,
+.navbar-background .navbar-toggler-icon /* if it's a svg background */
+{
+    color: var(--early-modern-cream) !important;
+}
+
+/* For Footer */
+.footer-background.bg-light, /* Target original Bootstrap classes AND your class */
+.footer-background /* Or just your class if you can remove bg-light */
+{
+    background-color: var(--early-modern-darkest-brown) !important;
+}
+
+/* For Footer Text */
+.footer-background,
+.footer-background * { /* Target footer content directly, might need to be more specific */
+    color: var(--early-modern-cream) !important;
 }
 
 /* ========================================================================= */
@@ -271,7 +292,7 @@ h3 { font-size: 1.8rem !important; }
     background-color: var(--early-modern-darkest-brown) !important; /* Dark background for map container */
     padding: 40px !important;                                   /* Padding around the map */
     /* Dark parchment texture for the map background */
-    background-image: url('assets/additional_images/hollowknight-wallpaper.jpg') !important; /* Adjust path */
+    background-image: url('../images/aged_paper_light.jpg') !important; /* Adjust path */
     background-repeat: repeat;                                  /* Repeat the texture */
     background-size: cover;                                     /* Covers the map area */
     background-blend-mode: overlay;                             /* Blends texture with background color */
@@ -347,7 +368,7 @@ hr {
     position: absolute;                                       /* Position relative to parent (.section-divider) */
     width: 20px;                                              /* Size of the decorative flourish */
     height: 20px;
-    background-image: url('../images/small-flourish.png');    /* Image of the flourish - Adjust path */
+    /*background-image: url('../images/small-flourish.png');*/    /* Image of the flourish - Adjust path */
     background-size: contain;                                 /* Ensures flourish fits within its dimensions */
     top: 50%;                                                 /* Vertically centers the flourish */
     transform: translateY(-50%);                              /* Adjusts for precise vertical centering */
