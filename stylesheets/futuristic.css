@@ -114,9 +114,9 @@ section.team-section, article .carousel {
     background-color: var(--color-elevation-2);
 }
 
-/* .carousel-card {
-    color: var(--body-text) !important;
-} */
+.qr-code {
+    filter: invert(100%);
+}
 
 .team-member {
     background-color: var(--color-elevation-3);

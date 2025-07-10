@@ -13,10 +13,12 @@ let narratives = [];
 let currentSelection = [];
 let currentNarrative = "";
 let currentValue = "";
+
 let allTextDurations = [];
 let currentTextDurations = [];
-let currentSort = "";
+
 let areas = [];
+let selectedArea = localStorage.getItem("selectedArea");
 
 let currentItemIndex = "";
 
@@ -27,7 +29,6 @@ let languageButtonCreated = false;
 let contentButtonCreated = false;
 let selectedAreaFound = false;
 
-let selectedArea = localStorage.getItem("selectedArea");
 
 function arraysEqual(arr1, arr2) {
 	if (arr1.length !== arr2.length) return false;
@@ -62,7 +63,6 @@ function prepareNarratives(narrativeType) {
 		selectedArea = localStorage.getItem("selectedArea");
 		currentValue = JSON.parse(selectedArea);
 		selectedAreaFound = true;
-		console.log(currentValue)
 	}
 
 	if (narrativeType === "Chronological") {
@@ -234,8 +234,9 @@ function getItemImages() {
 	hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[0];
 	hollowKnightImageArea.alt = item.metadata.hollowKnightArea;
 
-	const itemImage = itemImageArea.src;
-	const itemQRCode = `assets/qr_codes/${items[currentItemIndex].qrCodeImage}`;
+	let itemImage = itemImageArea.src;
+	let itemQRCode = `assets/qr_codes/${items[currentItemIndex].qrCodeImage}`;
+	console.log(itemQRCode)
 
 	itemImageArea.addEventListener("mouseenter", () => {
 		itemImageArea.style.transform = "scale(1.05)";
@@ -343,7 +344,6 @@ function showMore() {
 }
 
 function showLess() {
-	console.log(currentTextDurations)
 	if (!arraysEqual(shortOnly, currentTextDurations)) {
 		for (let i = allTextDurations.length - 1; i > 0; i--) {
 			if (currentTextDurations.includes(allTextDurations[i]) && currentTextDurations.includes(allTextDurations[i - 1])) {

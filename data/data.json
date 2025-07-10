@@ -16,7 +16,7 @@
     	"hollowKnightImages": ["greenpath_A1.jpg", "greenpath_A2.jpg"],
 		"areaId": "greenpath",
 		"yearId" : 1545,
-		"qrCodeImage": "greenpath_qr_code.jpg",
+		"qrCodeImage": "greenpath.png",
     	"metadata": {
 			"fullName": "Cast iron balcony front designed by Hector Guimard",
 			"year": "1545, discovered in 1982",
@@ -31,7 +31,7 @@
     	"hollowKnightImages": ["city_of_tears_left_A1.jpg", "city_of_tears_left_A2.jpg"],
 		"areaId": "city-of-tears-left",
 		"yearId" : 1900,
-		"qrCodeImage": "city_of_tears_left_qr_code.jpg",
+		"qrCodeImage": "city_of_tears_left.png",
     	"metadata": {
 			"fullName": "Cast iron balcony front designed by Hector Guimard",
 			"year": "1900",
@@ -46,7 +46,7 @@
     	"hollowKnightImages": ["crystal_peak_A1.jpg", "crystal_peak_A2.jpg"],
 		"areaId": "crystal-peak",
 		"yearId" : 500,
-		"qrCodeImage": "crystal_peak_left_qr_code.jpg",
+		"qrCodeImage": "crystal_peak.png",
     	"metadata": {
 			"fullName": "Decorative Frieze with Wolves Chasing Gazelles",
 			"year": "300 - 500 CE",
@@ -61,6 +61,7 @@
     	"hollowKnightImages": ["resting_grounds_A1.jpg"],
 		"areaId": "resting-grounds",
 		"yearId" : 1927,
+		"qrCodeImage": "resting_grounds.png",
     	"metadata": {
 			"fullName": "Ships in the Dark",
 			"year": "1927",
@@ -75,6 +76,7 @@
     	"hollowKnightImages": ["howling_cliffs_A1.jpg"],
 		"areaId": "howling-cliffs",
 		"yearId" : 1916,
+		"qrCodeImage": "howling_cliffs.png",
     	"metadata": {
 			"fullName": "Celluloid exterior accordion",
 			"year": "1916 - 1919",
@@ -89,6 +91,7 @@
     	"hollowKnightImages": ["city_of_tears_right_A1.jpg", "city_of_tears_right_A2.jpg"],
 		"areaId": "city-of-tears-right",
 		"yearId" : 1903,
+		"qrCodeImage": "city_of_tears_right.png",
     	"metadata": {
 			"fullName": "Elevator in the house of S. Muyaki",
 			"year": "1903",
@@ -103,6 +106,7 @@
     	"hollowKnightImages": ["royal_waterways_A1.jpg", "royal_waterways_A2.jpg"],
 		"areaId": "royal-waterways",
 		"yearId" : 1859,
+		"qrCodeImage": "royal_waterways.png",
     	"metadata": {
 			"fullName": "Marble column with base and capital",
 			"year": "1845 - 1859",
@@ -117,6 +121,7 @@
 		"hollowKnightImages": ["ancient_basin_A1.jpg", "ancient_basin_A2.jpg"],
 		"areaId": "ancient-basin",
 		"yearId" : 138,
+		"qrCodeImage": "ancient_basin.png",
 		"metadata": {
 			"fullName": "Marble column with base and capital",
 			"year": "138 CE",
@@ -131,6 +136,7 @@
 		"hollowKnightImages": ["kingdoms_edge_A1.jpg", "kingdoms_edge_A2.jpg"],
 		"areaId": "kingdoms-edge",
 		"yearId" : 1899,
+		"qrCodeImage": "kingdoms_edge.png",
 		"metadata": {
 			"fullName": "Memento mori showing woman with half a head and half a skull",
 			"year": "1801 - 1900",
@@ -145,6 +151,7 @@
     	"hollowKnightImages": ["queens_gardens_A1.jpg", "queens_gardens_A2.jpg"],
 		"areaId": "queens-gardens",
 		"yearId" : 1869,
+		"qrCodeImage": "queens_gardens.png",
     	"metadata": {
 			"fullName": "The Faith and Hope Stained-Glass Window",
 			"year": "1867 - 1869",
@@ -174,6 +181,7 @@
     	"hollowKnightImages": ["forgotten_crossroads_A1.jpg", "forgotten_crossroads_A2.jpg"],
 		"areaId": "forgotten-crossroads",
 		"yearId" : 1500,
+		"qrCodeImage": "forgotten_crossroads.png",
     	"metadata": {
 			"fullName": "French Pilgrim Badge",
 			"year": "400 - 1500",
@@ -188,6 +196,7 @@
     	"hollowKnightImages": ["fungal_wastes_A1.jpg", "fungal_wastes_A2.jpg"],
 		"areaId": "fungal-wastes",
 		"yearId" : 1600,
+		"qrCodeImage": "fungal_wastes.png",
     	"metadata": {
 			"fullName": "Japanese Noh Mask",
 			"year": "1600",
@@ -202,6 +211,7 @@
     	"hollowKnightImages": ["fog_canyon_A1.jpg", "fog_canyon_A2.jpg"],
 		"areaId": "fog-canyon",
 		"yearId" : 1500,
+		"qrCodeImage": "fog_canyon.png",
     	"metadata": {
 			"fullName": "'A Wakeful Sleep' handscroll by Tosa Mitsunobu",
 			"year": "1400 - 1500",
@@ -216,6 +226,7 @@
     	"hollowKnightImages": ["deepnest_A1.jpg", "deepnest_A2.jpg"],
 		"areaId": "deepnest",
 		"yearId" : 2009,
+		"qrCodeImage": "deepnest.png",
     	"metadata": {
 			"fullName": "Golden Spider silk preservation method to make a handwoven Shawl",
 			"year": "2009",
@@ -230,6 +241,7 @@
     	"hollowKnightImages": ["the_hive_A1.jpg", "the_hive_A2.jpg"],
 		"areaId": "the-hive",
 		"yearId" : 1948,
+		"qrCodeImage": "the_hive.png",
     	"metadata": {
 			"fullName": "Abbè Warre's 'People's Hive'",
 			"year": "1948",
