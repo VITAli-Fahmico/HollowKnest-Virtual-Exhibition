@@ -189,8 +189,8 @@ html, body {
 }
 
 .qr-code {
-  width: 70px !important;
-  height: 70px !important;
+  width: 80px !important;
+  height: 80px !important;
   object-fit: contain;
   border: 1px solid #ccc;
   border-radius: 6px;
