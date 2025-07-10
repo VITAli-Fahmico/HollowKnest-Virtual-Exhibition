@@ -1,0 +1,1391 @@
+      {
+  "data": {
+    "___comment": "### WARNING ### - <enhancement> tags are experimental, please do not aggregate",
+    "type": "objects",
+    "id": "co77229",
+    "attributes": {
+      "@admin": {
+        "processed": 1752093913989,
+        "sequence": 22435011,
+        "uid": "co77229",
+        "added": 1699638711238,
+        "stream": "collections-online",
+        "enhancement": {
+          "enhanced": true,
+          "enhancements": [
+            {
+              "id": "575b7b2e-0353-3535-8ba9-5a02d7522575",
+              "source": "ga4"
+            }
+          ]
+        },
+        "id": "object-77229",
+        "source": "Mimsy XG",
+        "uuid": "575b7b2e-0353-3535-8ba9-5a02d7522575"
+      },
+      "cumulation": {
+        "collector": [
+          {
+            "summary": {
+              "title": "Sir Henry Wellcome's Museum Collection"
+            },
+            "@link": {
+              "source": "catalogue"
+            },
+            "name": [
+              {
+                "value": "Sir Henry Wellcome's Museum Collection"
+              }
+            ],
+            "@entity": "literal"
+          }
+        ],
+        "@entity": "lifecycle"
+      },
+      "description": [
+        {
+          "type": "catalogue description",
+          "value": "Wooden bust of a woman, half head, half skull, mounted on a ivory and wooden stand, possibly Italian, possibly 19th century",
+          "primary": true
+        },
+        {
+          "type": "web description",
+          "value": "Carved from wood, this statue shows a woman with half of her head intact and the other half with a bare skull. This type of figure is known as a memento mori – literally a reminder of death, used to prompt people about the shortness of life and the inevitability of death. A skull was used to represent death from the 1500s onwards, replacing the older image of a skeleton leading a living person to their fate."
+        }
+      ],
+      "identifier": [
+        {
+          "type": "accession number",
+          "value": "A641349",
+          "primary": true
+        },
+        {
+          "value": "16235"
+        }
+      ],
+      "name": [
+        {
+          "type": "catalogue name",
+          "value": "memento mori",
+          "primary": true
+        },
+        {
+          "type": "object name",
+          "value": "memento mori"
+        }
+      ],
+      "summary": {
+        "title": "Memento mori showing woman with half a head and half a skull"
+      },
+      "title": [
+        {
+          "type": "catalogue title",
+          "value": "Memento mori showing woman with half a head and half a skull",
+          "primary": true
+        }
+      ],
+      "category": [
+        {
+          "museum": "SCM",
+          "name": "Anatomy & Pathology",
+          "type": "category1",
+          "value": "SCM - Anatomy & Pathology"
+        }
+      ],
+      "creation": {
+        "date": [
+          {
+            "from": "1801",
+            "source": "catalogue",
+            "to": "1900",
+            "value": "1801-1900"
+          },
+          {
+            "role": [
+              {
+                "value": "made"
+              }
+            ],
+            "from": "1801",
+            "to": "1900",
+            "value": "1801-1900"
+          }
+        ],
+        "maker": [
+          {
+            "summary": {
+              "title": "Unknown maker"
+            },
+            "@link": {
+              "source": "catalogue"
+            },
+            "name": [
+              {
+                "value": "Unknown maker"
+              }
+            ],
+            "@entity": "literal"
+          },
+          {
+            "summary": {
+              "title": "Unknown maker"
+            },
+            "@link": {
+              "role": [
+                {
+                  "value": "maker"
+                }
+              ],
+              "attribution": {
+                "date": [
+                  {
+                    "from": "2008",
+                    "to": "2008",
+                    "value": "2008-12-05",
+                    "primary": true
+                  }
+                ],
+                "note": [
+                  {
+                    "type": "comment",
+                    "value": "project cataloguer",
+                    "primary": true
+                  }
+                ],
+                "type": "S&H web project"
+              }
+            },
+            "@admin": {
+              "uid": "cp21665",
+              "id": "agent-21665",
+              "uuid": "2b819f5a-2e1d-3432-8d8a-a01bf2ab3f86"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "place": [
+          {
+            "summary": {
+              "title": "Italy"
+            },
+            "@link": {
+              "source": "catalogue"
+            },
+            "name": [
+              {
+                "value": "Italy"
+              }
+            ],
+            "@entity": "literal"
+          },
+          {
+            "summary": {
+              "title": "Italy"
+            },
+            "@link": {
+              "role": [
+                {
+                  "value": "made"
+                }
+              ],
+              "attribution": {
+                "date": [
+                  {
+                    "from": "2008",
+                    "to": "2008",
+                    "value": "2008-12-05",
+                    "primary": true
+                  }
+                ],
+                "note": [
+                  {
+                    "type": "comment",
+                    "value": "project cataloguer",
+                    "primary": true
+                  }
+                ],
+                "type": "S&H web project"
+              }
+            },
+            "@admin": {
+              "uid": "cd159",
+              "id": "place-159",
+              "uuid": "381c3c27-5c3a-317f-8db3-5af8513ed871"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "@entity": "lifecycle"
+      },
+      "facility": [
+        {
+          "summary": {
+            "title": "WC03"
+          },
+          "@admin": {
+            "uid": "cf170150",
+            "id": "facility-170150",
+            "uuid": "79d010ef-537a-304e-8385-8000a0df21bb"
+          },
+          "name": [
+            {
+              "type": "name",
+              "value": "Science Museum, Medicine: The Wellcome Galleries",
+              "primary": true
+            },
+            {
+              "type": "gallery",
+              "value": "Medicine: The Wellcome Galleries"
+            },
+            {
+              "type": "museum",
+              "value": "Science Museum"
+            }
+          ],
+          "@hierarchy": [
+            {
+              "@admin": {
+                "id": "facility-103",
+                "uuid": "39f90045-1ae3-3d84-ae56-caf2f2a7b52b",
+                "status": "public"
+              },
+              "name": [
+                {
+                  "type": "name",
+                  "value": "Science Museum"
+                }
+              ],
+              "@datatype": "site",
+              "@entity": "reference"
+            },
+            {
+              "@admin": {
+                "id": "facility-168777",
+                "uuid": "0bf56391-904c-36b8-938e-230a6179f1e8",
+                "status": "public"
+              },
+              "name": [
+                {
+                  "type": "name",
+                  "value": "First Floor"
+                }
+              ],
+              "@datatype": "floor",
+              "@entity": "reference"
+            },
+            {
+              "@admin": {
+                "id": "facility-170031",
+                "uuid": "c058dfc0-e7a7-3635-9d40-0571fcc1e91c",
+                "status": "public"
+              },
+              "name": [
+                {
+                  "type": "name",
+                  "value": "Medicine: The Wellcome Galleries"
+                }
+              ],
+              "@datatype": "permanent gallery",
+              "@entity": "reference"
+            },
+            {
+              "@admin": {
+                "id": "facility-170048",
+                "uuid": "c6d1da6a-7506-34bd-8ba8-a5c283c5643c",
+                "status": "public"
+              },
+              "name": [
+                {
+                  "type": "name",
+                  "value": "Exploring Medicine"
+                }
+              ],
+              "@datatype": "thematic zone",
+              "@entity": "reference"
+            },
+            {
+              "@admin": {
+                "id": "facility-170150",
+                "uuid": "79d010ef-537a-304e-8385-8000a0df21bb",
+                "status": "public"
+              },
+              "name": [
+                {
+                  "type": "name",
+                  "value": "WC03"
+                }
+              ],
+              "@datatype": "wall case",
+              "@entity": "reference"
+            }
+          ],
+          "@entity": "reference",
+          "primary": true
+        }
+      ],
+      "language": [
+        {
+          "value": "eng"
+        }
+      ],
+      "legal": {
+        "credit": "Loan, Wellcome Trust"
+      },
+      "material": [
+        {
+          "type": "catalogue materials",
+          "value": "bust, wood"
+        },
+        {
+          "type": "catalogue materials",
+          "value": "bust, mineral"
+        },
+        {
+          "type": "catalogue materials",
+          "value": "bust, metal"
+        },
+        {
+          "type": "catalogue materials",
+          "value": "stand, ivory"
+        },
+        {
+          "type": "catalogue materials",
+          "value": "stand, wood"
+        },
+        {
+          "type": "catalogue materials",
+          "value": "stand, metal"
+        }
+      ],
+      "measurements": {
+        "display": "overall: 140 mm x 50 mm x 50 mm,",
+        "count": "1",
+        "dimensions": [
+          {
+            "type": "catalogue dimensions",
+            "value": "overall: 148 mm x 52 mm x 51 mm, .18 kg",
+            "primary": true
+          },
+          {
+            "units": "in",
+            "dimension": "depth",
+            "value": "2"
+          },
+          {
+            "units": "mm",
+            "dimension": "depth",
+            "value": "51"
+          },
+          {
+            "units": "in",
+            "dimension": "height",
+            "value": "5 13/16"
+          },
+          {
+            "units": "mm",
+            "dimension": "height",
+            "value": "148"
+          },
+          {
+            "units": "kg",
+            "dimension": "weight",
+            "value": "0.18"
+          },
+          {
+            "units": "lbs",
+            "dimension": "weight",
+            "value": "0.39683"
+          },
+          {
+            "units": "in",
+            "dimension": "width",
+            "value": "2 1/16"
+          },
+          {
+            "units": "mm",
+            "dimension": "width",
+            "value": "52"
+          },
+          {
+            "units": "in",
+            "dimension": "depth",
+            "value": "1 15/16"
+          },
+          {
+            "units": "mm",
+            "dimension": "depth",
+            "value": "50"
+          },
+          {
+            "units": "in",
+            "dimension": "height",
+            "value": "5 1/2"
+          },
+          {
+            "units": "mm",
+            "dimension": "height",
+            "value": "140"
+          },
+          {
+            "units": "in",
+            "dimension": "width",
+            "value": "1 15/16"
+          },
+          {
+            "units": "mm",
+            "dimension": "width",
+            "value": "50"
+          },
+          {
+            "units": "mm",
+            "value": "150"
+          },
+          {
+            "units": "mm",
+            "value": "50"
+          }
+        ]
+      },
+      "multimedia": [
+        {
+          "@admin": {
+            "uid": "i291851",
+            "id": "media-291851",
+            "source": "smgi",
+            "uuid": "14facca4-9edb-3676-9aba-e3bc96e9f0ca"
+          },
+          "@processed": {
+            "large": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1740493120000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/291/851/large_a641314__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 137425
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 1152
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 1536
+                  }
+                ]
+              }
+            },
+            "small_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1740493120000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/291/851/small_thumbnail_a641314__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 19317
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 48
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 64
+                  }
+                ]
+              }
+            },
+            "zoom": {
+              "resizable": true,
+              "@type": "image",
+              "format": "IIIF",
+              "modified": 1740493120000,
+              "location": "https://zoom.sciencemuseumgroup.org.uk/iiif/3/291%2F851%2FGroup_shot_of_various_memento_mori.ptif",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 47424190
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 6208
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 8280
+                  }
+                ]
+              }
+            },
+            "medium": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1740493120000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/291/851/medium_a641314__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 56059
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 576
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 768
+                  }
+                ]
+              }
+            },
+            "large_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1740493120000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/291/851/large_thumbnail_a641314__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 27647
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 240
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 320
+                  }
+                ]
+              }
+            },
+            "medium_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1740493120000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/291/851/medium_thumbnail_a641314__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 22700
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 144
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 192
+                  }
+                ]
+              }
+            }
+          },
+          "@type": "image",
+          "upload_sort": "2018-03-20 14:07:56",
+          "legal": {
+            "rights": [
+              {
+                "licence": "CC BY-NC-SA 4.0",
+                "copyright": "© The Board of Trustees of the Science Museum"
+              }
+            ]
+          },
+          "credit": {
+            "value": "Science Museum Group"
+          },
+          "@entity": "reference"
+        },
+        {
+          "@admin": {
+            "uid": "i2508",
+            "id": "media-2508",
+            "source": "smgi",
+            "uuid": "2742e778-0f07-3304-a6c7-3f464fbf793d"
+          },
+          "@processed": {
+            "large": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/508/large_a641349__0002_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 129682
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 1536
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 1194
+                  }
+                ]
+              }
+            },
+            "small_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/508/small_thumbnail_a641349__0002_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 12424
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 62
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 48
+                  }
+                ]
+              }
+            },
+            "zoom": {
+              "resizable": true,
+              "@type": "image",
+              "format": "IIIF",
+              "modified": 1731667238000,
+              "location": "https://zoom.sciencemuseumgroup.org.uk/iiif/3/2%2F508%2FWooden_bust_of_a_woman__half_head__half_skull.ptif",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 20477924
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 4932
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 3834
+                  }
+                ]
+              }
+            },
+            "medium": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/508/medium_a641349__0002_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 31668
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 576
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 448
+                  }
+                ]
+              }
+            },
+            "large_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/508/large_thumbnail_a641349__0002_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 23423
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 411
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 320
+                  }
+                ]
+              }
+            },
+            "medium_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/508/medium_thumbnail_a641349__0002_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 16896
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 247
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 192
+                  }
+                ]
+              }
+            }
+          },
+          "@type": "image",
+          "upload_sort": "2015-06-04 16:25:31",
+          "legal": {
+            "rights": [
+              {
+                "licence": "CC BY-NC-SA 4.0",
+                "copyright": "© The Board of Trustees of the Science Museum"
+              }
+            ]
+          },
+          "credit": {
+            "value": "Science Museum Group Collection"
+          },
+          "@entity": "reference"
+        },
+        {
+          "@admin": {
+            "uid": "i2507",
+            "id": "media-2507",
+            "source": "smgi",
+            "uuid": "867b7b36-0332-3695-861c-2a16c32fdad3"
+          },
+          "@processed": {
+            "large": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/507/large_a641349__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 125743
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 1536
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 1222
+                  }
+                ]
+              }
+            },
+            "small_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/507/small_thumbnail_a641349__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 12495
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 60
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 48
+                  }
+                ]
+              }
+            },
+            "zoom": {
+              "resizable": true,
+              "@type": "image",
+              "format": "IIIF",
+              "modified": 1731667238000,
+              "location": "https://zoom.sciencemuseumgroup.org.uk/iiif/3/2%2F507%2FWooden_bust_of_a_woman__half_head__half_skull.ptif",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 17053426
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 4803
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 3822
+                  }
+                ]
+              }
+            },
+            "medium": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/507/medium_a641349__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 31621
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 576
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 459
+                  }
+                ]
+              }
+            },
+            "large_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/507/large_thumbnail_a641349__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 22938
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 402
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 320
+                  }
+                ]
+              }
+            },
+            "medium_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/507/medium_thumbnail_a641349__0001_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 16737
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 241
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 192
+                  }
+                ]
+              }
+            }
+          },
+          "@type": "image",
+          "upload_sort": "2015-06-04 16:25:30",
+          "legal": {
+            "rights": [
+              {
+                "licence": "CC BY-NC-SA 4.0",
+                "copyright": "© The Board of Trustees of the Science Museum"
+              }
+            ]
+          },
+          "credit": {
+            "value": "Science Museum Group Collection"
+          },
+          "@entity": "reference"
+        },
+        {
+          "@admin": {
+            "uid": "i2509",
+            "id": "media-2509",
+            "source": "smgi",
+            "uuid": "798d112c-91a0-3248-bd71-20c61ac5db22"
+          },
+          "@processed": {
+            "large": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/509/large_a641349__0003_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 130552
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 1536
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 1154
+                  }
+                ]
+              }
+            },
+            "small_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/509/small_thumbnail_a641349__0003_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 12395
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 64
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 48
+                  }
+                ]
+              }
+            },
+            "zoom": {
+              "resizable": true,
+              "@type": "image",
+              "format": "IIIF",
+              "modified": 1731667238000,
+              "location": "https://zoom.sciencemuseumgroup.org.uk/iiif/3/2%2F509%2FWooden_bust_of_a_woman__half_head__half_skull.ptif",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 24002766
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 4872
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 3660
+                  }
+                ]
+              }
+            },
+            "medium": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/509/medium_a641349__0003_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 33780
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 576
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 433
+                  }
+                ]
+              }
+            },
+            "large_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/509/large_thumbnail_a641349__0003_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 24935
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 426
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 320
+                  }
+                ]
+              }
+            },
+            "medium_thumbnail": {
+              "resizable": true,
+              "@type": "image",
+              "format": "jpeg",
+              "modified": 1731667238000,
+              "location": "https://coimages.sciencemuseumgroup.org.uk/2/509/medium_thumbnail_a641349__0003_.jpg",
+              "measurements": {
+                "filesize": {
+                  "units": "bytes",
+                  "value": 17298
+                },
+                "dimensions": [
+                  {
+                    "units": "pixels",
+                    "dimension": "height",
+                    "value": 255
+                  },
+                  {
+                    "units": "pixels",
+                    "dimension": "width",
+                    "value": 192
+                  }
+                ]
+              }
+            }
+          },
+          "@type": "image",
+          "upload_sort": "2015-06-04 16:25:32",
+          "legal": {
+            "rights": [
+              {
+                "licence": "CC BY-NC-SA 4.0",
+                "copyright": "© The Board of Trustees of the Science Museum"
+              }
+            ]
+          },
+          "credit": {
+            "value": "Science Museum Group Collection"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "enhancement": {
+        "analytics": {
+          "current": {
+            "date": {
+              "from": "2025-07-01",
+              "to": "2025-07-07"
+            },
+            "cumulative_views": 25,
+            "views": 0
+          },
+          "previous": {
+            "date": {
+              "from": "2025-06-24",
+              "to": "2025-06-30"
+            },
+            "cumulative_views": 25,
+            "views": 2
+          }
+        }
+      },
+      "ondisplay": [
+        {
+          "type": "name",
+          "value": "Science Museum, Medicine: The Wellcome Galleries",
+          "primary": true
+        },
+        {
+          "type": "gallery",
+          "value": "Medicine: The Wellcome Galleries"
+        },
+        {
+          "type": "museum",
+          "value": "Science Museum"
+        }
+      ]
+    },
+    "links": {
+      "self": "https://collection.sciencemuseumgroup.org.uk/objects/co77229/memento-mori-showing-woman-with-half-a-head-and-half-a-skull",
+      "root": "https://collection.sciencemuseumgroup.org.uk",
+      "api": "https://collection.sciencemuseumgroup.org.uk/api/objects/co77229",
+      "iiif": "https://collection.sciencemuseumgroup.org.uk/iiif/objects/co77229"
+    },
+    "relationships": {
+      "place": {
+        "data": [
+          {
+            "type": "place",
+            "id": "cd159"
+          }
+        ]
+      },
+      "term": {
+        "data": [
+          {
+            "type": "term",
+            "id": "ct262482"
+          },
+          {
+            "type": "term",
+            "id": "ct262880"
+          },
+          {
+            "type": "term",
+            "id": "ct261875"
+          },
+          {
+            "type": "term",
+            "id": "ct264935"
+          },
+          {
+            "type": "term",
+            "id": "ct261886"
+          }
+        ]
+      },
+      "maker": {
+        "data": [
+          {
+            "type": "people",
+            "id": "cp21665"
+          }
+        ]
+      }
+    },
+    "children": [],
+    "record": {
+      "groupingType": "SPH",
+      "recordType": "parent"
+    },
+    "counts": ""
+  },
+  "included": [
+    {
+      "type": "place",
+      "id": "cd159",
+      "attributes": {
+        "role": {
+          "type": "place",
+          "value": "made"
+        },
+        "summary": {
+          "title": "Italy"
+        },
+        "@admin": {
+          "uid": "cd159",
+          "id": "place-159",
+          "uuid": "381c3c27-5c3a-317f-8db3-5af8513ed871"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/place/cd159"
+      }
+    },
+    {
+      "type": "term",
+      "id": "ct262482",
+      "attributes": {
+        "summary": {
+          "title": "statue"
+        },
+        "role": {
+          "value": "object name"
+        },
+        "@admin": {
+          "uid": "ct262482",
+          "id": "term-262482",
+          "uuid": "089a8c8b-acf8-3ae0-a2ca-d783c8ea7d75"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/term/ct262482"
+      }
+    },
+    {
+      "type": "term",
+      "id": "ct262880",
+      "attributes": {
+        "summary": {
+          "title": "memento mori"
+        },
+        "role": {
+          "value": "object name"
+        },
+        "@admin": {
+          "uid": "ct262880",
+          "id": "term-262880",
+          "uuid": "f1e4cf85-0953-3942-af00-c26ecfc8ea43"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/term/ct262880"
+      }
+    },
+    {
+      "type": "term",
+      "id": "ct261875",
+      "attributes": {
+        "summary": {
+          "title": "Birth and death"
+        },
+        "role": {
+          "value": "theme"
+        },
+        "@admin": {
+          "uid": "ct261875",
+          "id": "term-261875",
+          "uuid": "6e882723-825b-3280-9af2-3a706803e66c"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/term/ct261875"
+      }
+    },
+    {
+      "type": "term",
+      "id": "ct264935",
+      "attributes": {
+        "summary": {
+          "title": "Art and anatomy in the European Renaissance"
+        },
+        "role": {
+          "value": "topic"
+        },
+        "@admin": {
+          "uid": "ct264935",
+          "id": "term-264935",
+          "uuid": "515b934f-b512-3c7b-b01b-df6662b8bce2"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/term/ct264935"
+      }
+    },
+    {
+      "type": "term",
+      "id": "ct261886",
+      "attributes": {
+        "summary": {
+          "title": "Understanding the body"
+        },
+        "role": {
+          "value": "theme"
+        },
+        "@admin": {
+          "uid": "ct261886",
+          "id": "term-261886",
+          "uuid": "b4d0bfb8-ba2f-389d-88f6-b08d26e0f65d"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/term/ct261886"
+      }
+    },
+    {
+      "type": "people",
+      "id": "cp21665",
+      "attributes": {
+        "role": {
+          "type": "maker",
+          "value": "maker"
+        },
+        "summary": {
+          "title": "Unknown maker"
+        },
+        "@admin": {
+          "uid": "cp21665",
+          "id": "agent-21665",
+          "uuid": "2b819f5a-2e1d-3432-8d8a-a01bf2ab3f86"
+        },
+        "@entity": "reference"
+      },
+      "links": {
+        "self": "https://collection.sciencemuseumgroup.org.uk/people/cp21665"
+      }
+    }
+  ],
+  "inProduction": true
+}
+    
