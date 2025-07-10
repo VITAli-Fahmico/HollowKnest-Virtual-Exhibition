@@ -102,12 +102,24 @@ body {
     color: var(--body-text);
 }
 
-section.team-section {
+section.team-section, article .carousel {
+    background-color: var(--color-elevation-2) !important;
+}
+
+.carousel {
+    background-color: var(--color-row);
+}
+
+.carousel article {
     background-color: var(--color-elevation-2);
 }
 
+/* .carousel-card {
+    color: var(--body-text) !important;
+} */
+
 .team-member {
-    background-color: var(--color-elevation-3)
+    background-color: var(--color-elevation-3);
 }
 
 .team-member a {

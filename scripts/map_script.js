@@ -35,8 +35,3 @@ function styleImage(className, hollowKnightImage, itemImage) {
     }`;
     document.head.appendChild(style);
 }
-
-function selectArea(selectedArea) {
-    localStorage.setItem("selectedArea", JSON.stringify(selectedArea));
-    window.location.href = "exhibition.html";
-}

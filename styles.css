@@ -5,7 +5,7 @@
 	--exhibition-card-header-height: 3.5em;
 	--exhibition-card-footer-height: 3.5em;
 
-	--fv-card-body-height: calc( 
+	--exhibition-card-body-height: calc( 
 		var(--exhibition-main-height) - 
 		var(--exhibition-card-header-height) - 
 		var(--exhibition-card-footer-height) -
@@ -38,7 +38,7 @@ html {
 }
 
 html, body {
-    overflow-y: auto;
+    /* overflow-y: auto; */
     overscroll-behavior: none;
 }
 
@@ -67,16 +67,16 @@ html, body {
 
 /* Wrapper for image + text */
 .banner-wrapper {
-  position: relative;
-  width: 100%;
-  display: inline-block;
+    position: relative;
+    width: 100%;
+    display: inline-block;
 }
 
 /* Banner Image */
 .banner-image {
-  width: 100%;
-  height: auto;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Text over image */
@@ -95,13 +95,16 @@ html, body {
 
 /* === Carousel Container === */
 .carousel {
-  display: flex;
-  flex-wrap: nowrap;             /* Cards in a row */
-  overflow-x: auto;              /* Scroll horizontally */
-  gap: 1.5rem;
-  padding: 1rem;
-  scroll-behavior: smooth;
+    display: flex;
+    flex-wrap: nowrap;             /* Cards in a row */
+    overflow-x: auto;              /* Scroll horizontally */
+    gap: 1.5rem;
+    padding: 1rem;
+    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+    border-radius: 15px;
 }
+
 
 /* === Hide horizontal scrollbar (while keeping scroll functionality) === */
 .carousel {
@@ -117,7 +120,7 @@ html, body {
 /* === Individual Card === */
 .carousel article {
   background-color: #ffffff;
-  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   min-width: 300px;
   max-width: 320px;
@@ -146,6 +149,7 @@ html, body {
 .carousel article h2 {
   font-size: 1.1rem;
   text-align: center;
+  margin-top: 0.75rem;
   margin-bottom: 0.5rem;
   flex-shrink: 0;
 }
@@ -176,11 +180,11 @@ html, body {
 /* === "Read More" Link === */
 .carousel-text a {
   font-size: 0.85rem;
-  color: #007bff;
   text-decoration: none;
 }
 
 .carousel-text a:hover {
+  font-size: 0.85rem;
   text-decoration: underline;
 }
 
@@ -324,7 +328,7 @@ main.exhibition {
 }
 
 .card-body {
-	height: var(--fv-card-body-height) !important; 	
+	height: var(--exhibition-card-body-height) !important; 	
 	overflow-y: scroll; 
 }
 

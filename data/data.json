@@ -159,6 +159,7 @@
     	"hollowKnightImages": ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"],
 		"areaId": "dirtmouth",
 		"yearId" : 1791,
+		"qrCodeImage": "dirtmouth.png",
     	"metadata": {
 			"fullName": "Plan and elevation of St. Patrick’s Well in Orvieto",
 			"year": "1791",

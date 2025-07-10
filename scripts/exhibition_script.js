@@ -91,20 +91,13 @@ function prepareNarratives(narrativeType) {
 		currentItemIndex = 0;
 	}; 
 
-	const style = document.createElement("style");
-
-    style.innerHTML = `
-    figure#itemImageArea:hover {
-        background-image: ${items[currentItemIndex].qrCodeImage}; 
-    }`;
-    document.head.appendChild(style);
-
 	getItemInformation();
 }
 
 function getItemInformation() {
 	clearItemText();
 	getItemMetadata();
+	getItemImages();
 	getItemNarrativeText();
 	getItemBodyText();
 	getNavigationElements();
@@ -204,14 +197,6 @@ function getItemMetadata() {
 	let item = currentSelection[currentItemIndex];
 	let itemMetadata = item.metadata;
 
-	let itemImageArea = document.getElementById("itemImageArea");
-	let hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
-
-	itemImageArea.src = imageDirectory + "/" + item.itemImages[0];
-	hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[0];
-	itemImageArea.alt = item.metadata.fullName;
-	hollowKnightImageArea.alt = item.metadata.hollowKnightArea;
-
 	for (const [metadataAttribute, value] of Object.entries(itemMetadata)) {
 		if (metadataAttribute === "year" || metadataAttribute == "hollowKnightArea") {
 			const container = document.getElementById(metadataAttribute);
@@ -226,6 +211,45 @@ function getItemMetadata() {
 		}
 		
 	}
+}
+
+function switchImages(alternateImage) {
+	const timeOut = 200;
+	itemImageArea.style.opacity = "0";
+	setTimeout(() => {
+		itemImageArea.src = alternateImage;
+		itemImageArea.style.opacity = "1";
+	}, timeOut);
+}
+
+function getItemImages() {
+	let item = currentSelection[currentItemIndex];
+	let itemImageArea = document.getElementById("itemImageArea");
+	let hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
+
+	itemImageArea.src = imageDirectory + "/" + item.itemImages[0];
+	itemImageArea.alt = item.metadata.fullName;
+	itemImageArea.style.transition = "opacity 0.4s ease, transform 0.4s ease"
+
+	hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[0];
+	hollowKnightImageArea.alt = item.metadata.hollowKnightArea;
+
+	const itemImage = itemImageArea.src;
+	const itemQRCode = `assets/qr_codes/${items[currentItemIndex].qrCodeImage}`;
+
+	itemImageArea.addEventListener("mouseenter", () => {
+		itemImageArea.style.transform = "scale(1.05)";
+		itemImageArea.style.backgroundColor = "white";
+		itemImageArea.style.backgroundSize = "cover";
+		itemImageArea.style.backgroundPosition = "center";
+		switchImages(itemQRCode);
+	});
+
+	itemImageArea.addEventListener("mouseleave", () => {
+		itemImageArea.style.transform = "scale(1)";
+		itemImageArea.style.backgroundColor = "";
+		switchImages(itemImage);
+	});
 }
 
 function getNavigationElements() {

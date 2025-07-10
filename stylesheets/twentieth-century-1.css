@@ -73,7 +73,7 @@ section.team-section {
     background-color: var(--color-elevation-2);
 }
 
-.team-member {
+.team-member, .carousel {
     background-color: var(--color-elevation-3)
 }
 

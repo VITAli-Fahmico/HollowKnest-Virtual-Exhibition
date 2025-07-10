@@ -1,6 +1,11 @@
 const componentDirectory = "components";
 const stylesheetsDirectory = "stylesheets";
 
+function selectArea(selectedArea) {
+	localStorage.setItem("selectedArea", JSON.stringify(selectedArea));
+	window.location.href = "exhibition.html";
+}
+
 async function loadComponent(fileName, placeholderId, backgroundClass) { // for loading essential HTML content into each placeholder
 	try {
 		const response = await fetch(`${componentDirectory}/${fileName}`);
@@ -45,3 +50,4 @@ document.addEventListener("DOMContentLoaded", async () => { // loads the header 
 	await loadFooter();
 	// await loadExhibitionPreview()
 }); 
+
