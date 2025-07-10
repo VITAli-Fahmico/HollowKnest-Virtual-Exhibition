@@ -206,7 +206,7 @@ h3 { font-size: 2.5rem !important; }
 /* Carousel article headings */
 .carousel article h2 {
     font-family: var(--twentieth-century-font-subheading) !important; /* Subheading font */
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
     text-shadow: none !important; /* Remove heavy glow for smaller headings */
     color: var(--twentieth-century-neon-pink) !important;
 }
@@ -269,6 +269,7 @@ h3 { font-size: 2.5rem !important; }
 /* 8. Carousel Specific Adjustments                                          */
 /* Ensures the carousel cards fit the theme's energetic aesthetic.          */
 /* ========================================================================= */
+/* Inside your 8. Carousel Specific Adjustments section */
 .carousel article {
     background-color: var(--twentieth-century-background-secondary) !important; /* Mid-grey background */
     border: 2px solid var(--twentieth-century-neon-green) !important;         /* Neon green border */
@@ -276,6 +277,24 @@ h3 { font-size: 2.5rem !important; }
                 0 4px 15px rgba(0, 0, 0, 0.4) !important;                     /* Standard shadow */
     border-radius: 10px !important;
     padding: 1.5rem !important;
+    color: var(--twentieth-century-text-light) !important; /* Ensure default text is light for overall readability */
+}
+
+/* --- ADD OR MODIFY THIS RULE FOR "READ MORE" LINKS/BUTTONS --- */
+.carousel article a,
+.carousel article .btn { /* Target links and buttons specifically within carousel articles */
+    color: var(--twentieth-century-neon-pink) !important; /* A bright, contrasting neon pink */
+    text-shadow: none !important; /* CRUCIAL: Remove any text-shadows that might be blurring it */
+    font-weight: bold !important; /* Make it bold for better visibility */
+    background: none !important; /* If it's a link styled as a button, ensure no background issues */
+    border: none !important; /* Remove button borders if not desired for simple text links */
+    text-decoration: underline !important; /* Make it clear it's a link */
+}
+
+.carousel article a:hover,
+.carousel article .btn:hover {
+    color: var(--twentieth-century-neon-yellow) !important; /* Change color on hover */
+    text-decoration: none !important; /* Remove underline on hover for contrast */
 }
 
 .carousel article img:first-of-type {
