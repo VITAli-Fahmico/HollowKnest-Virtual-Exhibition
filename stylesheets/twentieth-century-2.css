@@ -335,9 +335,12 @@ h3 { font-size: 2.5rem !important; }
     transform: scale(1.02);
 }
 
+/* In the main section of your twentieth-century-2.css */
 .team-member h3 {
     color: var(--twentieth-century-neon-yellow) !important; /* Neon yellow for names */
     text-shadow: 0 0 5px var(--twentieth-century-neon-yellow);
+    font-size: 1.8rem !important; /* A good default for desktop/larger screens */
+    line-height: 1.2 !important;
 }
 
 .team-member a {
@@ -663,9 +666,10 @@ main.exhibition {
     }
 }
 
+/* Existing Media Queries (towards the end of twentieth-century-2.css) */
 @media (max-width:992px) {
     main.exhibition {
-        font-size: 85% !important; /* Slightly larger text for mobile readability */
+        font-size: 85% !important;
     }
 
     #cardTitle {
@@ -689,5 +693,24 @@ main.exhibition {
     #previousButton, #nextButton {
         font-size: 0.65rem !important;
         padding: 0.4em 0.8em !important;
+    }
+
+    /* --- ADD THIS FOR TEAM MEMBER NAMES ON SMALLER SCREENS --- */
+    .team-member h3 {
+        font-size: 1.3rem !important; /* Smaller size for mobile/tablet */
+    }
+}
+
+@media (max-width:600px) {
+    .card {
+        width: 95vw !important;
+        left: 2.5vw !important;
+    }
+    h1 { font-size: 3rem !important; }
+    h2 { font-size: 2.2rem !important; }
+    h3 { font-size: 1.6rem !important; }
+    /* You might want to make team member names even smaller here if needed */
+    .team-member h3 {
+        font-size: 1.1rem !important; /* Even smaller for very small screens */
     }
 }
