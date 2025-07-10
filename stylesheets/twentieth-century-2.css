@@ -206,7 +206,7 @@ h3 { font-size: 2.5rem !important; }
 /* Carousel article headings */
 .carousel article h2 {
     font-family: var(--twentieth-century-font-subheading) !important; /* Subheading font */
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     text-shadow: none !important; /* Remove heavy glow for smaller headings */
     color: var(--twentieth-century-neon-pink) !important;
 }
