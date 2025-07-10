@@ -1,3 +1,562 @@
-html { /* placeholder text */
-    width: 100%;
+/*
+ * early-modern.css
+ *
+ * This stylesheet defines the visual theme for the "1500-1800 Early Modern" aesthetic.
+ * It is designed to be dynamically loaded by theme.js by swapping the 'href' of a <link> tag.
+ *
+ * All styles in this file are intended to override default/base styles (from styles.css)
+ * and Bootstrap styles to achieve the desired historical look.
+ *
+ * Image assets mentioned (e.g., 'aged_paper_light.jpg') are assumed to be in an 'images/'
+ * folder, which is a sibling to the 'stylesheets/' folder. Adjust paths if your structure differs.
+ */
+
+/* ========================================================================= */
+/* 1. CSS Variables for Color Palette and Fonts (Defined at :root)          */
+/* These variables provide a centralized way to manage the theme's colors */
+/* and fonts, making it easy to keep the design consistent.               */
+/* ========================================================================= */
+:root {
+    /* Main Browns: Earthy and deep tones from the moodboard. */
+    --early-modern-darkest-brown: #332414; /* Deep, rich brown for primary elements like headers */
+    --early-modern-dark-brown: #5C4A2D;    /* Slightly lighter, robust brown for borders and accents */
+    --early-modern-medium-brown: #7C694F;   /* Mid-tone brown for secondary backgrounds and hover states */
+    --early-modern-light-brown: #A08C6E;    /* Lighter brown, good for subtle details and borders */
+
+    /* Golds/Tans: Warm, aged tones for accents and background variations. */
+    --early-modern-gold: #B38F6A;          /* Prominent gold/tan, ideal for buttons or highlight elements */
+    --early-modern-light-tan: #D9C3A6;     /* Light, warm tan for card backgrounds or content areas */
+    --early-modern-cream: #F0EAD6;         /* Soft, off-white/cream for main body background, mimicking aged paper */
+
+    /* Muted Purples/Greys: Subtle, sophisticated secondary colors. */
+    --early-modern-muted-purple: #705B69;  /* A refined, subdued purple */
+    --early-modern-light-purple: #9D8C9C;  /* A lighter variant of the muted purple */
+    --early-modern-dark-grey: #4C4F51;     /* A deep, almost black-grey for strong contrast */
+
+    /* Accents: Specific, strong colors to draw attention, inspired by period art. */
+    --early-modern-deep-red: #8B2C2C;      /* A rich, deep reddish-brown for links or important highlights */
+    --early-modern-dark-green: #3D4F3F;    /* A muted forest green for subtle detailing */
+    --early-modern-muted-blue: #4A6E8A;    /* A desaturated blue for complementary accents */
+
+    /* Text Colors: Defined for easy global text adjustments. */
+    --early-modern-text-dark: var(--early-modern-darkest-brown); /* Default dark text color */
+    --early-modern-text-light: var(--early-modern-cream);       /* Default light text color (for dark backgrounds) */
+
+    /* Backgrounds: Common background colors for theme elements. */
+    --early-modern-background-main: var(--early-modern-cream);       /* Primary background for body/main content */
+    --early-modern-background-secondary: var(--early-modern-light-tan); /* Secondary background for cards/sections */
+
+    /* Fonts: Variables for different typography roles. These fonts should be
+     * linked in the HTML <head> section to ensure they load correctly. */
+    --early-modern-font-heading: 'IM Fell Double Pica', serif; /* Ornate font for major titles */
+    --early-modern-font-subheading: 'Playfair Display', serif; /* Elegant serif for subheadings */
+    --early-modern-font-body: 'EB Garamond', serif;             /* Classic, readable serif for body text */
+    --early-modern-font-alt-body: 'Lora', serif;                 /* Alternative body font for variety */
+}
+
+/* ========================================================================= */
+/* 2. Base Body and General Text Styling                                     */
+/* Applies the overall background, text color, and primary font.          */
+/* Includes a subtle aged paper texture for an immersive feel.            */
+/* ========================================================================= */
+body {
+    background-color: var(--early-modern-background-main) !important; /* Main background color */
+    color: var(--early-modern-text-dark) !important;                  /* Default text color */
+    font-family: var(--early-modern-font-body) !important;            /* Primary font for body text */
+    line-height: 1.6 !important;                                    /* Increased line height for readability */
+    font-size: 1.1rem !important;                                   /* Slightly larger base font size */
+    /* Aged paper texture applied as a background image. Adjust path if necessary. */
+    background-image: url('../images/aged_paper_light.jpg') !important;
+    background-repeat: repeat;                                      /* Repeat the texture across the background */
+    background-size: auto;                                          /* Maintain original texture size */
+    background-blend-mode: multiply;                                /* Blends the texture with the background color */
+}
+
+/* ========================================================================= */
+/* 3. Navigation Bar and Footer Overrides                                    */
+/* Styles the top navigation and bottom footer to match the theme.        */
+/* ========================================================================= */
+.navbar-background {
+    background-color: var(--early-modern-darkest-brown) !important; /* Darkest brown for navbar background */
+    color: var(--early-modern-cream) !important;                    /* Light text color for contrast */
+}
+
+.footer-background {
+    background-color: var(--early-modern-darkest-brown) !important; /* Darkest brown for footer background */
+    color: var(--early-modern-cream) !important;                    /* Light text color for contrast */
+}
+
+/* ========================================================================= */
+/* 4. Card Styling (General Bootstrap Card Overrides)                        */
+/* Applies themed colors, borders, and shadows to Bootstrap cards.        */
+/* Includes decorative layered borders and a subtle header texture.       */
+/* ========================================================================= */
+.card {
+    background-color: var(--early-modern-background-secondary) !important; /* Secondary background for card body */
+    border: 3px double var(--early-modern-dark-brown) !important;         /* Double line border for antique look */
+    border-radius: 8px !important;                                      /* Slightly rounded corners */
+    /* Layered box-shadow for a deep, ornate frame effect */
+    box-shadow: 0 0 0 2px var(--early-modern-light-brown),
+                0 0 0 5px var(--early-modern-medium-brown),
+                5px 5px 15px rgba(0, 0, 0, 0.3) !important;
+    position: relative; /* Essential for potential future pseudo-element decorations */
+    overflow: hidden;   /* Ensures content stays within the rounded/bordered edges */
+}
+
+.card-header {
+    background-color: var(--early-modern-medium-brown) !important; /* Medium brown for card headers */
+    color: var(--early-modern-cream) !important;                   /* Light text color for header titles */
+    border-bottom: 1px solid var(--early-modern-dark-brown) !important; /* Separator line below header */
+    /* Subtle aged paper texture for card headers */
+    background-image: url('../images/aged_paper_texture.jpg') !important; /* Adjust path */
+    background-size: cover;                                           /* Covers the entire header area */
+    background-blend-mode: multiply;                                  /* Blends texture with background color */
+    box-shadow: inset 0 -3px 5px rgba(0,0,0,0.2);                     /* Inset shadow for depth */
+    padding: 1em;                                                     /* Padding inside the header */
+}
+
+.card-footer {
+    background-color: var(--early-modern-medium-brown) !important; /* Medium brown for card footers */
+    color: var(--early-modern-cream) !important;                   /* Light text color for footer content */
+    border-top: 1px solid var(--early-modern-dark-brown) !important; /* Separator line above footer */
+}
+
+/* ========================================================================= */
+/* 5. Link Styling                                                           */
+/* Defines the appearance of hyperlinks across the website.               */
+/* ========================================================================= */
+a {
+    color: var(--early-modern-deep-red) !important; /* Deep red for links, providing a distinct accent */
+    text-decoration: underline;                     /* Classic underline for links */
+}
+
+a:hover {
+    color: var(--early-modern-dark-brown) !important; /* Darker brown on hover for subtle feedback */
+}
+
+/* ========================================================================= */
+/* 6. Typography (Headings and Specific Text Elements)                       */
+/* Applies the chosen historical fonts to headings and other key text.    */
+/* ========================================================================= */
+h1, h2, h3, .banner-title {
+    font-family: var(--early-modern-font-heading) !important; /* Ornate font for primary headings */
+    font-weight: normal !important;                          /* Historical fonts often aren't bold */
+    text-transform: capitalize;                              /* Capitalize first letter of each word (adjust as needed) */
+    letter-spacing: 0.05em;                                  /* Slight letter spacing for a classic feel */
+}
+
+h1 { font-size: 3.5rem !important; } /* Specific sizes for different heading levels */
+h2 { font-size: 2.5rem !important; }
+h3 { font-size: 1.8rem !important; }
+
+/* Carousel article headings */
+.carousel article h2 {
+    font-family: var(--early-modern-font-subheading) !important; /* Subheading font for carousel titles */
+    font-size: 1.3rem !important;
+}
+
+/* Card titles in exhibition view */
+#cardTitle {
+    font-family: var(--early-modern-font-subheading) !important; /* Subheading font for card titles */
+    font-weight: normal !important;
+}
+
+/* Narrative text in exhibition view */
+#narrativeItem {
+    font-family: var(--early-modern-font-alt-body) !important; /* Alternative body font for narrative */
+    font-size: 1.2em !important;
+    line-height: 1.7 !important;
+}
+
+/* ========================================================================= */
+/* 7. Button Styling (Bootstrap Button Overrides)                            */
+/* Customizes the appearance of all Bootstrap buttons.                    */
+/* ========================================================================= */
+.btn {
+    font-family: var(--early-modern-font-alt-body) !important; /* Use an elegant body font for buttons */
+    font-weight: 500 !important;                             /* Medium weight for readability */
+    text-transform: uppercase;                               /* Uppercase text for a formal look */
+    letter-spacing: 0.03em;                                  /* Slight letter spacing */
+    border-radius: 5px !important;                           /* Slightly rounded corners */
+    padding: 0.7em 1.5em !important;                         /* Generous padding */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);                /* Subtle text shadow for depth */
+    border: 1px solid var(--early-modern-dark-brown) !important; /* Solid border */
+    /* Linear gradient for a richer, more antique appearance */
+    background-image: linear-gradient(to bottom, var(--early-modern-gold), var(--early-modern-medium-brown)) !important;
+    color: var(--early-modern-text-light) !important;         /* Light text color on buttons */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);                  /* Soft box shadow */
+}
+
+.btn:hover {
+    /* Reverse gradient and reduce shadow on hover for interactive feedback */
+    background-image: linear-gradient(to bottom, var(--early-modern-medium-brown), var(--early-modern-gold)) !important;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* ========================================================================= */
+/* 8. Carousel Specific Adjustments                                          */
+/* Ensures the carousel cards fit the theme's aesthetic.                  */
+/* ========================================================================= */
+.carousel article {
+    background-color: var(--early-modern-light-tan) !important; /* Light tan background for carousel articles */
+    border: 1px solid var(--early-modern-medium-brown) !important; /* Medium brown border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;         /* Standard card shadow */
+}
+
+.carousel article img:first-of-type {
+    border-radius: 8px !important; /* Rounded corners for carousel images */
+}
+
+.qr-code {
+    border: 1px solid var(--early-modern-medium-brown) !important; /* Border for QR codes */
+    border-radius: 6px !important;                               /* Rounded corners for QR codes */
+}
+
+.qr-code:hover {
+    transform: scale(1.1) !important;         /* Slight scale-up on hover */
+    transition: transform 0.2s ease !important; /* Smooth transition for hover effect */
+}
+
+/* ========================================================================= */
+/* 9. About Team Section Styles                                              */
+/* Theming for the "About Team" section and individual team member cards. */
+/* ========================================================================= */
+.team-section {
+    background-color: var(--early-modern-background-secondary) !important; /* Secondary background for the section */
+    border-radius: 15px !important;                                       /* Rounded corners for the section container */
+}
+
+.team-member {
+    padding: 1rem !important;                                    /* Padding inside each team member card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;           /* Standard shadow */
+    background-color: var(--early-modern-cream) !important;      /* Cream background for team member cards */
+    border-radius: 12px !important;                              /* Rounded corners for cards */
+    border: 2px solid var(--early-modern-light-brown) !important; /* Light brown border */
+    transition: transform 0.3s !important;                       /* Smooth transition for hover effect */
+}
+
+.team-member:hover {
+    transform: translateY(-5px) !important; /* Lift effect on hover */
+}
+
+.team-member img {
+    border-radius: 20px !important;                               /* Rounded corners for team member images */
+    border: 1px solid var(--early-modern-medium-brown) !important; /* Border for images */
+    filter: sepia(0.1) saturate(1.05) brightness(1.05);           /* Subtle sepia filter for an aged look */
+    transition: filter 0.3s ease;                                 /* Smooth transition for filter effect */
+}
+
+.team-member img:hover {
+    filter: sepia(0) saturate(1) brightness(1); /* Removes sepia on hover */
+}
+
+.team-member h3 {
+    color: var(--early-modern-darkest-brown) !important; /* Dark text for team member names */
+}
+
+.team-member a {
+    color: var(--early-modern-deep-red) !important; /* Deep red for social links */
+}
+
+.team-member a:hover {
+    color: var(--early-modern-dark-brown) !important; /* Darker brown on hover */
+}
+
+/* ========================================================================= */
+/* 10. Map Section Styles                                                    */
+/* Theming for the interactive map areas.                                */
+/* ========================================================================= */
+.map {
+    color: var(--early-modern-text-light) !important;           /* Light text color for map elements */
+    background-color: var(--early-modern-darkest-brown) !important; /* Dark background for map container */
+    padding: 40px !important;                                   /* Padding around the map */
+    /* Dark parchment texture for the map background */
+    background-image: url('assets/additional_images/hollowknight-wallpaper.jpg') !important; /* Adjust path */
+    background-repeat: repeat;                                  /* Repeat the texture */
+    background-size: cover;                                     /* Covers the map area */
+    background-blend-mode: overlay;                             /* Blends texture with background color */
+}
+
+.map-grid {
+    gap: 6px !important; /* Spacing between map areas */
+}
+
+.map-area {
+    background-color: var(--early-modern-dark-brown) !important; /* Background for individual map regions */
+    border: 1px solid var(--early-modern-light-brown) !important; /* Light brown border */
+    color: var(--early-modern-cream) !important;                 /* Text color inside map areas */
+    border-radius: 10px !important;                              /* Rounded corners for map areas */
+    font-size: 1.5vw !important;                                 /* Responsive font size */
+    padding: 6px !important;                                     /* Padding inside map areas */
+    /* Inset shadow for a debossed effect, and an outer shadow for depth */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2), 3px 3px 8px rgba(0,0,0,0.3) !important;
+}
+
+a.map-area {
+    color: var(--early-modern-cream) !important; /* Ensures link color within map areas is light */
+}
+
+/* ========================================================================= */
+/* 11. Image Styling and Decorative Frames                                   */
+/* Applies filters and custom frame effects to images and image frames.  */
+/* ========================================================================= */
+img {
+    border: 2px solid var(--early-modern-light-brown) !important; /* General border for all images */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);                     /* Soft shadow for images */
+    filter: sepia(0.2) saturate(1.1) brightness(1.05);             /* Subtle sepia and warmth for aged look */
+    transition: filter 0.3s ease;                                 /* Smooth transition for filter effects */
+}
+
+img:hover {
+    filter: sepia(0) saturate(1) brightness(1); /* Removes sepia on hover for a cleaner view */
+}
+
+figure.image-frame, .image-frame {
+    padding: 10px !important;                                    /* Inner padding for the "matting" effect */
+    background-color: var(--early-modern-light-tan) !important; /* Background color of the "mat" */
+    border: 5px solid var(--early-modern-dark-brown) !important; /* Outer, robust frame border */
+    /* Multi-layered box-shadow for an ornate, deep frame appearance */
+    box-shadow: 0 0 0 2px var(--early-modern-medium-brown),
+                0 0 0 4px var(--early-modern-gold),
+                8px 8px 15px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 0 !important;                                 /* Sharp corners for traditional frames */
+    overflow: hidden;                                            /* Ensures frame content is clipped correctly */
+}
+
+/* ========================================================================= */
+/* 12. Decorative Separators and List Embellishments                         */
+/* Adds stylistic horizontal rules and custom list item markers.         */
+/* ========================================================================= */
+hr {
+    border: none !important;                                    /* Removes default horizontal rule border */
+    border-top: 2px dotted var(--early-modern-medium-brown) !important; /* Dotted line as a separator */
+    width: 80% !important;                                      /* Width of the separator */
+    margin: 2em auto !important;                                /* Centered with vertical spacing */
+}
+
+.section-divider {
+    height: 1px !important;                                     /* Thin line for visual division */
+    background-color: var(--early-modern-dark-brown) !important; /* Color of the divider line */
+    margin: 3em 0 !important;                                   /* Vertical spacing */
+    position: relative;                                         /* For positioning pseudo-elements */
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';                                              /* Required for pseudo-elements */
+    position: absolute;                                       /* Position relative to parent (.section-divider) */
+    width: 20px;                                              /* Size of the decorative flourish */
+    height: 20px;
+    background-image: url('../images/small-flourish.png');    /* Image of the flourish - Adjust path */
+    background-size: contain;                                 /* Ensures flourish fits within its dimensions */
+    top: 50%;                                                 /* Vertically centers the flourish */
+    transform: translateY(-50%);                              /* Adjusts for precise vertical centering */
+}
+.section-divider::before {
+    left: 10%;                                                /* Positions flourish on the left side */
+}
+.section-divider::after {
+    right: 10%;                                               /* Positions flourish on the right side */
+    transform: translateY(-50%) rotateY(180deg);              /* Rotates right flourish for symmetry */
+}
+
+/* Custom list item markers */
+ul li::before {
+    content: '❦ ';                                          /* Unicode heart flower symbol as bullet */
+    color: var(--early-modern-deep-red);                    /* Deep red color for the symbol */
+    margin-right: 0.5em;                                    /* Spacing between symbol and text */
+    font-size: 0.8em;                                       /* Slightly smaller size for the symbol */
+}
+ul {
+    list-style: none !important;                            /* Removes default list bullets */
+}
+
+/* ========================================================================= */
+/* 13. Form Elements and Dropdown Menus                                      */
+/* Theming for input fields and navigation dropdowns.                    */
+/* ========================================================================= */
+.form-control {
+    border: 1px solid var(--early-modern-medium-brown) !important; /* Medium brown border for inputs */
+    background-color: var(--early-modern-cream) !important;       /* Cream background for input fields */
+    color: var(--early-modern-text-dark) !important;              /* Dark text color for input */
+    border-radius: 5px !important;                                /* Slightly rounded corners */
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);                /* Inset shadow for depth */
+}
+
+.dropdown-menu {
+    background-color: var(--early-modern-light-tan) !important; /* Light tan background for dropdowns */
+    border: 1px solid var(--early-modern-dark-brown) !important; /* Dark brown border for dropdowns */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);                 /* Shadow for dropdowns */
+}
+
+.dropdown-item {
+    color: var(--early-modern-text-dark) !important;            /* Dark text for dropdown items */
+    font-family: var(--early-modern-font-alt-body) !important;  /* Alternative body font for items */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--early-modern-medium-brown) !important; /* Medium brown background on hover */
+    color: var(--early-modern-cream) !important;                  /* Light text on hover */
+}
+
+/* ========================================================================= */
+/* 14. Modal Styling                                                         */
+/* Theming for Bootstrap modal pop-ups.                                  */
+/* ========================================================================= */
+.modal-content {
+    background-color: var(--early-modern-background-secondary) !important; /* Secondary background for modal content */
+    border: 3px double var(--early-modern-dark-brown) !important;         /* Double border for modals */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);                         /* Stronger shadow for pop-ups */
+}
+
+.modal-header, .modal-footer {
+    background-color: var(--early-modern-medium-brown) !important; /* Medium brown for modal header/footer */
+    color: var(--early-modern-cream) !important;                   /* Light text color */
+    border-bottom: 1px solid var(--early-modern-darkest-brown);   /* Separator below header */
+}
+
+/* ========================================================================= */
+/* 15. Adjustments for Existing main.css (or styles.css) Rules             */
+/* Ensures consistency and proper overriding of pre-existing rules.      */
+/* ========================================================================= */
+/* Global HTML/Body overflow handling from your main.css */
+html {
+    overflow-x: hidden !important;
+}
+
+html, body {
+    overflow-y: auto !important;
+    overscroll-behavior: none !important;
+}
+
+/* Minimum height for navbar and footer */
+#navbar, #footer {
+    min-height: 56px !important;
+}
+
+/* Homepage banner styling adjustments */
+.banner-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    display: inline-block !important;
+    /* Dark fabric texture for the banner background */
+    background-image: url('../images/fabric_texture_dark.jpg') !important; /* Adjust path */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--early-modern-dark-brown) !important; /* Fallback color */
+    background-blend-mode: overlay; /* Blends texture with color */
+}
+
+.banner-title {
+    color: var(--early-modern-cream) !important;                /* Light text for banner title */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9) !important;      /* Stronger shadow for legibility */
+}
+
+/* Carousel general layout adjustments */
+.carousel {
+    gap: 1.5rem !important;
+    padding: 1rem !important;
+}
+
+/* Existing exhibition-specific sizing variables (assuming they are still relevant) */
+/* These variables are inherited from the main CSS and used in the rules below */
+/*
+:root {
+    --exhibition-main-height: calc(100vh - 4em);
+    --exhibition-card-header-height: 3.5em;
+    --exhibition-card-footer-height: 3.5em;
+    --fv-card-body-height: calc(
+        var(--exhibition-main-height) -
+        var(--exhibition-card-header-height) -
+        var(--exhibition-card-footer-height) -
+        1em
+    );
+}
+*/
+
+/* Exhibition main area styling */
+main.exhibition {
+    height: var(--exhibition-main-height) !important; /* Uses height variable */
+    background-color: var(--early-modern-background-main) !important; /* Theme background for exhibition */
+}
+
+/* Exhibition card component height adjustments */
+.card-header {
+    height: var(--exhibition-card-header-height) !important;
+}
+
+.card-body {
+    height: var(--fv-card-body-height) !important;
+    overflow-y: scroll !important; /* Ensures scrolling for content */
+}
+
+.card-footer {
+    height: var(--exhibition-card-footer-height) !important;
+}
+
+/* Image object-fit styling from main.css */
+.img-object-fit {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* Height limiting for images in specific contexts */
+.limit-height {
+    max-height: 50vh !important;
+    width: auto !important;
+}
+
+/* Specific line-height and margin for exhibition titles/narratives */
+#cardTitle, #narrativeItem {
+    line-height: 1.4 !important;
+    margin-bottom: 0 !important;
+}
+
+/* ========================================================================= */
+/* 16. Media Queries (Responsive Adjustments)                                */
+/* Ensures the theme adapts well to different screen sizes.              */
+/* These are copied directly from your original main.css for consistency.*/
+/* ========================================================================= */
+@media (max-width:600px) {
+    .card {
+        width: 95vw !important;
+        left: 2.5vw !important;
+    }
+}
+@media (min-width:600px) {
+    .card {
+        width: 90vw !important;
+        left: 5vw !important;
+    }
+}
+
+@media (max-width:992px) {
+    main.exhibition {
+        font-size: 75% !important; /* Reduce font size for smaller screens */
+    }
+
+    #cardTitle {
+        line-height: 1 !important;
+        font-size: 200% !important; /* Adjust title font size */
+    }
+
+    #narrativeItem {
+        line-height: 1.4 !important; /* Adjust narrative line height */
+    }
+
+    .btn {
+        font-size: 0.75rem !important; /* Smaller button font size */
+    }
+
+    .card-footer {
+        /* Adjust card footer height for better fit on small screens */
+        height: calc(var(--exhibition-card-footer-height) + 1em) !important;
+    }
+
+    #previousButton, #nextButton {
+        font-size: 0.55rem !important; /* Smaller navigation button font size */
+    }
 }
