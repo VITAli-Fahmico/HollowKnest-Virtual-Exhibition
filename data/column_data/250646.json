@@ -1,0 +1,81 @@
+{
+  "objectID": 250646,
+  "isHighlight": false,
+  "accessionNumber": "17.230.119",
+  "accessionYear": "1917",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/gr/original/DP-14287-095.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/gr/web-large/DP-14287-095.jpg",
+  "additionalImages": [],
+  "constituents": null,
+  "department": "Greek and Roman Art",
+  "objectName": "Column",
+  "title": "Marble column with base and capital",
+  "culture": "Roman",
+  "period": "Hadrianic",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "",
+  "artistPrefix": "",
+  "artistDisplayName": "",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "",
+  "artistULAN_URL": "",
+  "objectDate": "ca. 117–138 CE",
+  "objectBeginDate": 100,
+  "objectEndDate": 199,
+  "medium": "Marble",
+  "dimensions": "H. with capital 165 in. (419.1 cm)\r\nH. of column  144 in. (365.8 cm)\r\nH. of capital  21 in. (53.3 cm)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": "height with capital",
+      "elementMeasurements": {
+        "Height": 419.1008
+      }
+    },
+    {
+      "elementName": "Other",
+      "elementDescription": "height of capital",
+      "elementMeasurements": {
+        "Height": 53.3401
+      }
+    },
+    {
+      "elementName": "Other",
+      "elementDescription": "height of column",
+      "elementMeasurements": {
+        "Height": 365.7607
+      }
+    }
+  ],
+  "creditLine": "Rogers Fund, 1917",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Stone Sculpture",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2025-03-06T04:54:30Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/250646",
+  "tags": null,
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116402598",
+  "isTimelineWork": false,
+  "GalleryNumber": "162"
+}
