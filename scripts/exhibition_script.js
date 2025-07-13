@@ -405,6 +405,55 @@ function changeTextLanguage() {
 	}
 }
 
-// ?? other stuff for later
+
 // ∞ some sort of image gallery, and a way to switch between images
+document.addEventListener("DOMContentLoaded", () => {
+  // Your current item data - replace this with dynamic loading
+  const currentItem = {
+    itemImages: ["dirtmouth_I1.jpg", "dirtmouth_I2.jpg"],
+    hollowKnightImages: ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"]
+  };
+
+  let itemImageIndex = 0;
+  let hkImageIndex = 0;
+
+  const itemImageArea = document.getElementById("itemImageArea");
+  const hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
+
+  const itemImageDots = document.getElementById("itemImageDots");
+  const hollowKnightImageDots = document.getElementById("hollowKnightImageDots");
+
+  function createDots(container, count, activeIndex, onClick) {
+    container.innerHTML = ""; // clear previous dots
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement("span");
+      dot.classList.toggle("active", i === activeIndex);
+      dot.addEventListener("click", () => onClick(i));
+      container.appendChild(dot);
+    }
+  }
+
+  function showItemImage(index) {
+    if (index < 0) index = currentItem.itemImages.length - 1;
+    if (index >= currentItem.itemImages.length) index = 0;
+    itemImageIndex = index;
+    itemImageArea.src = currentItem.itemImages[itemImageIndex];
+    itemImageArea.alt = `Item Image ${itemImageIndex + 1}`;
+    createDots(itemImageDots, currentItem.itemImages.length, itemImageIndex, showItemImage);
+  }
+
+  function showHKImage(index) {
+    if (index < 0) index = currentItem.hollowKnightImages.length - 1;
+    if (index >= currentItem.hollowKnightImages.length) index = 0;
+    hkImageIndex = index;
+    hollowKnightImageArea.src = currentItem.hollowKnightImages[hkImageIndex];
+    hollowKnightImageArea.alt = `Hollow Knight Image ${hkImageIndex + 1}`;
+    createDots(hollowKnightImageDots, currentItem.hollowKnightImages.length, hkImageIndex, showHKImage);
+  }
+
+  showItemImage(0);
+  showHKImage(0);
+});
+
 // ∞ a way to choose text to show and hide
+// ?? other stuff for later
