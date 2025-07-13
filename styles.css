@@ -93,6 +93,35 @@ html, body {
   z-index: 2;
 }
 
+/* === choose your narrative === */
+.narrative-card {
+  display: inline-block; /* or block/flex if needed */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+  cursor: pointer;
+  color: inherit;
+  text-align: center;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.narrative-card:hover,
+.narrative-card:focus {
+  animation: wave 0.6s ease-in-out;
+  outline: none;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(3deg); }
+}
+
+
+
 /* === Carousel Container === */
 .carousel {
     display: flex;
