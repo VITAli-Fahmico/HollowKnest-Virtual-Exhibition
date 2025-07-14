@@ -60,35 +60,7 @@
                         <p>You don't have much time? Don't worry! You are in the right place if you are here for a quick visit or want to discover every insect and hero hiding in the corners of this exhibition! You can also learn more about the related items through their QR codes. </p>
                         </div>
                     </div>
-                </div>
             </div>
-
-            <div class="row my-5">
-                <div class="col">
-                    <div class="text-center" id="narrative-page">
-                    <h1 class="my-2">Choose Your Narrative:</h1>
-
-                    <div class="narrative-container d-flex justify-content-center gap-4 flex-wrap">
-                        <a href="https://vitali-fahmico.github.io/HollowKnest-Virtual-Exhibition/exhibition.html#ancient-basin" 
-                        class="narrative-card p-4 border rounded shadow-sm text-decoration-none" 
-                        title="historical" aria-label="Historical Narrative" role="button" tabindex="0">
-                        Historical Narrative
-                        </a>
-                        <a href="https://vitali-fahmico.github.io/HollowKnest-Virtual-Exhibition/exhibition.html#dirtmouth" 
-                        class="narrative-card p-4 border rounded shadow-sm text-decoration-none" 
-                        title="game" aria-label="Hollow Knight Narrative" role="button" tabindex="0">
-                        Hollow Knight Narrative
-                        </a>
-                    </div>
-                    </div>
-                </div>
-                    <div class="text-center">
-                       <br/><p>In the exhibition page, click on the Area name to follow the Game Narrative while to follow the Historical Narrative click on the Year!</p>
-                    </div>
-                </div>
-
-
-
                 <div class="row my-5">
                     <div class="col">
                         <div>
@@ -99,7 +71,6 @@
                         <br/>The game offers a rich and unforgettable journey through its beautiful hand-drawn art and atmospheric storytelling.</p>
                         <p>Discover more about the lore of the game in the <a href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki">fanmade wiki page!</a></p>
                         </div>
-                    </div>
                     </div>
                 </div>
                 
@@ -380,6 +351,25 @@
                         </section>
                     </div>
                 </div>
+
+                <div class="row my-5">
+                        <div class="col">
+                            <article class="d-flex justify-content-center gap-4 flex-wrap choose-narrative">
+                                <div>
+                                    <h1 class="my-2 text-center">Choose Your Narrative</h1>
+                                    <div class="text-center">
+                                        <br>
+                                        <p>In the exhibition page, click on the Area name to follow the Game Narrative while to follow the Historical Narrative click on the Year!</p>
+                                    </div>
+                                    <div class="narrative-container d-flex justify-content-center gap-4 flex-wrap">
+                                        <a href="exhibition.html" onclick="selectArea('Ancient Basin')" class="btn-primary narrative-card p-4 border rounded shadow-sm text-decoration-none">Historical</a>
+                                        <a href="exhibition.html" onclick="selectArea('Dirtmouth')" class="btn-primary narrative-card p-4 border rounded shadow-sm text-decoration-none">Hollow Knight</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                </div>
+            </div>
             </div>
         </main>
 

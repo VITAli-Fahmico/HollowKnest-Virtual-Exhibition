@@ -5,7 +5,7 @@
 :root {
     --color-bg: rgb(18, 18, 24); /* ! rename colours */
     --color-elevation-1: rgb(24, 24, 32);
-    --color-row: rgb(28, 28, 38);
+    --color-elevation-cards: rgb(28, 28, 38);
     --color-elevation-2: rgb(36, 36, 48);
     --color-dropdown: rgb(42, 42, 56);
     --color-elevation-3: rgb(48, 48, 60);
@@ -102,24 +102,26 @@ body {
     color: var(--body-text);
 }
 
-section.team-section, article .carousel {
-    background-color: var(--color-elevation-2) !important;
+article.card {
+    color: var(--card-text);
+    background-color: var(--color-elevation-cards);
 }
 
-.carousel {
-    background-color: var(--color-row);
+section.team-section, .carousel, .choose-narrative {
+    background-color: var(--color-elevation-cards) !important;
 }
 
-.carousel article {
+.carousel article, .team-member {
     background-color: var(--color-elevation-2);
 }
+
 
 .qr-code {
     filter: invert(100%);
 }
 
 .team-member {
-    background-color: var(--color-elevation-3);
+    background-color: var(--color-elevation-2);
 }
 
 .team-member a {
@@ -128,6 +130,11 @@ section.team-section, article .carousel {
 
 .team-member a:hover {
     color: var(--link-highlight-color);
+}
+
+a.narrative-card {
+    color: var(--body-text);
+    
 }
 
 footer div {
@@ -179,7 +186,7 @@ figure.image-frame {
 }
 
 .card-header, .card-footer {
-    background-color: var(--color-row) !important;
+    background-color: var(--color-elevation-cards) !important;
 }
 
 a.map-area:hover {
