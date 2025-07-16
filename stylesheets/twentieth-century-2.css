@@ -706,7 +706,7 @@ html, body {
 
 /* Exhibition main area styling */
 main.exhibition {
-    height: var(--exhibition-main-height) !important;
+    /*height: var(--exhibition-main-height) !important;
     background-color: var(--twentieth-century-background-main) !important;
 }
 
@@ -849,5 +849,8 @@ tr:nth-child(even) {
     /* You might want to make team member names even smaller here if needed */
     .team-member h3 {
         font-size: 1.1rem !important; /* Even smaller for very small screens */
+     }
     }
 }
+
+/*in future put media queries in the main one not in all */
