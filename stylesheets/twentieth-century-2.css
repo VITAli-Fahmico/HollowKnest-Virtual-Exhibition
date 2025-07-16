@@ -474,11 +474,11 @@ table#table tbody tr:nth-child(even) {
 }
 
 table#table a {
-  color: var(--twentieth-century-neon-yellow) !important;
+  color: var(--twentieth-century-neon-pink) !important;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
-  text-shadow: 0 0 5px var(--twentieth-century-neon-yellow) !important;
+  text-shadow: 0 0 5px var(--twentieth-century-neon-pink) !important;
 }
 
 table#table a:hover {
@@ -771,6 +771,16 @@ main.exhibition {
   color: #b94f4f;  /* Slightly lighter red */
   background-color: #f9eaea; /* Light red-ish background */
   border-color: transparent;
+}
+
+/*put for footer especially*/
+tr:nth-child(odd) {
+    background-color: var(--color-elevation-2) !important;
+
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-elevation-3) !important;
 }
 /* ========================================================================= */
 /* 16. Media Queries (Responsive Adjustments)                                */

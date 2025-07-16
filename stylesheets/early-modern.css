@@ -603,7 +603,15 @@ main.exhibition {
   border-color: transparent;
 }
 
+/*put for footer especially*/
+tr:nth-child(odd) {
+    background-color: var(--color-elevation-2) !important;
 
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-elevation-3) !important;
+}
 /* ========================================================================= */
 /* 16. Media Queries (Responsive Adjustments)                                */
 /* Ensures the theme adapts well to different screen sizes.              */
