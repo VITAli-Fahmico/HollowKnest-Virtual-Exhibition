@@ -5,9 +5,9 @@
 :root {
     --color-bg: rgb(18, 18, 24); /* ! rename colours */
     --color-elevation-1: rgb(24, 24, 32);
-    --color-elevation-cards: rgb(28, 28, 38);
+    --color-elevation-cards: rgb(30, 30, 40);
     --color-elevation-2: rgb(36, 36, 48);
-    --color-dropdown: rgb(42, 42, 56);
+    --color-elevation-bright-modals: rgb(42, 42, 56);
     --color-elevation-3: rgb(48, 48, 60);
 
     --body-text: rgba(255, 255, 255, 0.88);
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .dropdown-menu {
-    background-color: var(--color-dropdown);
+    background-color: var(--color-elevation-bright-modals);
 }
 
 .dropdown-item {
@@ -186,7 +186,7 @@ figure.image-frame {
 }
 
 .card-header, .card-footer {
-    background-color: var(--color-elevation-cards) !important;
+    background-color: var(--color-elevation-2) !important;
 }
 
 a.map-area:hover {
@@ -261,4 +261,12 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
     background-color: var(--color-elevation-3) !important;
+}
+
+button.nav-link {
+    color: var(--link-color)
+}
+
+button.nav-link:hover {
+    color: var(--link-highlight-color)
 }
