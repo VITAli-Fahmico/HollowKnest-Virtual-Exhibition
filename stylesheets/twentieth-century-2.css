@@ -314,6 +314,48 @@ h3 { font-size: 1.5rem !important; }
     transition: transform 0.3s ease-in-out !important;
 }
 
+/*choose your narrative*/
+.choose-narrative {
+    background-color: var(--twentieth-century-background-secondary) !important;
+    color: var(--twentieth-century-text-light) !important;
+    padding: 2rem !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 0 20px var(--twentieth-century-neon-purple) !important;
+    font-family: var(--twentieth-century-font-body) !important;
+    text-align: center !important;
+}
+
+.choose-narrative h1 {
+    font-family: var(--twentieth-century-font-heading) !important;
+    color: var(--twentieth-century-neon-pink) !important;
+    font-size: 2.5rem !important;
+}
+
+.choose-narrative p {
+    font-size: 1.1rem !important;
+    color: var(--twentieth-century-text-light) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+.narrative-card {
+    background-color: var(--twentieth-century-mid-gray) !important;
+    color: var(--twentieth-century-neon-green) !important;
+    border: 2px solid var(--twentieth-century-neon-green) !important;
+    transition: all 0.3s ease !important;
+    font-family: var(--twentieth-century-font-subheading) !important;
+    font-size: 1.2rem !important;
+    box-shadow: 0 0 10px var(--twentieth-century-neon-green) !important;
+}
+
+.narrative-card:hover {
+    background-color: var(--twentieth-century-dark) !important;
+    color: var(--twentieth-century-neon-blue) !important;
+    border-color: var(--twentieth-century-neon-blue) !important;
+    box-shadow: 0 0 15px var(--twentieth-century-neon-blue) !important;
+}
+
+
 /* ========================================================================= */
 /* 9. About Team Section Styles                                              */
 /* Theming for the "About Team" section and individual team member cards.   */
@@ -432,6 +474,68 @@ img {
     border-radius: 8px;
 }
 
+/*table under image*/
+table#table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--twentieth-century-font-body) !important;
+  background-color: var(--twentieth-century-background-secondary) !important;
+  color: var(--twentieth-century-text-light) !important;
+  border: 3px solid var(--twentieth-century-neon-purple) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 0 8px var(--twentieth-century-neon-purple),
+    0 0 15px var(--twentieth-century-neon-pink) !important;
+  overflow: hidden !important;
+}
+
+table#table th, table#table td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--twentieth-century-mid-gray) !important;
+}
+
+table#table th {
+  background: linear-gradient(90deg, var(--twentieth-century-neon-blue), var(--twentieth-century-neon-pink)) !important;
+  color: var(--twentieth-century-text-light) !important;
+  font-family: var(--twentieth-century-font-subheading) !important;
+  font-weight: 700;
+  text-shadow:
+    0 0 6px var(--twentieth-century-neon-blue),
+    0 0 10px var(--twentieth-century-neon-pink) !important;
+}
+
+table#table tbody tr:nth-child(odd) {
+  background-color: var(--twentieth-century-dark) !important;
+  box-shadow: inset 0 0 10px var(--twentieth-century-neon-blue) !important;
+}
+
+table#table tbody tr:nth-child(even) {
+  background-color: var(--twentieth-century-mid-gray) !important;
+  box-shadow: inset 0 0 8px var(--twentieth-century-neon-pink) !important;
+}
+
+table#table a {
+  color: var(--twentieth-century-neon-pink) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 5px var(--twentieth-century-neon-pink) !important;
+}
+
+table#table a:hover {
+  color: var(--twentieth-century-neon-orange) !important;
+  text-shadow: 0 0 15px var(--twentieth-century-neon-orange) !important;
+}
+
+table#table tr:hover {
+  background-color: var(--twentieth-century-neon-green) !important;
+  color: var(--twentieth-century-text-dark) !important;
+  box-shadow: 0 0 20px var(--twentieth-century-neon-green) !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 /* 10. Map Section Styles (or right after the general img rule) */
 
 .map-area img, /* Target images directly within a map-area */
@@ -515,19 +619,6 @@ hr {
 .section-divider::before { left: 5%; }
 .section-divider::after { right: 5%; transform: translateY(-50%) rotateY(180deg); }
 */
-
-/* Custom list item markers - using a bold symbol like an asterisk or small square */
-ul li::before {
-    content: '★ ';                                           /* Star symbol for bullets */
-    color: var(--twentieth-century-neon-yellow) !important; /* Neon yellow color */
-    margin-right: 0.7em;                                     /* More spacing */
-    font-size: 1.2em;                                        /* Larger symbol */
-    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow); /* Glow */
-}
-ul {
-    list-style: none !important;                             /* Removes default bullets */
-    padding-left: 1.5em !important;                          /* Add back some padding if needed */
-}
 
 
 /* ========================================================================= */
@@ -657,7 +748,7 @@ html, body {
 
 /* Exhibition main area styling */
 main.exhibition {
-    height: var(--exhibition-main-height) !important;
+    /*height: var(--exhibition-main-height) !important;
     background-color: var(--twentieth-century-background-main) !important;
 }
 
@@ -698,6 +789,41 @@ main.exhibition {
     margin-bottom: 0.5em !important; /* Add some margin for better spacing */
 }
 
+/* ========================================================================= */
+/*Documentation tabs nav*/
+/* ========================================================================= */
+
+/* Default tab link text color */
+.nav-tabs .nav-link {
+  color: var(--twentieth-century-neon-pink);
+  font-weight: 600;
+  border-color: transparent; /* Hide default border */
+}
+
+/* Active tab */
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: var(--twentieth-century-neon-pink);
+  border-color: var(--twentieth-century-neon-pink) var(--twentieth-century-neon-pink) white;
+  border-bottom-color: white; /* To blend with tab content */
+}
+
+/* Hover effect on tabs */
+.nav-tabs .nav-link:hover:not(.active) {
+  color: #b94f4f;  /* Slightly lighter red */
+  background-color: #f9eaea; /* Light red-ish background */
+  border-color: transparent;
+}
+
+/*put for footer especially*/
+tr:nth-child(odd) {
+    background-color: var(--color-elevation-2) !important;
+
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-elevation-3) !important;
+}
 /* ========================================================================= */
 /* 16. Media Queries (Responsive Adjustments)                                */
 /* Ensures the theme adapts well to different screen sizes.                */
@@ -765,5 +891,8 @@ main.exhibition {
     /* You might want to make team member names even smaller here if needed */
     .team-member h3 {
         font-size: 1.1rem !important; /* Even smaller for very small screens */
+     }
     }
 }
+
+/*in future put media queries in the main one not in all */

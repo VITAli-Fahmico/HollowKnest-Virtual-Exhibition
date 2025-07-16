@@ -345,6 +345,57 @@ figure.image-frame, .image-frame {
 }
 
 /* ========================================================================= */
+/*exhibition table styling*/
+/* ========================================================================= */
+
+/* Table container and general styles */
+table#table {
+  font-family: var(--early-modern-font-body) !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+  background-color: var(--early-modern-background-secondary) !important;
+  color: var(--early-modern-text-dark) !important;
+  box-shadow:
+    0 0 5px var(--early-modern-dark-brown) !important;
+  border: 2px solid var(--early-modern-dark-brown) !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+
+/* Table header cells */
+table#table th {
+  background-color: var(--early-modern-dark-brown) !important;
+  color: var(--early-modern-light-tan) !important;
+  font-family: var(--early-modern-font-subheading) !important;
+  font-weight: 700 !important;
+  padding: 10px 15px !important;
+  text-align: left !important;
+  border-bottom: 2px solid var(--early-modern-gold) !important;
+}
+
+/* Table data cells */
+table#table td {
+  padding: 10px 15px !important;
+  border-bottom: 1px solid var(--early-modern-medium-brown) !important;
+}
+
+/* Stripe effect override (for Bootstrap .table-striped) */
+table#table tbody tr:nth-child(odd) {
+  background-color: var(--early-modern-background-main) !important;
+}
+
+/* Links inside table */
+table#table a {
+  color: var(--early-modern-deep-red) !important;
+  text-decoration: underline !important;
+  transition: color 0.3s ease !important;
+}
+table#table a:hover {
+  color: var(--early-modern-dark-brown) !important;
+  text-decoration: none !important;
+}
+
+/* ========================================================================= */
 /* 12. Decorative Separators and List Embellishments                         */
 /* Adds stylistic horizontal rules and custom list item markers.         */
 /* ========================================================================= */
@@ -381,16 +432,6 @@ hr {
     transform: translateY(-50%) rotateY(180deg);              /* Rotates right flourish for symmetry */
 }
 
-/* Custom list item markers */
-ul li::before {
-    content: '❦ ';                                          /* Unicode heart flower symbol as bullet */
-    color: var(--early-modern-deep-red);                    /* Deep red color for the symbol */
-    margin-right: 0.5em;                                    /* Spacing between symbol and text */
-    font-size: 0.8em;                                       /* Slightly smaller size for the symbol */
-}
-ul {
-    list-style: none !important;                            /* Removes default list bullets */
-}
 
 /* ========================================================================= */
 /* 13. Form Elements and Dropdown Menus                                      */
@@ -498,7 +539,7 @@ html, body {
 
 /* Exhibition main area styling */
 main.exhibition {
-    height: var(--exhibition-main-height) !important; /* Uses height variable */
+    /*height: var(--exhibition-main-height) !important; /* Uses height variable */
     background-color: var(--early-modern-background-main) !important; /* Theme background for exhibition */
 }
 
@@ -536,6 +577,41 @@ main.exhibition {
     margin-bottom: 0 !important;
 }
 
+/* ========================================================================= */
+/*Documentation tabs nav*/
+/* ========================================================================= */
+
+/* Default tab link text color */
+.nav-tabs .nav-link {
+  color: var(--early-modern-deep-red);
+  font-weight: 600;
+  border-color: transparent; /* Hide default border */
+}
+
+/* Active tab */
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: var(--early-modern-deep-red);
+  border-color: var(--early-modern-deep-red) var(--early-modern-deep-red) white;
+  border-bottom-color: white; /* To blend with tab content */
+}
+
+/* Hover effect on tabs */
+.nav-tabs .nav-link:hover:not(.active) {
+  color: #b94f4f;  /* Slightly lighter red */
+  background-color: #f9eaea; /* Light red-ish background */
+  border-color: transparent;
+}
+
+/*put for footer especially*/
+tr:nth-child(odd) {
+    background-color: var(--color-elevation-2) !important;
+
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-elevation-3) !important;
+}
 /* ========================================================================= */
 /* 16. Media Queries (Responsive Adjustments)                                */
 /* Ensures the theme adapts well to different screen sizes.              */
