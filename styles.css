@@ -61,6 +61,8 @@ html, body {
 
 /* ! add ACTIVE styling (i.e. how does the site look when active?) */
 
+/*-----------------------------------------------------------*/
+/* Fahmida starts */
 /* Homepage styles */
 
 /* Banner and title style */
@@ -282,7 +284,8 @@ html, body {
 .team-member a:hover {
     color: #000;
 }
-
+/*Fahmida stops*/
+/*-----------------------------------------------------------*/
 
 /* ?? map */
 
@@ -392,6 +395,8 @@ figure.image-frame {
     width: auto; 
 }
 
+/*-----------------------------------------------------------*/
+/*Fahmida starts*/
 /* ∞ Add animation and transition styles here */
 .image-dots {
   margin-top: 10px;
@@ -410,8 +415,11 @@ figure.image-frame {
 }
 
 .image-dots span.active {
-  background-color: #007bff; /* bootstrap primary blue */
+  background-color: #acbdce;
 }
+
+/*Fahmida stops*/
+/*-----------------------------------------------------------*/
 
 
 /* 
