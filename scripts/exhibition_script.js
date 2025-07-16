@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 function prepareNarratives(narrativeType) {
 	if (selectedArea && !selectedAreaFound) {
 		selectedArea = localStorage.getItem("selectedArea");
+		localStorage.removeItem("selectedArea");
 		currentValue = JSON.parse(selectedArea);
 		selectedAreaFound = true;
 	}
