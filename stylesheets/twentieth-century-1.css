@@ -236,3 +236,11 @@ tr:nth-child(even) {
     background-color: var(--color-elevation-3) !important;
     background-image: var(--background-texture);
 }
+
+button.nav-link {
+    color: var(--link-color)
+}
+
+button.nav-link:hover {
+    color: var(--link-highlight-color)
+}
