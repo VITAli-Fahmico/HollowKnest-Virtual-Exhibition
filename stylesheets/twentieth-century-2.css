@@ -686,6 +686,31 @@ main.exhibition {
 }
 
 /* ========================================================================= */
+/*Documentation tabs nav*/
+/* ========================================================================= */
+
+/* Default tab link text color */
+.nav-tabs .nav-link {
+  color: var(--twentieth-century-neon-pink);
+  font-weight: 600;
+  border-color: transparent; /* Hide default border */
+}
+
+/* Active tab */
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: var(--twentieth-century-neon-pink);
+  border-color: var(--twentieth-century-neon-pink) var(--twentieth-century-neon-pink) white;
+  border-bottom-color: white; /* To blend with tab content */
+}
+
+/* Hover effect on tabs */
+.nav-tabs .nav-link:hover:not(.active) {
+  color: #b94f4f;  /* Slightly lighter red */
+  background-color: #f9eaea; /* Light red-ish background */
+  border-color: transparent;
+}
+/* ========================================================================= */
 /* 16. Media Queries (Responsive Adjustments)                                */
 /* Ensures the theme adapts well to different screen sizes.                */
 /* These are copied from your original main.css for consistency.           */
