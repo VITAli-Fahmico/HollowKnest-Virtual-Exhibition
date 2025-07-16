@@ -315,49 +315,46 @@ h3 { font-size: 1.5rem !important; }
 }
 
 /*choose your narrative*/
+.choose-narrative {
+    background-color: var(--twentieth-century-background-secondary) !important;
+    color: var(--twentieth-century-text-light) !important;
+    padding: 2rem !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 0 20px var(--twentieth-century-neon-purple) !important;
+    font-family: var(--twentieth-century-font-body) !important;
+    text-align: center !important;
+}
+
 .choose-narrative h1 {
     font-family: var(--twentieth-century-font-heading) !important;
-    color: var(--twentieth-century-neon-blue) !important;
-    text-shadow: 2px 2px var(--twentieth-century-neon-purple) !important;
+    color: var(--twentieth-century-neon-pink) !important;
     font-size: 2.5rem !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .choose-narrative p {
-    font-family: var(--twentieth-century-font-body) !important;
-    color: var(--twentieth-century-light) !important;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-.narrative-container {
-    margin-top: 2rem;
+    font-size: 1.1rem !important;
+    color: var(--twentieth-century-text-light) !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
 }
 
 .narrative-card {
-    font-family: var(--twentieth-century-font-subheading) !important;
     background-color: var(--twentieth-century-mid-gray) !important;
-    color: var(--twentieth-century-neon-blue) !important;
-    border: 3px solid var(--twentieth-century-neon-purple) !important;
-    border-radius: 12px;
-    text-align: center;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px var(--twentieth-century-neon-blue),
-                0 0 20px var(--twentieth-century-neon-purple) inset !important; /*inset creates glow or shadow*/
+    color: var(--twentieth-century-neon-green) !important;
+    border: 2px solid var(--twentieth-century-neon-green) !important;
+    transition: all 0.3s ease !important;
+    font-family: var(--twentieth-century-font-subheading) !important;
+    font-size: 1.2rem !important;
+    box-shadow: 0 0 10px var(--twentieth-century-neon-green) !important;
 }
 
 .narrative-card:hover {
-    background-color: var(--twentieth-century-neon-pink) !important;
-    color: var(--twentieth-century-dark) !important;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--twentieth-century-neon-pink),
-                0 0 25px var(--twentieth-century-neon-blue) inset !important;
-    text-shadow: 1px 1px var(--twentieth-century-neon-purple) !important;
+    background-color: var(--twentieth-century-dark) !important;
+    color: var(--twentieth-century-neon-blue) !important;
+    border-color: var(--twentieth-century-neon-blue) !important;
+    box-shadow: 0 0 15px var(--twentieth-century-neon-blue) !important;
 }
+
 
 /* ========================================================================= */
 /* 9. About Team Section Styles                                              */
