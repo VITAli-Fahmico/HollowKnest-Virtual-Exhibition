@@ -35,8 +35,6 @@ body {
     color: var(--body-text) !important;
 }
 
-
-
 a {
     color: var(--link-color); /* make this into another colour, maybe a bit more saturated. hover should make it different */
 }
@@ -80,7 +78,6 @@ footer {
 .dropdown-item:active {
     color: var(--link-highlight-color) !important;
 }
-/* rgba(255, 255, 255, 0.12) */
 
 article.card {
     color: var(--card-text);
@@ -88,7 +85,7 @@ article.card {
     background-image: var(--background-texture);
 }
 
-section.team-section, .carousel {
+section.team-section, .carousel, .choose-narrative {
     background-color: var(--color-elevation-2) !important;
     background-image: var(--background-texture);
 }
@@ -108,6 +105,11 @@ section.team-section, .carousel {
 
 .team-member a:hover {
     color: var(--link-highlight-color);
+}
+
+a.narrative-card {
+    background-color: var(--color-elevation-2) !important;
+    background-image: var(--background-texture);
 }
 
 footer div {

@@ -6,6 +6,7 @@ const targetAreas = {
 	"long": "longTextArea"
 };
 const shortOnly = ["short"];
+const timeOut = 200;
 
 
 let items = [];
@@ -21,6 +22,8 @@ let areas = [];
 let selectedArea = localStorage.getItem("selectedArea");
 
 let currentItemIndex = "";
+let currentItemImage = 0;
+let currentHollowKnightAreaImage = 0;
 
 let currentTone = "";
 let currentCompetency = "";
@@ -212,45 +215,64 @@ function getItemMetadata() {
 		
 	}
 }
-
-function switchImages(alternateImage) {
-	const timeOut = 200;
+function transitionToImage(alternateImage) {
+	let item = currentSelection[currentItemIndex];
 	itemImageArea.style.opacity = "0";
+
 	setTimeout(() => {
 		itemImageArea.src = alternateImage;
 		itemImageArea.style.opacity = "1";
 	}, timeOut);
 }
 
+
+
 function getItemImages() {
 	let item = currentSelection[currentItemIndex];
 	let itemImageArea = document.getElementById("itemImageArea");
 	let hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
 
-	itemImageArea.src = imageDirectory + "/" + item.itemImages[0];
+	itemImageArea.src = imageDirectory + "/" + item.itemImages[currentItemImage];
 	itemImageArea.alt = item.metadata.fullName;
 	itemImageArea.style.transition = "opacity 0.4s ease, transform 0.4s ease"
 
-	hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[0];
+	hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[currentHollowKnightAreaImage];
 	hollowKnightImageArea.alt = item.metadata.hollowKnightArea;
 
 	let itemImage = itemImageArea.src;
 	let itemQRCode = `assets/qr_codes/${items[currentItemIndex].qrCodeImage}`;
-	console.log(itemQRCode)
 
 	itemImageArea.addEventListener("mouseenter", () => {
 		itemImageArea.style.transform = "scale(1.05)";
 		itemImageArea.style.backgroundColor = "white";
 		itemImageArea.style.backgroundSize = "cover";
 		itemImageArea.style.backgroundPosition = "center";
-		switchImages(itemQRCode);
+		transitionToImage(itemQRCode);
 	});
 
 	itemImageArea.addEventListener("mouseleave", () => {
 		itemImageArea.style.transform = "scale(1)";
 		itemImageArea.style.backgroundColor = "";
-		switchImages(itemImage);
+		transitionToImage(itemImage);
+		setTimeout(() => {
+			currentItemImage = (currentItemImage === 0) ? 1 : 0;
+			itemImageArea.src = imageDirectory + "/" + item.itemImages[currentItemImage];
+		}, timeOut)
 	});
+
+	hollowKnightImageArea.onclick = () => {
+		hollowKnightImageArea.style.transition = "opacity 0.4s ease, transform 0.4s ease";
+
+		hollowKnightImageArea.style.opacity = "0.5";
+		hollowKnightImageArea.style.transform = "scale(0.95)";
+
+		setTimeout(() => {
+			currentHollowKnightAreaImage = (currentHollowKnightAreaImage === 0) ? 1 : 0;
+			hollowKnightImageArea.src = imageDirectory + "/" + item.hollowKnightImages[currentHollowKnightAreaImage];
+			hollowKnightImageArea.style.opacity = "1";
+			hollowKnightImageArea.style.transform = "scale(1)";
+		}, timeOut); 
+	};
 }
 
 function getNavigationElements() {
@@ -405,55 +427,56 @@ function changeTextLanguage() {
 	}
 }
 
-
-// ∞ some sort of image gallery, and a way to switch between images
 document.addEventListener("DOMContentLoaded", () => {
-  // Your current item data - replace this with dynamic loading
-  const currentItem = {
-    itemImages: ["dirtmouth_I1.jpg", "dirtmouth_I2.jpg"],
-    hollowKnightImages: ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"]
-  };
 
-  let itemImageIndex = 0;
-  let hkImageIndex = 0;
+})
 
-  const itemImageArea = document.getElementById("itemImageArea");
-  const hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
 
-  const itemImageDots = document.getElementById("itemImageDots");
-  const hollowKnightImageDots = document.getElementById("hollowKnightImageDots");
+// // ∞ some sort of image gallery, and a way to switch between images
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Your current item data - replace this with dynamic loading
+// //   const currentItem = {
+// //     itemImages: ["dirtmouth_I1.jpg", "dirtmouth_I2.jpg"],
+// //     hollowKnightImages: ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"]
+// //   };
 
-  function createDots(container, count, activeIndex, onClick) {
-    container.innerHTML = ""; // clear previous dots
-    for (let i = 0; i < count; i++) {
-      const dot = document.createElement("span");
-      dot.classList.toggle("active", i === activeIndex);
-      dot.addEventListener("click", () => onClick(i));
-      container.appendChild(dot);
-    }
-  }
+//   let itemImageIndex = 0;
+//   let hkImageIndex = 0;
 
-  function showItemImage(index) {
-    if (index < 0) index = currentItem.itemImages.length - 1;
-    if (index >= currentItem.itemImages.length) index = 0;
-    itemImageIndex = index;
-    itemImageArea.src = currentItem.itemImages[itemImageIndex];
-    itemImageArea.alt = `Item Image ${itemImageIndex + 1}`;
-    createDots(itemImageDots, currentItem.itemImages.length, itemImageIndex, showItemImage);
-  }
+//   const itemImageArea = document.getElementById("itemImageArea");
+//   const hollowKnightImageArea = document.getElementById("hollowKnightImageArea");
 
-  function showHKImage(index) {
-    if (index < 0) index = currentItem.hollowKnightImages.length - 1;
-    if (index >= currentItem.hollowKnightImages.length) index = 0;
-    hkImageIndex = index;
-    hollowKnightImageArea.src = currentItem.hollowKnightImages[hkImageIndex];
-    hollowKnightImageArea.alt = `Hollow Knight Image ${hkImageIndex + 1}`;
-    createDots(hollowKnightImageDots, currentItem.hollowKnightImages.length, hkImageIndex, showHKImage);
-  }
+//   const itemImageDots = document.getElementById("itemImageDots");
+//   const hollowKnightImageDots = document.getElementById("hollowKnightImageDots");
 
-  showItemImage(0);
-  showHKImage(0);
-});
+//   function createDots(container, count, activeIndex, onClick) {
+//     container.innerHTML = ""; // clear previous dots
+//     for (let i = 0; i < count; i++) {
+//       const dot = document.createElement("span");
+//       dot.classList.toggle("active", i === activeIndex);
+//       dot.addEventListener("click", () => onClick(i));
+//       container.appendChild(dot);
+//     }
+//   }
 
-// ∞ a way to choose text to show and hide
-// ?? other stuff for later
+//   function showItemImage(index) {
+//     if (index < 0) index = currentItem.itemImages.length - 1;
+//     if (index >= currentItem.itemImages.length) index = 0;
+//     itemImageIndex = index;
+//     itemImageArea.src = currentItem.itemImages[itemImageIndex];
+//     itemImageArea.alt = `Item Image ${itemImageIndex + 1}`;
+//     createDots(itemImageDots, currentItem.itemImages.length, itemImageIndex, showItemImage);
+//   }
+
+//   function showHKImage(index) {
+//     if (index < 0) index = currentItem.hollowKnightImages.length - 1;
+//     if (index >= currentItem.hollowKnightImages.length) index = 0;
+//     hkImageIndex = index;
+//     hollowKnightImageArea.src = currentItem.hollowKnightImages[hkImageIndex];
+//     hollowKnightImageArea.alt = `Hollow Knight Image ${hkImageIndex + 1}`;
+//     createDots(hollowKnightImageDots, currentItem.hollowKnightImages.length, hkImageIndex, showHKImage);
+//   }
+
+//   showItemImage(0);
+//   showHKImage(0);
+// });

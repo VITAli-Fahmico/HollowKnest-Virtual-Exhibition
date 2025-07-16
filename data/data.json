@@ -27,7 +27,7 @@
   	{
     	"shortName" : "Balcony front",
     	"itemText": "city_of_tears_left.html", 
-		"itemImages": ["city_of_tears_left_I1.jpg", "city_of_tears_left_I2.jpg", "city_of_tears_left_I3.jpg"],
+		"itemImages": ["city_of_tears_left_I1.jpg", "city_of_tears_left_I2.jpg"],
     	"hollowKnightImages": ["city_of_tears_left_A1.jpg", "city_of_tears_left_A2.jpg"],
 		"areaId": "city-of-tears-left",
 		"yearId" : 1900,
@@ -42,7 +42,7 @@
 	{
     	"shortName" : "Frieze",
     	"itemText": "crystal_peak.html", 
-		"itemImages": ["crystal_peak_I1.jpg", "crystal_peak_I2.jpg", "crystal_peak_I3.jpg"],
+		"itemImages": ["crystal_peak_I1.jpg", "crystal_peak_I2.jpg"],
     	"hollowKnightImages": ["crystal_peak_A1.jpg", "crystal_peak_A2.jpg"],
 		"areaId": "crystal-peak",
 		"yearId" : 500,
@@ -57,8 +57,8 @@
 	{
     	"shortName" : "Ships surrealist painting",
     	"itemText": "resting_grounds.html", 
-		"itemImages": ["resting_grounds_I1.jpg"],
-    	"hollowKnightImages": ["resting_grounds_A1.jpg"],
+		"itemImages": ["resting_grounds_I1.jpg", "resting_grounds_I2.jpg"],
+    	"hollowKnightImages": ["resting_grounds_A1.jpg", "resting_grounds_A2.jpg"],
 		"areaId": "resting-grounds",
 		"yearId" : 1927,
 		"qrCodeImage": "resting_grounds.png",
@@ -72,8 +72,8 @@
 		{
     	"shortName" : "Celluloid exterior accordion",
     	"itemText": "howling_cliffs.html", 
-		"itemImages": ["howling_cliffs_I1.jpg", "howling_cliffs_I2.jpg", "howling_cliffs_I3.jpg"],
-    	"hollowKnightImages": ["howling_cliffs_A1.jpg"],
+		"itemImages": ["howling_cliffs_I1.jpg", "howling_cliffs_I2.jpg"],
+    	"hollowKnightImages": ["howling_cliffs_A1.jpg", "howling_cliffs_A2.jpg"],
 		"areaId": "howling-cliffs",
 		"yearId" : 1916,
 		"qrCodeImage": "howling_cliffs.png",
@@ -87,7 +87,7 @@
 	{
     	"shortName" : "Steampunk elevator",
     	"itemText": "city_of_tears_right.html", 
-		"itemImages": ["city_of_tears_right_I1.jpg", "city_of_tears_right_I2.jpg", "city_of_tears_right_I3.jpg"],
+		"itemImages": ["city_of_tears_right_I1.jpg", "city_of_tears_right_I2.jpg"],
     	"hollowKnightImages": ["city_of_tears_right_A1.jpg", "city_of_tears_right_A2.jpg"],
 		"areaId": "city-of-tears-right",
 		"yearId" : 1903,
@@ -102,7 +102,7 @@
 	{
     	"shortName" : "Decorative oak panel",
     	"itemText": "royal_waterways.html", 
-		"itemImages": ["royal_waterways_I1.jpg", "royal_waterways_I2.jpg", "royal_waterways_I3.jpg"],
+		"itemImages": ["royal_waterways_I1.jpg", "royal_waterways_I2.jpg"],
     	"hollowKnightImages": ["royal_waterways_A1.jpg", "royal_waterways_A2.jpg"],
 		"areaId": "royal-waterways",
 		"yearId" : 1859,
@@ -117,7 +117,7 @@
 	{
 		"shortName" : "Marble column",
 		"itemText": "ancient_basin.html", 
-		"itemImages": ["ancient_basin_I1.jpg", "ancient_basin_I2.jpg", "ancient_basin_I3.jpg"], 
+		"itemImages": ["ancient_basin_I1.jpg", "ancient_basin_I2.jpg"], 
 		"hollowKnightImages": ["ancient_basin_A1.jpg", "ancient_basin_A2.jpg"],
 		"areaId": "ancient-basin",
 		"yearId" : 138,
@@ -132,7 +132,7 @@
 	{
 		"shortName" : "Mememto mori",
 		"itemText": "kingdoms_edge.html", 
-		"itemImages": ["kingdoms_edge_I1.jpg", "kingdoms_edge_I2.jpg", "kingdoms_edge_I3.jpg"], 
+		"itemImages": ["kingdoms_edge_I1.jpg", "kingdoms_edge_I2.jpg"], 
 		"hollowKnightImages": ["kingdoms_edge_A1.jpg", "kingdoms_edge_A2.jpg"],
 		"areaId": "kingdoms-edge",
 		"yearId" : 1899,
@@ -147,7 +147,7 @@
 	{
     	"shortName" : "Faith and Hope",
     	"itemText": "queens_gardens.html", 
-		"itemImages": ["queens_gardens_I1.jpg"],
+		"itemImages": ["queens_gardens_I1.jpg", "queens_gardens_I2.jpg"],
     	"hollowKnightImages": ["queens_gardens_A1.jpg", "queens_gardens_A2.jpg"],
 		"areaId": "queens-gardens",
 		"yearId" : 1869,
@@ -162,7 +162,7 @@
 	{
     	"shortName" : "St. Patrick’s Well",
     	"itemText": "dirtmouth.html", 
-		"itemImages": ["dirtmouth_I1.jpg"],
+		"itemImages": ["dirtmouth_I1.jpg", "dirtmouth_I2.jpg"],
     	"hollowKnightImages": ["dirtmouth_A1.jpg", "dirtmouth_A2.jpg"],
 		"areaId": "dirtmouth",
 		"yearId" : 1791,
@@ -177,7 +177,7 @@
 		{
     	"shortName" : "Pilgrim's Badge",
     	"itemText": "forgotten_crossroads.html", 
-		"itemImages": ["forgotten_crossroads_I1.jpg"],
+		"itemImages": ["forgotten_crossroads_I1.jpg", "forgotten_crossroads_I2.jpg"],
     	"hollowKnightImages": ["forgotten_crossroads_A1.jpg", "forgotten_crossroads_A2.jpg"],
 		"areaId": "forgotten-crossroads",
 		"yearId" : 1500,
@@ -192,7 +192,7 @@
 		{
     	"shortName" : "Noh Mask",
     	"itemText": "fungal_wastes.html", 
-		"itemImages": ["fungal_wastes_I1.jpg"],
+		"itemImages": ["fungal_wastes_I1.jpg", "fungal_wastes_I2.jpg"],
     	"hollowKnightImages": ["fungal_wastes_A1.jpg", "fungal_wastes_A2.jpg"],
 		"areaId": "fungal-wastes",
 		"yearId" : 1600,
@@ -207,7 +207,7 @@
 		{
     	"shortName" : "A Wakeful Sleep",
     	"itemText": "fog_canyon.html", 
-		"itemImages": ["fog_canyon_I1.jpg"],
+		"itemImages": ["fog_canyon_I1.jpg", "fog_canyon_I2.jpg"],
     	"hollowKnightImages": ["fog_canyon_A1.jpg", "fog_canyon_A2.jpg"],
 		"areaId": "fog-canyon",
 		"yearId" : 1500,
@@ -222,7 +222,7 @@
 		{
     	"shortName" : "Golden Spider Silk",
     	"itemText": "deepnest.html", 
-		"itemImages": ["deepnest_I1.jpg"],
+		"itemImages": ["deepnest_I1.jpg", "deepnest_I2.jpg"],
     	"hollowKnightImages": ["deepnest_A1.jpg", "deepnest_A2.jpg"],
 		"areaId": "deepnest",
 		"yearId" : 2009,
@@ -237,7 +237,7 @@
 		{
     	"shortName" : "People’s Hive",
     	"itemText": "the_hive.html", 
-		"itemImages": ["the_hive_I1.jpg"],
+		"itemImages": ["the_hive_I1.jpg", "the_hive_I2.jpg"],
     	"hollowKnightImages": ["the_hive_A1.jpg", "the_hive_A2.jpg"],
 		"areaId": "the-hive",
 		"yearId" : 1948,
