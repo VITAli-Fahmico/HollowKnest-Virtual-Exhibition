@@ -479,3 +479,12 @@ figure.image-frame {
         line-height: 1 !important;
     } */
 }
+
+/*Documentation wireframe style*/
+/* Make image smaller but still responsive */
+.responsive-image {
+  max-width: 200px !important;       /* Or whatever max size you want */
+  height: auto;           /* Maintain aspect ratio */
+  display: block;         /* Ensures it doesn't inline with text */
+  margin: 1rem auto;      /* Centers the image horizontally */
+}
