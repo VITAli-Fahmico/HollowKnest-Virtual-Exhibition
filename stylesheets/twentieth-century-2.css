@@ -107,6 +107,30 @@ body {
     filter: drop-shadow(0 0 5px var(--twentieth-century-neon-blue)) drop-shadow(0 0 10px var(--twentieth-century-neon-blue));
 }
 
+footer {
+    background-color: var(--twentieth-century-dark) !important;
+    color: var(--twentieth-century-neon-blue) !important;
+    text-align: center !important;
+    padding: 2rem 1rem !important;
+    font-family: var(--twentieth-century-font-body) !important;
+    font-size: 1rem !important;
+    box-shadow: 0 0 25px var(--twentieth-century-neon-blue) inset !important;
+    border-top: 2px solid var(--twentieth-century-neon-blue) !important;
+}
+
+footer a {
+    color: var(--twentieth-century-neon-green) !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    transition: color 0.3s ease !important;
+}
+
+footer a:hover {
+    color: var(--twentieth-century-neon-pink) !important;
+    text-shadow: 0 0 5px var(--twentieth-century-neon-pink),
+                 0 0 10px var(--twentieth-century-neon-pink) !important;
+}
+
 
 .footer-background {
     background-color: var(--twentieth-century-dark) !important;      /* Dark background for footer */
