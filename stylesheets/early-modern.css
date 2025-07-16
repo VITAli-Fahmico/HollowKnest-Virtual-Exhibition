@@ -381,16 +381,6 @@ hr {
     transform: translateY(-50%) rotateY(180deg);              /* Rotates right flourish for symmetry */
 }
 
-/* Custom list item markers */
-ul li::before {
-    content: '❦ ';                                          /* Unicode heart flower symbol as bullet */
-    color: var(--early-modern-deep-red);                    /* Deep red color for the symbol */
-    margin-right: 0.5em;                                    /* Spacing between symbol and text */
-    font-size: 0.8em;                                       /* Slightly smaller size for the symbol */
-}
-ul {
-    list-style: none !important;                            /* Removes default list bullets */
-}
 
 /* ========================================================================= */
 /* 13. Form Elements and Dropdown Menus                                      */

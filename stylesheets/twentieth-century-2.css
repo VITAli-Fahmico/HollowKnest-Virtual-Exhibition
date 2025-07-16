@@ -516,19 +516,6 @@ hr {
 .section-divider::after { right: 5%; transform: translateY(-50%) rotateY(180deg); }
 */
 
-/* Custom list item markers - using a bold symbol like an asterisk or small square */
-ul li::before {
-    content: '★ ';                                           /* Star symbol for bullets */
-    color: var(--twentieth-century-neon-yellow) !important; /* Neon yellow color */
-    margin-right: 0.7em;                                     /* More spacing */
-    font-size: 1.2em;                                        /* Larger symbol */
-    text-shadow: 0 0 5px var(--twentieth-century-neon-yellow); /* Glow */
-}
-ul {
-    list-style: none !important;                             /* Removes default bullets */
-    padding-left: 1.5em !important;                          /* Add back some padding if needed */
-}
-
 
 /* ========================================================================= */
 /* 13. Form Elements and Dropdown Menus                                      */
