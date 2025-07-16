@@ -432,6 +432,68 @@ img {
     border-radius: 8px;
 }
 
+/*table under image*/
+table#table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--twentieth-century-font-body);
+  background-color: var(--twentieth-century-background-secondary);
+  color: var(--twentieth-century-text-light);
+  border: 3px solid var(--twentieth-century-neon-purple);
+  border-radius: 12px;
+  box-shadow:
+    0 0 8px var(--twentieth-century-neon-purple),
+    0 0 15px var(--twentieth-century-neon-pink);
+  overflow: hidden;
+}
+
+table#table th, table#table td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--twentieth-century-mid-gray);
+}
+
+table#table th {
+  background: linear-gradient(90deg, var(--twentieth-century-neon-blue), var(--twentieth-century-neon-pink));
+  color: var(--twentieth-century-text-light);
+  font-family: var(--twentieth-century-font-subheading);
+  font-weight: 700;
+  text-shadow:
+    0 0 6px var(--twentieth-century-neon-blue),
+    0 0 10px var(--twentieth-century-neon-pink);
+}
+
+table#table tbody tr:nth-child(odd) {
+  background-color: var(--twentieth-century-dark);
+  box-shadow: inset 0 0 10px var(--twentieth-century-neon-blue);
+}
+
+table#table tbody tr:nth-child(even) {
+  background-color: var(--twentieth-century-mid-gray);
+  box-shadow: inset 0 0 8px var(--twentieth-century-neon-pink);
+}
+
+table#table a {
+  color: var(--twentieth-century-neon-yellow);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 5px var(--twentieth-century-neon-yellow);
+}
+
+table#table a:hover {
+  color: var(--twentieth-century-neon-orange);
+  text-shadow: 0 0 15px var(--twentieth-century-neon-orange);
+}
+
+table#table tr:hover {
+  background-color: var(--twentieth-century-neon-green);
+  color: var(--twentieth-century-text-dark);
+  box-shadow: 0 0 20px var(--twentieth-century-neon-green);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 /* 10. Map Section Styles (or right after the general img rule) */
 
 .map-area img, /* Target images directly within a map-area */

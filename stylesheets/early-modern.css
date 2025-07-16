@@ -345,6 +345,57 @@ figure.image-frame, .image-frame {
 }
 
 /* ========================================================================= */
+/*exhibition table styling*/
+/* ========================================================================= */
+
+/* Table container and general styles */
+table#table {
+  font-family: var(--early-modern-font-body);
+  border-collapse: collapse;
+  width: 100%;
+  background-color: var(--early-modern-background-secondary);
+  color: var(--early-modern-text-dark);
+  box-shadow:
+    0 0 5px var(--early-modern-dark-brown);
+  border: 2px solid var(--early-modern-dark-brown);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Table header cells */
+table#table th {
+  background-color: var(--early-modern-dark-brown);
+  color: var(--early-modern-light-tan);
+  font-family: var(--early-modern-font-subheading);
+  font-weight: 700;
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 2px solid var(--early-modern-gold);
+}
+
+/* Table data cells */
+table#table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--early-modern-medium-brown);
+}
+
+/* Stripe effect override (for Bootstrap .table-striped) */
+table#table tbody tr:nth-child(odd) {
+  background-color: var(--early-modern-background-main);
+}
+
+/* Links inside table */
+table#table a {
+  color: var(--early-modern-deep-red);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+table#table a:hover {
+  color: var(--early-modern-dark-brown);
+  text-decoration: none;
+}
+
+/* ========================================================================= */
 /* 12. Decorative Separators and List Embellishments                         */
 /* Adds stylistic horizontal rules and custom list item markers.         */
 /* ========================================================================= */
