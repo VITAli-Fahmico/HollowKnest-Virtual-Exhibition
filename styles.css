@@ -61,6 +61,8 @@ html, body {
 
 /* ! add ACTIVE styling (i.e. how does the site look when active?) */
 
+/*-----------------------------------------------------------*/
+/* Fahmida starts */
 /* Homepage styles */
 
 /* Banner and title style */
@@ -292,7 +294,8 @@ html, body {
 .team-member a:hover {
     color: #000;
 }
-
+/*Fahmida stops*/
+/*-----------------------------------------------------------*/
 
 /* ?? map */
 
@@ -402,7 +405,39 @@ figure.image-frame {
     width: auto; 
 }
 
-/* ∞ documentation stuff */
+/*-----------------------------------------------------------*/
+/*Fahmida starts*/
+/* ∞ Add animation and transition styles here */
+.image-dots {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.image-dots span.active {
+  background-color: #acbdce;
+}
+
+/*Fahmida stops*/
+/*-----------------------------------------------------------*/
+
+
+/* 
+:hover {
+    image smoothly switches from the area to the item
+}
+
+*/
 
 #cardTitle, #narrativeItem {
     line-height: 1.4;
